@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <>
       <header>
-        <div className="px-4 py-2 text-white flex  justify-between bg-blue-900">
+        <div className="px-4 py-2 text-white flex top-0 w-full sticky justify-between bg-blue-900">
           <h1>LOGO</h1>
           <div
             className={
@@ -28,7 +28,7 @@ export const Header = () => {
                 <NavLink to="/events">Events</NavLink>
               </li>
               <li className="md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3">
-                <NavLink to="/team">Team</NavLink>
+                <NavLink to="/team/lead">Team</NavLink>
               </li>
               <li className="md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3">
                 <NavLink to="/contact">Contact</NavLink>
