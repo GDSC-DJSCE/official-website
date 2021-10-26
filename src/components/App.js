@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <Header />
+      
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/events" component={Events} />
