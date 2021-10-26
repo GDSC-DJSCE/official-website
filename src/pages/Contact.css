@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    margin-top: 77px;
+    text-align: center;
+    justify-content: center;
+}
+.sub-header{
+    text-align: center;
+    font-size: 28px;
+}
+.box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    margin:50px;
+}
+.head{
+    font-family: 'Montserrat', sans-serif;
+}
+.box-primary{
+    display: flex;
+}
+.box-secondary{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    overflow: hidden;
+}
+.box-detail{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.box-address{
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.detail{
+    align-items: center;
+    justify-content: center;
+}
+.box-social{
+    display: grid;
+    grid-template-columns: 0% 30% 30% 30%;
+}
+.mailid{
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 58.25% 10.25% 25%;
+}
+.atRate{
+    padding-right: 9px;
+}
+
+@media screen and (min-width: 850px ){
+    .box-map{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .header{
+        font-size: 40px;
+    }
+    .sub-header{
+        font-size: 25px;
+        text-align: center;
+    }
+    .box-image {
+        display: none;
+    }
+    .box-address{
+        display: none;
+    }
+    .box-primary{
+        height: 500px;
+    }
+    .box{
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 100%; 
+        height: 1000px;
+        margin: 15px ;
+        margin-top: 20px;
+        margin-bottom: 150px;
+    }
+    .form{
+        width: 320px;
+
+    }
+    .box-mail{
+        width: 160px
+    }
+    .atRate{
+        width: 38px;
+    }
+
+    .mailid{
+        grid-template-columns: 50% 11.75% 20% ;
+    }
+    .inner-Box{
+        margin: 10px;
+    }
+    .box-detail{
+        grid-template-rows: 0% 0% 70% ;
+        
+    }
+    .box-social{
+        margin-top: 250px;
+        margin-left: 20px;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .box-map{
+        margin: 10px;
+        width: 320px ;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+}
