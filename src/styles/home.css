@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
 *{
-    padding:0;
+    padding:0 ;
     margin: 0;
 }
 
@@ -13,12 +15,12 @@ body{
     position: relative;
     display: block;
     width: 100%;
-    height: 550px;
+    height: 570px;
     /* height: auto; */
     /* min-height: 100%; */
-
+    padding: 0 !important;
     overflow:hidden ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-image: url('../assets/images/home-bg.png');
 }
 
@@ -28,13 +30,13 @@ body{
     left: 35%;
     width: 400px;
     height: auto;
-    border: 1px soid rgb(0, 255, 136);
+    /* border: 1px soid rgb(0, 255, 136); */
 
 }
 
 .banner .circle{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 0;
     width: 100px;
     height: auto;
@@ -43,7 +45,7 @@ body{
 }
 .banner .rectangle{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 93%;
     width: fit-content;
     /* width: 60px; */
@@ -58,15 +60,14 @@ body{
     height: 100%;
 }
 
-
-
-
+/* BANNER CONTENT */
 .banner .banner_content{
-    display: flow-root;  
+    display: flow-root; 
+    position: relative; 
     width: fit-content;
     height: fit-content;
-    margin: 100px auto;
-    border: 1px solid rgb(0, 255, 136);
+    margin: 90px auto;
+    /* border: 1px solid rgb(0, 255, 136); */
 
 }
 .banner .banner_content .left_content , 
@@ -74,15 +75,336 @@ body{
     /* width: calc(100% - 2px); */
     float: left;
 }
-.banner .banner_content .left_content{
-    width: 100px;
+
+.banner .banner_content .left_content .gdsc{
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid rgb(102, 255, 0); */
+
+}
+
+
+.banner .banner_content .left_content .logo{
+    width: 250px;
+    height: auto;
+
+
+}
+
+.banner .banner_content .left_content .gdsc span{
+    width: 250px;
+    height: fit-content;
+    display: block;
+    margin: 0 auto;
+    padding: 0 ;
+    text-align: center ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+    font-weight: 600;
+    /* color: #2F3944; */
+    background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #8b8b8b 51.87%, #3F3F3F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+
+.banner .banner_content .left_content .gdsc .span1{
+    transform: translateY(-30px);
 
 }
 
 .banner .banner_content .right_content{
-    width: 300px;
+    /* width: 300px;    */
+    overflow: hidden;
+    border: 1px solid yellow;
+    margin-left: 20px;
+}
+
+.banner .banner_content .right_content .banner_img{
+    /* display: block; */
+    width: 400px;
+    height: 300px;
 
 }
 
 
+/* INFO */
+
+.info{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    min-height: 650px;
+    overflow: hidden;
+    background-image: url('../assets/images/wave.png');
+    background-size: 100% 100%;
+
+}
+
+.info .about{
+    margin-top: 100px;
+    display: block;
+    position: relative;
+    width: calc(100% - 0%);
+    height: fit-content;
+    /* border: 1px solid green ; */
+    
+}
+
+.info .about .about_img{
+
+    position: absolute;
+    display: block;
+    top: -30%;
+    right: 10%;
+    width: 370px;
+    height: auto;
+}
+
+.info .about .header{
+    display: block;
+    position: relative;
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    /* color: #2F3944; */
+    background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #696969 51.87%, #3F3F3F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.info .about .content_box{
+    width: calc(80% - 10px);
+    margin: 10px;
+    margin-left: 80px;
+    border-radius: 10px;
+    background-color: #A1C2FF;
+    /* border: 1px solid rgb(229, 255, 0); */
+
+}
+
+.info .about .content_box .content{
+
+    width: calc(68% - 10px);
+    margin: 10px;
+    /* margin-left: 80px; */
+    display: block;
+    position: relative;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #090a0a;
+    padding: 20px;
+    /* border: 1px solid red; */
+
+}
+
+
+/* VISION */
+
+.info .vision{
+    margin-top: 80px;
+    display: block;
+    position: relative;
+    width: calc(100% - 0%);
+    height: fit-content;
+    /* border: 1px solid green ; */
+    
+}
+
+.info .vision .vision_img{
+
+    position: absolute;
+    display: block;
+    top: -2%;
+    left: 4%;
+    width: 400px;
+    height: auto;
+}
+.info .vision .header{
+    display: block;
+    position: relative;
+    text-align: right;
+    padding-right: 20px;
+    margin-right: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    height: fit-content;
+    transform: translateY(-70px);
+    /* border: 1px solid green ; */
+
+}
+
+.info .vision .content_box{
+    width: calc(80% - 10px);
+    margin-left: auto;
+    margin-right: 80px;
+    border-radius: 10px;
+    background-color:#EEDDDB;
+
+    /* border: 1px solid rgb(229, 255, 0); */
+
+}
+
+.info .vision .content_box .content{
+
+    width: calc(75% - 10px);
+    margin-left: auto;
+    display: block;
+    position: relative;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #090a0a;
+    padding: 25px;
+
+    /* border: 1px solid red; */
+
+}
+
+/* DOTS */
+.dots_box{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+}
+
+
+.dots_box  .dots{
+    float: left;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.info .about .dots_box{
+    bottom: 6%;
+    right: 29%;
+}
+
+.info .vision .dots_box{
+    top: 5%;
+    left: 26%;
+}
+
+
+/* FEATURED */
+.featured{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    background-size: 100% 100%;
+
+}
+
+.featured .header{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #696969 51.87%, #3F3F3F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* border: 1px solid green ; */
+    
+}
+
+.featured .featured_container{
+    width: 100%;
+    display: flow-root;
+    margin: 0 auto;
+
+}
+
+.featured .featured_container .featured_box{
+    width: calc( 33% - 42px);
+    margin: 20px 20px;
+    float: left;
+    border: 1px solid rgb(196, 196, 196);
+    overflow: hidden;
+    border-radius: 10px;
+    background: #F5F5F5;
+    box-shadow: 3px 2px 10px rgba(139, 139, 139, 0.596);
+}
+
+.featured .featured_container .featured_box .featured_title{
+
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+.featured .featured_container .featured_box .body{
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.featured .featured_container .featured_box .learnBtn{
+    display: block;
+    position: relative;
+    width: 200px;
+    margin-top: 10px ;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    box-shadow: 4px 3px 6px rgba(119, 119, 119, 0.822);
+    border-radius: 10px;
+    
+
+}
+
+
+.featured .featured_container .featured_box .learnBtn a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform:uppercase ;
+    color: white;
+
+}
+
+.featured .featured_container .featured_box .featured_img{
+    /* border: 1px solid red; */
+    width: calc(100% - 30px);
+    margin: 0 auto;
+
+}
+
+.featured .featured_container .featured_box .featured_img img{
+    width: calc(100% - 0px);
+    height: auto;
+    
+}
 
