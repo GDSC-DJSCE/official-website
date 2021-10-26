@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import triangle from "../assets/images/Triangle.png" ;
 import circle from "../assets/images/Circle.png" ;
 import rectangle from "../assets/images/Rectangle.png" ;
@@ -14,7 +13,6 @@ import { HomeDots } from "../components/HomeDots";
 import {FeaturedBox} from "../components/FeaturedBox" ;
 
 import banner_img from "../assets/images/banner_img.svg" ;
-import {BannerSVG} from "../components/BannerSVG" ;
 
 
 export const Home = () => {

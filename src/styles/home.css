@@ -102,6 +102,7 @@ body{
     font-weight: 600;
     /* color: #2F3944; */
     background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #8b8b8b 51.87%, #3F3F3F 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -174,7 +175,8 @@ body{
     font-weight: 600;
     /* color: #2F3944; */
     background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #696969 51.87%, #3F3F3F 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 
 }
@@ -319,6 +321,7 @@ body{
     font-size: 50px;
     font-weight: 600;
     background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #696969 51.87%, #3F3F3F 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* border: 1px solid green ; */
