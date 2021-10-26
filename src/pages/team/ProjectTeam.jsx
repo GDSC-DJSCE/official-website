@@ -1,5 +1,5 @@
 import React from "react";
-import { TeamNav, THead, TCard } from "../../components";
+import { TeamNav, THead } from "../../components";
 
 export const ProjectTeam = () => {
   return (

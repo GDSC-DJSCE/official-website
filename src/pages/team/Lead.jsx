@@ -6,7 +6,7 @@ export const Lead = () => {
     <>
       <THead />
       <TeamNav />
-      <div className="h-24 w-min mx-auto border-3-blue"></div>
+      <div className="h-24 w-min mx-auto border-2-blue"></div>
       <div className="flex justify-center">
         <TCard />
       </div>
