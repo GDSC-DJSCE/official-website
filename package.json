@@ -4,13 +4,10 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-=======
+
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
->>>>>>> 1f4594e38f5ca514606dbaf83dfd4e13141a8faa
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@testing-library/jest-dom": "^5.14.1",
