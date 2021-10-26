@@ -25,7 +25,7 @@ body {
     -4px 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.border-3-green {
+.border-2-green {
   background-color: #109d58;
   border: 2px solid #109d58;
 }
@@ -36,10 +36,10 @@ body {
   border-radius: 50%;
 }
 
-.border-3-blue {
+.border-2-blue {
   border-radius: 3px 3px 0 0;
   background-color: #4385f3;
-  border: 3px solid #4385f3;
+  border: 2px solid #4385f3;
 }
 
 .navicon {
