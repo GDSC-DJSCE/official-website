@@ -1,54 +1,44 @@
-import React, { useState } from "react";
+import * as React from "react";
 import { NavLink } from "react-router-dom";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-
-  const handleToggle = () => {
-    setToggleMenu(!toggleMenu);
-  };
   return (
-    <>
-      <header>
-        <div className="px-4 py-2 text-white flex top-0 w-full sticky justify-between bg-blue-900">
-          <h1>LOGO</h1>
-          <div
-            className={
-              toggleMenu
-                ? "md:flex  md:pt-0 pt-10 w-full md:w-auto"
-                : "hidden md:flex"
-            }
-            id="menu"
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
           >
-            <ul>
-              <li className="md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="dropdown md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3 relative">
-                <NavLink to="/events">Events</NavLink>
-              </li>
-              <li className="md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3">
-                <NavLink to="/team/lead">Team</NavLink>
-              </li>
-              <li className="md:inline-block cursor-pointer hover:text-gray-500 border-b md:border-none py-2 px-3">
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="cursor-pointer md:hidden">
-            <input class="menu-btn hidden" type="checkbox" id="menu-btn" />
-            <label
-              class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none"
-              for="menu-btn"
-            >
-              <span
-                onClick={handleToggle}
-                class="navicon bg-white-darkest flex items-center relative"
-              ></span>
-            </label>
-          </div>
-        </div>
-      </header>
-    </>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            LOGO
+          </Typography>
+          <Button color="inherit">
+            <NavLink to="/">Home</NavLink>
+          </Button>
+          <Button color="inherit">
+            <NavLink to="/events">Events</NavLink>
+          </Button>
+          <Button color="inherit">
+            <NavLink to="/team">Team</NavLink>
+          </Button>
+          <Button color="inherit">
+            <NavLink to="/contact">Contact</NavLink>
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 };

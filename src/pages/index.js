@@ -6,6 +6,7 @@ import { ContentEditorial } from "./team/ContentEditorial";
 import { DomainHead } from "./team/DomainHead";
 import { OutreachEvents } from "./team/OutreachEvents";
 import { ProjectTeam } from "./team/ProjectTeam";
+import { Team } from "./team/Team";
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   DomainHead,
   OutreachEvents,
   ProjectTeam,
+  Team,
 };

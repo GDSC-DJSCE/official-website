@@ -1,12 +1,24 @@
-import React from "react";
+import * as React from "react";
+import { Box, Toolbar, AppBar, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import SearchIcon from "@mui/icons-material/Search";
+import MoreIcon from "@mui/icons-material/MoreVert";
 
 export const Footer = () => {
   return (
-    <>
-      <div className="absolute bottom-100 w-full flex justify-center items-center h-16 bg-black text-white">
-
-      <p>Copyright © 2021 All rights reserved.</p>
-      </div>
-    </>
+    <AppBar position="fixed" color="primary" sx={{ top: "auto", bottom: 0 }}>
+      <Toolbar>
+        <IconButton color="inherit" aria-label="open drawer">
+          <MenuIcon />
+        </IconButton>
+        <Box sx={{ flexGrow: 1 }} />
+        <IconButton color="inherit">
+          <SearchIcon />
+        </IconButton>
+        <IconButton color="inherit">
+          <MoreIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };

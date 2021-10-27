@@ -8,6 +8,7 @@ import {
   DomainHead,
   ProjectTeam,
   OutreachEvents,
+  Team,
 } from "../pages";
 import { Header, Footer } from "./";
 
@@ -15,11 +16,12 @@ function App() {
   return (
     <>
       <Header />
-      
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/team" component={Team} />
         <Route exact path="/team/lead" component={Lead} />
         <Route exact path="/team/domain-head" component={DomainHead} />
         <Route
