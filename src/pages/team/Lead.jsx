@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/team.css";
 import { TeamNav, THead, TCard } from "../../components";
 
 export const Lead = () => {

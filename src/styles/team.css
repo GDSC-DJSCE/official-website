@@ -1,0 +1,64 @@
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  color: #535353;
+}
+
+.tnav-shadow {
+  box-shadow: -4px -5px 10px rgba(0, 0, 0, 0.04),
+    4px 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.tcard-shadow {
+  box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.05),
+    -4px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tcard-max-d {
+  max-width: 165px;
+  max-height: 180px;
+  min-width: 165px;
+  min-height: 180px;
+}
+
+.border-2-green {
+  background-color: #109d58;
+  border: 2px solid #109d58;
+}
+
+.border-6-green {
+  background-color: #109d58;
+  border: 6px solid #109d58;
+  border-radius: 50%;
+}
+
+.border-2-blue {
+  border-radius: 3px 3px 0 0;
+  background-color: #4385f3;
+  border: 2px solid #4385f3;
+}
+
+.bg-bluegreen-gradient {
+  background: linear-gradient(
+    93.29deg,
+    #4385f3 0%,
+    rgba(16, 157, 88, 0.84) 97.28%
+  );
+}
+
+.border-blue {
+  border: 3px solid #4385f3;
+}
+
+.robo-text-size {
+  font-size: 28px;
+  line-height: 32.81px;
+}
+
+.team-cont1 {
+  margin: 0 7%;
+}
+
+#team-card:hover {
+  transform: scale(1.1);
+  background-color: #4385f3;
+}
