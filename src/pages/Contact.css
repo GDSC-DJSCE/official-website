@@ -525,5 +525,9 @@
         height: 200px;
         overflow: hidden;
     }
+    .submit{
+        width: 10rem;
+        height: 2rem;
+    }
     
 }

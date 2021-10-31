@@ -322,63 +322,12 @@ export const Contact = () => {
                     variant="outlined" 
                     onBlur={blur} />
                 </div>
-                <div  style={{marginTop:"-15px",paddingBottom:"15px", color:"red",fontSize:"0.9rem" , marginBottom:"4rem"}}>{errors.mesgerror}</div>
+                <div  style={{marginTop:"-19px",paddingBottom:"15px", color:"red",fontSize:"0.9rem" , marginBottom:"4rem"}}>{errors.mesgerror}</div>
             
-            <Button variant="contained" endIcon={<SendIcon />} style={{width:"13rem",height:"3rem" ,fontSize:"1.5rem",backgroundColor:"rgba(67, 133, 243, 1)",color:"white"}}>
+            <Button className ="submit" variant="contained" endIcon={<SendIcon />} style={{width:"13rem",height:"3rem" ,fontSize:"1.5rem",backgroundColor:"rgba(67, 133, 243, 1)",color:"white"}}>
               Submit
             </Button>
 
-            {/*<label
-              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
-              for="username"
-            >
-              Your Name
-            </label>
-            <input
-              class="shadow appearance-none border mb-14 rounded py-2 px-3 w-46 h-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
-              type="text"
-              placeholder="Your Name"
-            />
-            <label
-              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
-              for="email"
-            >
-              Your Email
-            </label>
-            <div className="mailid">
-              <input
-                class="box-mail shadow appearance-none border rounded  py-2 px-3 w-56 h-12 text-gray-700 focus:outline-none focus:shadow-outline"
-                id="username"
-                type="text"
-                placeholder="Email"
-              />
-              <div className="atRate w-10 h-12 text-xl p-2 shadow appearance-none border rounded font-bold">
-                @
-              </div>
-              <input
-                class="box-mail2 shadow appearance-none border rounded w-28 h-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
-                type="text"
-                placeholder=""
-              />
-            </div>
-            <label
-              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
-              for="email"
-            >
-              Your Message
-            </label>
-            <input
-              class="form-message shadow appearance-none border mb-14 rounded w-96 h-24 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="username"
-              type="text"
-            />
-            <div class="submit mt-2 ">
-              <button class="bg-blue-500 hover:bg-blue-700 w-36 h-12 text-white text-xl font-bold py-2 px-4 rounded-xl">
-                Submit{" "}
-              </button>
-            </div>*/}
              
           </div>
         </div>
