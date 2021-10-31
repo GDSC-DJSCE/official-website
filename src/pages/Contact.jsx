@@ -5,15 +5,15 @@ import { faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import yellowCircle from "../assets/images/yellowCircle.svg";
 import greenCircle from "../assets/images/greenCircle.svg";
 import blueCircle from "../assets/images/blueCircle.jpg";
-import blueCircleHalf from "../assets/images/blueCircle.svg.jpg";
+import blueCircleHalf from "../assets/images/blueCircleHalf.jpg";
 import redCircle from "../assets/images/redCircle.svg";
-import redCircleHalf from "../assets/images/redCircle.svg.jpg";
+import redCircleHalf from "../assets/images/redCircle.jpg";
 import redRect from "../assets/images/redRect.svg";
 import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
 import halfcircle from "../assets/images/halfcircle.svg";
-import yellowCircleHalf from "../assets/images/yellowCircleHalf.svg.jpg";
+import yellowCircleHalf from "../assets/images/yellowCircleHalf.jpg";
 import SendIcon from "@mui/icons-material/Send";
 
 import { TextField, makeStyles, Button } from "@material-ui/core";
