@@ -1,22 +1,335 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import yellowCircle from "../assets/images/yellowCircle.svg" ;
+import greenCircle from "../assets/images/greenCircle.svg";
+import blueCircle from "../assets/images/blueCircle.svg";
+import blueCircleHalf from "../assets/images/blueCircle.svg.jpg"
+import redCircle from "../assets/images/redCircle.svg";
+import redCircleHalf from "../assets/images/redCircle.svg.jpg";
+import redRect from "../assets/images/redRect.svg";
+import blueRect from "../assets/images/blueRect.svg";
+import yellowRect from "../assets/images/yellowRect.svg";
+import greenRect from "../assets/images/greenRect.svg";
+import halfcircle from "../assets/images/halfcircle.svg";
+import yellowCircleHalf from "../assets/images/yellowCircleHalf.svg.jpg";
+import SendIcon from '@mui/icons-material/Send';
+
+import { TextField ,makeStyles, Button } from '@material-ui/core'
+
+const useStyles = makeStyles({
+
+  root:{
+    "& .MuiOutlinedInput-root":{
+      width:"18rem",
+      height:"150px",
+    }
+  },
+
+  mainContainer : {
+      display:"grid",
+      justifyContent:"center",
+      position:"relative",
+      zIndex: 5
+  },
+  formContainer:{
+      position:"relative",
+      width:"23rem",
+      height:"auto",
+      justifyContent:"center",
+      padding:"10px",
+  },
+  inputbox:{
+   marginBottom:"1rem",
+   width:"18rem",
+   borderColor:"blue",
+  },
+  signbtn:{
+      width:"100%",
+      height:"2.5rem",
+      background : "#95a6fe",
+      color:"black",
+      fontSize:"1.1rem"
+  },
+  disablesignbtn:{
+      background:"rgb(149, 166, 254, 0.5)",
+      width:"100%",
+      height:"2.5rem",
+      color:"black",
+      fontSize:"1.1rem"
+  }
+})
+
+
+
 export const Contact = () => {
+
+
+  
+  let [errors, setErrors] = useState({
+    fnerror: '',
+    mesgerror: '',
+    emailerror: '',
+  });
+  let [value,setValue]=useState({
+    firstname: '',
+    message: '',
+    email: '',
+  });
+  
+  const handleChanges = (event) => {
+    setValue({
+        ...value, [event.target.name]: event.target.value,
+    })
+  }
+  const blur = (e) => {
+    let { name } = e.target
+    validateField(name)
+  }
+  
+  
+  const validateField = (name) => {
+    let isValid = false;
+  
+    if (name === "firstname") isValid = validateFirstName();
+    else if (name === "message") isValid = validateMessage();
+    else if (name === "email") isValid = validateEmailAddress();
+    return isValid;
+  }
+  const validateFirstName = () => {
+    let fnerror = ''
+    const valid = /^([A-Za-z][A-Za-z'-])+([A-Za-z][A-Za-z'-]+)*/
+    let fname = value.firstname
+    if (fname.trim() === "") fnerror = "First Name is required"
+    else if(!valid.test(fname)) fnerror="Name is not valid"
+    setErrors({
+        ...errors,fnerror: fnerror,
+    })
+  }
+  const validateEmailAddress = () => {
+  let emailerror = ''
+  const valid =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  let email = value.email
+  if (email.trim() === "") emailerror = "Email address is required"
+  else if(!valid.test(email)) emailerror="Email address is not valid"
+  setErrors({
+      ...errors,emailerror: emailerror,
+  })
+  }
+  const validateMessage = () => {
+    let mesgerror = ''
+    const valid = /^([A-Za-z][A-Za-z'-])+([A-Za-z][A-Za-z'-]+)*/
+    let msgname = value.message
+    if (msgname.trim() === "") mesgerror = "Message is required"
+    else if(!valid.test(msgname)) mesgerror="Message is not valid"
+    setErrors({
+        ...errors,mesgerror: mesgerror,
+    })
+  }
+
+
+
+  const classes = useStyles();
+
   return (
     <div>
       <div class="header font-black">Contact Us</div>
       <div className="sub-header">
         Any Questions or Remarks? Just write us a Question
       </div>
-      <div class="box shadow w-1190 h-840 bg-white rounded-lg mb-1 ml-12  mr-12 mt-20">
-        <div className="box-primary">
-          <div class="inner-Box mb-4 mt-8 ml-10">
-            <div className="head text-3xl mb-14 font-extrabold">
+      <div className="images-phone w-0">
+         
+          <div className="yellow">
+            <img src={yellowCircleHalf} alt="" />
+          </div>
+          <div className="green">
+            <img src={halfcircle} alt="" />
+          </div>
+          <div className="blue">
+            <img src={blueCircleHalf} alt="" />
+          </div>
+          <div className="red">
+            <img src={redCircleHalf} alt="" />
+          </div>
+          <div className="yellow1">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="green1">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="blue1">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="red1">
+            <img src={redCircle} alt="" />
+          </div>
+          <div className="blue2">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="red2">
+            <img src={redCircle} alt="" />
+          </div>
+          <div className="red3">
+            <img src={redCircle} alt="" />
+          </div>
+          <div className="yellowR1">
+            <img src={yellowRect} alt="" />
+          </div>
+          <div className="yellowR2">
+            <img src={yellowRect} alt="" />
+          </div>
+          <div className="yellowR3">
+            <img src={yellowRect} alt="" />
+          </div>
+          <div className="blueR">
+            <img src={blueRect} alt="" />
+          </div>
+          <div className="greenR">
+            <img src={greenRect} alt="" />
+          </div>
+
+      </div>
+
+      <div className="images-desktop">
+          <div className="greenR-d">
+            <img src={greenRect} alt="" />
+          </div>
+          <div className="blueR-d">
+            <img src={blueRect} alt="" />
+          </div>
+          <div className="redR-d">
+            <img src={redRect} alt="" />
+          </div>
+          <div className="yellowR-d">
+            <img src={yellowRect} alt="" />
+          </div>
+          <div className="blue1d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue2d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue3d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue4d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue5d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue6d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue7d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue8d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue9d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue10d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue11d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="blue12d">
+            <img src={blueCircle} alt="" />
+          </div>
+          <div className="green1d">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="green2d">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="green3d">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="green4d">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="green5d">
+            <img src={greenCircle} alt="" />
+          </div>
+          <div className="yellow1d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow2d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow3d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow4d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow5d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow6d">
+            <img src={yellowCircle} alt="" />
+          </div>
+          <div className="yellow7d">
+            <img src={yellowCircle} alt="" />
+          </div>
+
+      </div>
+
+      <div class="box shadow w-1190 h-820 bg-white  mb-1 ml-12  mr-12 mt-20">
+     <div className="box-primary">
+     <div class="inner-Box mb-4 mt-8 ml-20">
+     
+            <div className="head text-4xl mb-14 font-extrabold">
               Lets Talk ?
             </div>
-            <label
-              class="block text-gray-700 font-medium mb-2 text-2xl ml-0.5"
+        
+
+                <TextField 
+                    className={classes.inputbox}
+                    autoFocus='1' 
+                    label="Your Name" 
+                    name='firstname' 
+                    onChange={handleChanges} 
+                    value={value.firstname} 
+                    type="text" 
+                    variant="outlined" 
+                    onBlur={blur} />
+                <div  style={{marginTop:"-15px",paddingBottom:"15px", color:"red",fontSize:"0.9rem", marginBottom:"4rem"}}>{errors.fnerror}</div>
+            
+                <TextField 
+                    className={classes.inputbox}  
+                    label="Your Email" 
+                    name='email' 
+                    onChange={handleChanges} 
+                    value={value.email} 
+                    type="email" 
+                    variant="outlined" 
+                    onBlur={blur} />
+                <div  style={{marginTop:"-15px",paddingBottom:"15px", color:"red",fontSize:"0.9rem" , marginBottom:"4rem"}}>{errors.emailerror}</div>
+            
+                <div className="message-box">
+                <TextField 
+                    className={classes.root}  
+                    label="Your Message" 
+                    name='message' 
+                    onChange={handleChanges} 
+                    value={value.message} 
+                    type="text" 
+                    variant="outlined" 
+                    onBlur={blur} />
+                </div>
+                <div  style={{marginTop:"-15px",paddingBottom:"15px", color:"red",fontSize:"0.9rem" , marginBottom:"4rem"}}>{errors.mesgerror}</div>
+            
+            <Button variant="contained" endIcon={<SendIcon />} style={{width:"13rem",height:"3rem" ,fontSize:"1.5rem",backgroundColor:"rgba(67, 133, 243, 1)",color:"white"}}>
+              Submit
+            </Button>
+
+            {/*<label
+              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
               for="username"
             >
               Your Name
@@ -28,7 +341,7 @@ export const Contact = () => {
               placeholder="Your Name"
             />
             <label
-              class="block text-gray-700 font-medium mb-2 text-2xl ml-0.5"
+              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
               for="email"
             >
               Your Email
@@ -47,18 +360,17 @@ export const Contact = () => {
                 class="box-mail2 shadow appearance-none border rounded w-28 h-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="username"
                 type="text"
-                placeholder="
-        "
+                placeholder=""
               />
             </div>
             <label
-              class="block text-gray-700 font-medium mb-2 text-2xl ml-0.5"
+              class="block text-gray-700 font-medium mb-2 text-xl ml-0.5"
               for="email"
             >
-              Message
+              Your Message
             </label>
             <input
-              class="form shadow appearance-none border mb-14 rounded w-96 h-24 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="form-message shadow appearance-none border mb-14 rounded w-96 h-24 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
             />
@@ -66,7 +378,8 @@ export const Contact = () => {
               <button class="bg-blue-500 hover:bg-blue-700 w-36 h-12 text-white text-xl font-bold py-2 px-4 rounded-xl">
                 Submit{" "}
               </button>
-            </div>
+            </div>*/}
+             
           </div>
         </div>
         <div className="box-secondary">
@@ -90,7 +403,7 @@ export const Contact = () => {
                   size="2x"
                 />
               </div>
-              <div className="detail h-28 text-l font-extrabold  py-3">
+              <div className="detail h-28 text-xl font-semibold  py-3">
                 No. U-15, J.V.P.D. Scheme, Bhaktivedanta Swami Rd, Opp.Cooper
                 Hospital, Vile Parle, Mumbai, Maharashtra 400056{" "}
               </div>
@@ -103,7 +416,7 @@ export const Contact = () => {
                   size="2x"
                 />
               </div>
-              <div className="detail h-28 text-xl w-200 p-6 font-extrabold">
+              <div className="detail h-28 text-xl w-200 pl-3 p-6 font-semibold">
                 +91 939282927
               </div>
             </div>
