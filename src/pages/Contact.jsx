@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import yellowCircle from "../assets/images/yellowCircle.svg";
 import greenCircle from "../assets/images/greenCircle.svg";
-import blueCircle from "../assets/images/blueCircle.svg";
+import blueCircle from "../assets/images/blueCircle.jpg";
 import blueCircleHalf from "../assets/images/blueCircle.svg.jpg";
 import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.svg.jpg";
