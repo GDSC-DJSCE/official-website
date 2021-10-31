@@ -75,7 +75,7 @@ import vector2 from "../../assets/images/team/Vector5.svg";
 import vector3 from "../../assets/images/team/Vector1.svg";
 import vector4 from "../../assets/images/team/Vector2.svg";
 import { TCard, THead } from "../../components";
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Link } from "react-router-dom";
 
