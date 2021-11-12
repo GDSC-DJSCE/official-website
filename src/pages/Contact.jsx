@@ -192,7 +192,7 @@ export const Contact = () => {
         <div className="blueR-d">
           <img src={blueRect} alt="" />
         </div>
-        <div className="redR-d">
+        <div style={{position:"absolute" , top:"155%",left:"20%",width:"25px",height:"25px",opacity:"80%",overflow:"hidden"}}>
           <img src={redRect} alt="" />
         </div>
         <div className="yellowR-d">
@@ -249,7 +249,7 @@ export const Contact = () => {
         <div className="green5d">
           <img src={greenCircle} alt="" />
         </div>
-        <div class="yellow1d">
+        <div className="yellow1d">
           <img src={yellowCircle} alt="" />
         </div>
         <div className="yellow2d">
