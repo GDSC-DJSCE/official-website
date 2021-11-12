@@ -159,7 +159,7 @@ export const Contact = () => {
         <div className="red1">
           <img src={redCircle} alt="" />
         </div>
-        <div className="blue2">
+        <div class="blue2">
           <img src={blueCircle} alt="" />
         </div>
         <div className="red2">
@@ -186,7 +186,7 @@ export const Contact = () => {
       </div>
 
       <div className="images-desktop">
-        <div className="greenR-d">
+        <div class="greenR-d">
           <img src={greenRect} alt="" />
         </div>
         <div className="blueR-d">
@@ -249,7 +249,7 @@ export const Contact = () => {
         <div className="green5d">
           <img src={greenCircle} alt="" />
         </div>
-        <div className="yellow1d">
+        <div class="yellow1d">
           <img src={yellowCircle} alt="" />
         </div>
         <div className="yellow2d">
@@ -281,7 +281,7 @@ export const Contact = () => {
 
             <TextField
               className={classes.inputbox}
-              autoFocus="1"
+              //autoFocus="1"
               label="Your Name"
               name="firstname"
               onChange={handleChanges}
@@ -372,7 +372,7 @@ export const Contact = () => {
                 marginTop: "-120px",
                 marginLeft: "-50px",
               }}
-              src="https://s3-alpha-sig.figma.com/img/49e5/d9ca/1766733d946a6d5719a7e3fbf89d1a7c?Expires=1635724800&Signature=FJ-o4y9kKsQq86DU8HTITIO6zh5RKwojE6o3sN1YHJ-zNS6d4grTa8OgltSXtsSO0p027R~524DpL2UgQzJBIySn8RQDumdH7uuBVWx0aD5XvywccNDRXfSE9O2CdZVXgzrQd6xa182avXHDJSjskMTOvhSTXgA76tKr0eb39P3p4xm6GocMrRYjtNA9uccA~pfIHuVtEDxOcZSjtNKeEi10XYN4n5HarDBkb4UnfPUiuQw1ocAuVcoNUERBBwq10qGRWAtDS3wCvTn-3GKBSWSdFAxzOp5fpJrk-EQVAOfvVaNZGFPQ32F8C74WYTIdHTExHAe1SlnMLv6vzQ61gw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              src="https://s3-alpha-sig.figma.com/img/49e5/d9ca/1766733d946a6d5719a7e3fbf89d1a7c?Expires=1637539200&Signature=McAjviCi8Z9SzpotbxFdy-AainV~Gu2lSU9UAfkNISa1tbKmLZPj6C1-aZulriflFdkp5r9YPX2lZUDg2ZAj~oCdw3BSx8s999z~U4BVb8HztWzu7S2wipCz2hcoPqCbtLyCpNIOtZQH2mVoou27TD7cgnE0SXgsTN~xxcQ~tYl45LPDV~m2bOL-ijFsaD0EL6rl3v-L~cCFjNEsrDQzi9NyyYAFWOPhyDD-Xa1vJPdAIRGb1RADFZGotnhIEjCuhSuUoxsTMlYM55VETFHLkBS0kupwBbnrZPU8pdkGwpoIVFqOhQ5Q0qlKKpHkKO8Dsl8PAyRwtu-x8BUUCqQPfg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
               alt=""
             />
           </div>
