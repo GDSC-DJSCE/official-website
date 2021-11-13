@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import yellowCircle from "../assets/images/yellowCircle.svg";
 import greenCircle from "../assets/images/greenCircle.svg";
-//import blueCircle from "../assets/images/blueCircle.png";
+import blueCircle from "../assets/images/blueCircle.png";
 import blueCircleHalf from "../assets/images/blueCircleHalf.jpg";
 import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.jpg";
 //import redRect from "../assets/images/redRect.svg";
 import Contactpage from "../assets/images/Contactpage.gif"
-//import blueRect from "../assets/images/blueRect.svg";
+import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
 import halfcircle from "../assets/images/halfcircle.svg";
@@ -20,9 +20,9 @@ import SendIcon from "@mui/icons-material/Send";
 import { TextField, makeStyles, Button } from "@material-ui/core";
 
 var redRect = require('../assets/images/redRect.svg');
-var blueRect = require('../assets/images/blueRect.svg');
+//var blueRect = require('../assets/images/blueRect.svg');
 //
-var blueCircle = require('../assets/images/blueCircle.png')
+//var blueCircle = require('../assets/images/blueCircle.png')
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
@@ -168,13 +168,13 @@ export const Contact = () => {
           <img src={greenCircle} alt="" />
         </div>
         <div className="blue1">
-          <img src={blueCircle.default} alt="" />
+          <img src={blueCircle} alt="" />
         </div>
         <div className="red1">
           <img src={redCircle} alt="" />
         </div>
         <div className={classes.blue2}>
-          <img src={blueCircle.default} alt="" />
+          <img src={blueCircle} alt="" />
         </div>
         <div className="red2">
           <img src={redCircle} alt="" />
