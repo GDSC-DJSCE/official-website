@@ -278,7 +278,7 @@ export const Contact = () => {
         <div className="box-primary">
           <div class="inner-Box mb-4 mt-8 ml-20">
             <div className="head text-4xl mb-14 font-extrabold">
-              Lets Talk ?
+              Lets Talk 
             </div>
 
             <TextField
