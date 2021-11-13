@@ -164,7 +164,7 @@ export const Contact = () => {
         <div className="red1">
           <img src={redCircle} alt="" />
         </div>
-        <div class="blue2">
+        <div className="blue2">
           <img src={blueCircle.default} alt="" />
         </div>
         <div className="red2">
