@@ -63,6 +63,15 @@ const useStyles = makeStyles({
     color: "black",
     fontSize: "1.1rem",
   },
+  blue2:{
+    position: "absolute",
+    top: "60%",
+    left: "40%",
+    width: "18px",
+    height: "18px",
+    opacity: "60%",
+    overflow: "hidden",
+  }
 });
 
 export const Contact = () => {
@@ -164,7 +173,7 @@ export const Contact = () => {
         <div className="red1">
           <img src={redCircle} alt="" />
         </div>
-        <div className="blue2">
+        <div className={classes.blue2}>
           <img src={blueCircle.default} alt="" />
         </div>
         <div className="red2">
