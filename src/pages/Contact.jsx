@@ -10,7 +10,7 @@ import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.jpg";
 //import redRect from "../assets/images/redRect.svg";
 import Contactpage from "../assets/images/Contactpage.gif"
-import blueRect from "../assets/images/blueRect.svg";
+//import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
 import halfcircle from "../assets/images/halfcircle.svg";
@@ -20,6 +20,8 @@ import SendIcon from "@mui/icons-material/Send";
 import { TextField, makeStyles, Button } from "@material-ui/core";
 
 var redRect = require('../assets/images/redRect.svg');
+var blueRect = require('../assets/images/blueRect.svg');
+
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
@@ -192,7 +194,7 @@ export const Contact = () => {
           <img src={greenRect} alt="" />
         </div>
         <div className="blueR-d">
-          <img src={blueRect} alt="" />
+          <img src={blueRect.default} alt="" />
         </div>
         <div style={{position:"absolute" , top:"155%",left:"20%",width:"25px",height:"25px",opacity:"80%",overflow:"hidden"}}>
           <img src={redRect.default} alt="" />
