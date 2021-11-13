@@ -62,16 +62,16 @@ const useStyles = makeStyles({
   },
   blue2:{
     position: "absolute",
-    top: "62%",
+    top: "65%",
     left: "40%",
-    width: "18px",
-    height: "18px",
+    width: "10px",
+    height: "10px",
     opacity: "60%",
     overflow: "hidden",
   },
   red1:{
     position: "absolute",
-    top: "75%",
+    top: "50%",
     left: "42px",
     width: "15px",
     height: "15px",
@@ -79,7 +79,7 @@ const useStyles = makeStyles({
   },
   red2:{
     position:"absolute",
-    top:"38%",
+    top:"42%",
     left:"9%",
     width:"18px",
     height:"18px",
@@ -88,17 +88,17 @@ const useStyles = makeStyles({
   },
   green1:{
     position:"absolute",
-    top:"83%",
+    top:"95%",
     left:"75%",
-    width:"20px",
-    height:"20px",
+    width:"17px",
+    height:"17px",
     opacity:"60%",
 
   },
   blue1:{
     position:"absolute",
-    top:"30%",
-    left:"75%",
+    top:"50%",
+    left:"80%",
     width:"30px",
     height:"30px",
     opacity:"50%",
@@ -568,8 +568,8 @@ export const Contact = () => {
       <div class="box shadow w-1190 h-820 bg-white  mb-1 ml-12  mr-12 mt-20">
         <div className="box-primary">
           <div class="inner-Box mb-4 mt-8 ml-20">
-            <div className="head text-4xl mb-14 font-extrabold">
-              Lets Talk 
+            <div className="head text-3xl mb-14 font-bold">
+              Lets Talk ?
             </div>
 
             <TextField
