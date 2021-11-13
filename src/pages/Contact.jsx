@@ -115,19 +115,19 @@ const useStyles = makeStyles({
   },
   yellowR2:{
     position:"absolute",
-    top:"93%",
+    top:"97%",
     left:"7.5%",
-    width:"20px",
-    height:"20px",
+    width:"15px",
+    height:"15px",
     opacity:"30%",
 
   },
   yellowR3:{
     position:"absolute",
-    top:"105%",
+    top:"101%",
     left:"65%",
-    width:"20px",
-    height:"20px",
+    width:"15px",
+    height:"15px",
     opacity:"30%",
 
   },
