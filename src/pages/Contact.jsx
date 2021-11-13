@@ -156,6 +156,102 @@ const useStyles = makeStyles({
     height:"30px",
     opacity:"60%",
   },
+  blue1d:{
+    position:"absolute",
+    top:"58%",
+    left:"85%",
+    width:"25px",
+    height:"25px",
+    opacity:"50%",
+  },
+  blue2d:{
+    position:"absolute",
+    top:"145%",
+    left:"55%",
+    width:"25px",
+    height:"25px",
+    opacity:"50%",
+  },
+  blue3d:{
+    position:"absolute",
+    top:"152%",
+    left:"80%",
+    width:"25px",
+    height:"25px",
+    opacity:"50%",
+  },
+  blue4d:{
+    position:"absolute",
+    top:"48%",
+    left:"6%",
+    width:"25px",
+    height:"25px",
+    opacity:"40%",
+  },
+  blue5d:{
+    position:"absolute",
+    top:"147%",
+    left:"10%",
+    width:"20px",
+    height:"20px",
+    opacity:"40%",
+  },
+  blue6d:{
+    position:"absolute",
+    top:"120%",
+    left:"5%",
+    width:"20px",
+    height:"20px",
+    opacity:"40%",
+  },
+  blue7d:{
+    position:"absolute",
+    top:"75%",
+    left:"5%",
+    width:"12px",
+    height:"12px",
+    opacity:"40%",
+  },
+  blue8d:{
+    position:"absolute",
+    top:"68%",
+    left:"47%",
+    width:"10px",
+    height:"10px",
+    opacity:"50%",
+  },
+  blue9d:{
+    position:"absolute",
+    top:"95%",
+    left:"35%",
+    width:"12px",
+    height:"12px",
+    opacity:"40%",
+  },
+  blue10d:{
+    position:"absolute",
+    top:"151%",
+    left:"22%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  blue11d:{
+    position:"absolute",
+    top:"148%",
+    left:"28%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  blue12d:{
+    position:"absolute",
+    top:"142%",
+    left:"34%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  }
 
 
   
@@ -299,40 +395,40 @@ export const Contact = () => {
         <div className="yellowR-d">
           <img src={yellowRect} alt="" />
         </div>
-        <div className="blue1d">
+        <div className={classes.blue1d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue2d">
+        <div className={classes.blue2d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue3d">
+        <div className={classes.blue3d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue4d">
+        <div className={classes.blue4d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue5d">
+        <div className={classes.blue5d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue6d">
+        <div className={classes.blue6d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue7d">
+        <div className={classes.blue7d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue8d">
+        <div className={classes.blue8d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue9d">
+        <div className={classes.blue9d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue10d">
+        <div className={classes.blue10d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue11d">
+        <div className={classes.blue11d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="blue12d">
+        <div className={classes.blue12d}>
           <img src={blueCircle} alt="" />
         </div>
         <div className="green1d">
