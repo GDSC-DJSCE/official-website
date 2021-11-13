@@ -10,6 +10,7 @@ import {
   OutreachEvents,
   Team,
 } from "../pages";
+import EventsDetail from '../pages/EventsDetail';
 import { Header, Footer } from "./";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/team" component={Team} />
         <Route exact path="/team/lead" component={Lead} />
         <Route exact path="/team/domain-head" component={DomainHead} />
+        <Route path="/events/:id" component={EventsDetail} />
         <Route
           exact
           path="/team/content-editoral"
