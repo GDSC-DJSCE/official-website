@@ -20,9 +20,6 @@ import SendIcon from "@mui/icons-material/Send";
 import { TextField, makeStyles, Button } from "@material-ui/core";
 
 var redRect = require('../assets/images/redRect.svg');
-//var blueRect = require('../assets/images/blueRect.svg');
-//
-//var blueCircle = require('../assets/images/blueCircle.png')
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
@@ -71,6 +68,15 @@ const useStyles = makeStyles({
     height: "18px",
     opacity: "60%",
     overflow: "hidden",
+  },
+  red2:{
+    position:"absolute",
+    top:"38%",
+    left:"9%",
+    width:"18px",
+    height:"18px",
+    opacity:"60%",
+
   }
 });
 
@@ -176,7 +182,7 @@ export const Contact = () => {
         <div className={classes.blue2}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="red2">
+        <div className={classes.red2}>
           <img src={redCircle} alt="" />
         </div>
         <div className="red3">
@@ -295,7 +301,7 @@ export const Contact = () => {
 
             <TextField
               className={classes.inputbox}
-              //autoFocus="1"
+              autoFocus="1"
               label="Your Name"
               name="firstname"
               onChange={handleChanges}
