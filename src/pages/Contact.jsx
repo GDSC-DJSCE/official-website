@@ -62,7 +62,7 @@ const useStyles = makeStyles({
   },
   blue2:{
     position: "absolute",
-    top: "65%",
+    top: "40%",
     left: "40%",
     width: "10px",
     height: "10px",
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
   },
   red1:{
     position: "absolute",
-    top: "50%",
+    top: "60%",
     left: "42px",
     width: "15px",
     height: "15px",
