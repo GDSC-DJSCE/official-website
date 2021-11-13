@@ -251,7 +251,103 @@ const useStyles = makeStyles({
     width:"10px",
     height:"10px",
     opacity:"40%",
-  }
+  },
+  green1d:{
+    position:"absolute",
+    top:"128%",
+    left:"92%",
+    width:"25px",
+    height:"25px",
+    opacity:"40%",
+  },
+  green2d:{
+    position:"absolute",
+    top:"135%",
+    left:"88%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  green3d:{
+    position:"absolute",
+    top:"144%",
+    left:"85%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  green4d:{
+    position:"absolute",
+    top:"142%",
+    left:"34%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  green5d:{
+    position:"absolute",
+    top:"64%",
+    left:"42%",
+    width:"15px",
+    height:"15px",
+    opacity:"40%",
+  },
+  yellow1d:{
+    position:"absolute",
+    top:"52%",
+    left:"55%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  yellow2d:{
+    position:"absolute",
+    top:"75%",
+    left:"38%",
+    width:"15px",
+    height:"15px",
+    opacity:"40%",
+  },
+  yellow3d:{
+    position:"absolute",
+    top:"55%",
+    left:"35%",
+    width:"10px",
+    height:"10px",
+    opacity:"40%",
+  },
+  yellow4d:{
+    position:"absolute",
+    top:"99%",
+    left:"58%",
+    width:"22px",
+    height:"22px",
+    opacity:"40%",
+  },
+  yellow5d:{
+    position:"absolute",
+    top:"160%",
+    left:"38%",
+    width:"25px",
+    height:"25px",
+    opacity:"40%",
+  },
+  yellow6d:{
+    position:"absolute",
+    top:"149%",
+    left:"72%",
+    width:"15px",
+    height:"15px",
+    opacity:"40%",
+  },
+  yellow7d:{
+    position:"absolute",
+    top:"130%",
+    left:"81%",
+    width:"20px",
+    height:"20px",
+    opacity:"40%",
+  },
 
 
   
@@ -431,40 +527,40 @@ export const Contact = () => {
         <div className={classes.blue12d}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="green1d">
+        <div className={classes.green1d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="green2d">
+        <div className={classes.green2d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="green3d">
+        <div className={classes.green3d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="green4d">
+        <div className={classes.green4d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="green5d">
+        <div className={classes.green5d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="yellow1d">
+        <div className={classes.yellow1d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow2d">
+        <div className={classes.yellow2d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow3d">
+        <div className={classes.yellow3d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow4d">
+        <div className={classes.yellow4d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow5d">
+        <div className={classes.yellow5d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow6d">
+        <div className={classes.yellow6d}>
           <img src={yellowCircle} alt="" />
         </div>
-        <div className="yellow7d">
+        <div className={classes.yellow7d}>
           <img src={yellowCircle} alt="" />
         </div>
       </div>
