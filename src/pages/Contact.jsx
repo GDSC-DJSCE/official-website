@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
       width: "18rem",
-      height: "150px",
+      height: "100px",
     },
   },
 
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
   },
   blue2:{
     position: "absolute",
-    top: "60%",
+    top: "62%",
     left: "40%",
     width: "18px",
     height: "18px",
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
   },
   red1:{
     position: "absolute",
-    top: "80%",
+    top: "75%",
     left: "42px",
     width: "15px",
     height: "15px",
@@ -631,8 +631,8 @@ export const Contact = () => {
             </div>
             <div
               style={{
-                marginTop: "-19px",
-                paddingBottom: "15px",
+                marginTop: "2px",
+                paddingBottom: "5px",
                 color: "red",
                 fontSize: "0.9rem",
                 marginBottom: "4rem",
@@ -646,8 +646,8 @@ export const Contact = () => {
               variant="contained"
               endIcon={<SendIcon />}
               style={{
-                width: "13rem",
-                height: "3rem",
+                width: "12rem",
+                height: "2.5rem",
                 fontSize: "1.5rem",
                 backgroundColor: "rgba(67, 133, 243, 1)",
                 color: "white",
