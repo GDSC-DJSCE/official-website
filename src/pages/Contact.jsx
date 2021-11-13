@@ -9,6 +9,7 @@ import blueCircleHalf from "../assets/images/blueCircleHalf.jpg";
 import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.jpg";
 //import redRect from "../assets/images/redRect.svg";
+import Contactpage from "../assets/images/Contactpage.gif"
 import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
@@ -373,7 +374,7 @@ export const Contact = () => {
                 marginTop: "-120px",
                 marginLeft: "-50px",
               }}
-              src="https://s3-alpha-sig.figma.com/img/49e5/d9ca/1766733d946a6d5719a7e3fbf89d1a7c?Expires=1637539200&Signature=McAjviCi8Z9SzpotbxFdy-AainV~Gu2lSU9UAfkNISa1tbKmLZPj6C1-aZulriflFdkp5r9YPX2lZUDg2ZAj~oCdw3BSx8s999z~U4BVb8HztWzu7S2wipCz2hcoPqCbtLyCpNIOtZQH2mVoou27TD7cgnE0SXgsTN~xxcQ~tYl45LPDV~m2bOL-ijFsaD0EL6rl3v-L~cCFjNEsrDQzi9NyyYAFWOPhyDD-Xa1vJPdAIRGb1RADFZGotnhIEjCuhSuUoxsTMlYM55VETFHLkBS0kupwBbnrZPU8pdkGwpoIVFqOhQ5Q0qlKKpHkKO8Dsl8PAyRwtu-x8BUUCqQPfg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              src={Contactpage}
               alt=""
             />
           </div>
