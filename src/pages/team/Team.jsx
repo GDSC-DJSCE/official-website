@@ -83,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
   topimg: {
     width: "100%",
     opacity: "0.6",
+    [theme.breakpoints.up("xs")]: {
+      display: "none",
+    },
   },
   headSm: {
     width: "670px",
