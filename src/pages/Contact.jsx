@@ -69,6 +69,14 @@ const useStyles = makeStyles({
     opacity: "60%",
     overflow: "hidden",
   },
+  red1:{
+    position: "absolute",
+    top: "80%",
+    left: "42px",
+    width: "15px",
+    height: "15px",
+    opacity: "50%",
+  },
   red2:{
     position:"absolute",
     top:"38%",
@@ -86,7 +94,62 @@ const useStyles = makeStyles({
     height:"20px",
     opacity:"60%",
 
+  },
+  blue1:{
+    position:"absolute",
+    top:"30%",
+    left:"75%",
+    width:"30px",
+    height:"30px",
+    opacity:"50%",
+
+  },
+  yellowR1:{
+    position:"absolute",
+    top:"40%",
+    left:"50%",
+    width:"18px",
+    height:"18px",
+    opacity:"50%",
+
+  },
+  yellowR2:{
+    position:"absolute",
+    top:"87%",
+    left:"7.5%",
+    width:"20px",
+    height:"20px",
+    opacity:"30%",
+
+  },
+  yellowR3:{
+    position:"absolute",
+    top:"105%",
+    left:"65%",
+    width:"20px",
+    height:"20px",
+    opacity:"30%",
+
+  },
+  blueR:{
+    position:"absolute",
+    top:"75.5%",
+    left:"46%",
+    width:"19px",
+    height:"19px",
+    opacity:"30%",
+
+  },
+  greenR:{
+    position:"absolute",
+    top:"54%",
+    left:"78%",
+    width:"20px",
+    height:"20px",
+    opacity:"30%",
   }
+
+
   
 });
 
@@ -183,10 +246,10 @@ export const Contact = () => {
         <div className={classes.green1}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className="blue1">
+        <div className={classes.blue1}>
           <img src={blueCircle} alt="" />
         </div>
-        <div className="red1">
+        <div className={classes.red1}>
           <img src={redCircle} alt="" />
         </div>
         <div className={classes.blue2}>
@@ -198,19 +261,19 @@ export const Contact = () => {
         <div className="red3">
           <img src={redCircle} alt="" />
         </div>
-        <div className="yellowR1">
+        <div className={classes.yellowR1}>
           <img src={yellowRect} alt="" />
         </div>
-        <div className="yellowR2">
+        <div className={classes.yellowR2}>
           <img src={yellowRect} alt="" />
         </div>
-        <div className="yellowR3">
+        <div className={classes.yellowR3}>
           <img src={yellowRect} alt="" />
         </div>
-        <div className="blueR">
+        <div className={classes.blueR}>
           <img src={blueRect} alt="" />
         </div>
-        <div className="greenR">
+        <div className={classes.greenR}>
           <img src={greenRect} alt="" />
         </div>
       </div>
