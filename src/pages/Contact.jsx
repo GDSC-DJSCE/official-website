@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import yellowCircle from "../assets/images/yellowCircle.svg";
 import greenCircle from "../assets/images/greenCircle.svg";
-import blueCircle from "../assets/images/blueCircle.jpg";
+import blueCircle from "../assets/images/blueCircle.png";
 import blueCircleHalf from "../assets/images/blueCircleHalf.jpg";
 import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.jpg";
-import redRect from "../assets/images/redRect.svg";
+//import redRect from "../assets/images/redRect.svg";
+import Contactpage from "../assets/images/Contactpage.gif"
 import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
@@ -18,6 +19,10 @@ import SendIcon from "@mui/icons-material/Send";
 
 import { TextField, makeStyles, Button } from "@material-ui/core";
 
+var redRect = require('../assets/images/redRect.svg');
+//var blueRect = require('../assets/images/blueRect.svg');
+//
+//var blueCircle = require('../assets/images/blueCircle.png')
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
@@ -58,6 +63,15 @@ const useStyles = makeStyles({
     color: "black",
     fontSize: "1.1rem",
   },
+  blue2:{
+    position: "absolute",
+    top: "60%",
+    left: "40%",
+    width: "18px",
+    height: "18px",
+    opacity: "60%",
+    overflow: "hidden",
+  }
 });
 
 export const Contact = () => {
@@ -159,7 +173,7 @@ export const Contact = () => {
         <div className="red1">
           <img src={redCircle} alt="" />
         </div>
-        <div className="blue2">
+        <div className={classes.blue2}>
           <img src={blueCircle} alt="" />
         </div>
         <div className="red2">
@@ -186,14 +200,14 @@ export const Contact = () => {
       </div>
 
       <div className="images-desktop">
-        <div className="greenR-d">
+        <div class="greenR-d">
           <img src={greenRect} alt="" />
         </div>
         <div className="blueR-d">
-          <img src={blueRect} alt="" />
+          <img src={blueRect.default} alt="" />
         </div>
-        <div className="redR-d">
-          <img src={redRect} alt="" />
+        <div style={{position:"absolute" , top:"155%",left:"20%",width:"25px",height:"25px",opacity:"80%",overflow:"hidden"}}>
+          <img src={redRect.default} alt="" />
         </div>
         <div className="yellowR-d">
           <img src={yellowRect} alt="" />
@@ -276,12 +290,12 @@ export const Contact = () => {
         <div className="box-primary">
           <div class="inner-Box mb-4 mt-8 ml-20">
             <div className="head text-4xl mb-14 font-extrabold">
-              Lets Talk ?
+              Lets Talk 
             </div>
 
             <TextField
               className={classes.inputbox}
-              autoFocus="1"
+              //autoFocus="1"
               label="Your Name"
               name="firstname"
               onChange={handleChanges}
@@ -372,7 +386,7 @@ export const Contact = () => {
                 marginTop: "-120px",
                 marginLeft: "-50px",
               }}
-              src="https://s3-alpha-sig.figma.com/img/49e5/d9ca/1766733d946a6d5719a7e3fbf89d1a7c?Expires=1635724800&Signature=FJ-o4y9kKsQq86DU8HTITIO6zh5RKwojE6o3sN1YHJ-zNS6d4grTa8OgltSXtsSO0p027R~524DpL2UgQzJBIySn8RQDumdH7uuBVWx0aD5XvywccNDRXfSE9O2CdZVXgzrQd6xa182avXHDJSjskMTOvhSTXgA76tKr0eb39P3p4xm6GocMrRYjtNA9uccA~pfIHuVtEDxOcZSjtNKeEi10XYN4n5HarDBkb4UnfPUiuQw1ocAuVcoNUERBBwq10qGRWAtDS3wCvTn-3GKBSWSdFAxzOp5fpJrk-EQVAOfvVaNZGFPQ32F8C74WYTIdHTExHAe1SlnMLv6vzQ61gw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              src={Contactpage}
               alt=""
             />
           </div>
