@@ -593,8 +593,10 @@ export const Contact = () => {
         <div className={classes.yellow7d}>
           <img src={yellowCircle} alt="" />
         </div>
+        <div className="circle">
         <div className={classes.rgbyCircle1}>
           <img src={rgbyCircle} alt=""/>
+        </div>
         </div>
       </div>
 

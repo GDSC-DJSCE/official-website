@@ -139,9 +139,12 @@
     .box-map{
         display: none;
     }
+    .images-phone{
+        display: none;
+    }
    
 }
-@media screen and (min-width: 432px){
+@media screen and (min-width: 432px ){
     .images-phone{
         display: none;
     }
@@ -158,7 +161,6 @@
     .images-desktop{
         display: none;
     }
-    
     .box-image {
         display: none;
     }
