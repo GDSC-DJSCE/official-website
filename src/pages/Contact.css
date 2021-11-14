@@ -50,7 +50,7 @@
 }
 .greenR-d{
     position: absolute;
-    top: 81%;
+    top: 82%;
     left : 90%;
     width: 30px;
     height: 30px;
@@ -171,7 +171,7 @@
     .box{
         grid-template-rows: 70% 30%;
         grid-template-columns: 100%;
-        width: 328px;
+        width: 329px;
         height: 1000px;
         /*border: 1px solid black;*/
         margin-left: 30px;
