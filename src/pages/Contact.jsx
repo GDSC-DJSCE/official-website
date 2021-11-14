@@ -24,13 +24,13 @@ var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
-      width: "21rem",
+      width: "19rem",
       height: "100px",
     },
   },
   root1: {
     "& .MuiOutlinedInput-root": {
-      width: "21rem",
+      width: "19rem",
     },
   },
 
