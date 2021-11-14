@@ -182,10 +182,12 @@
         width: 295px ;
         height: 200px;
         overflow: hidden;
+        border-radius: 5px;
     }
     .box-social{
         margin-top: 250px;
     }
+    
 }
 
 @media screen and (max-width: 432px) and (min-width:0px){
@@ -211,7 +213,7 @@
         align-items: center;
     }
     .box{
-        grid-template-rows: 70% 30%;
+        grid-template-rows: 67% 33%;
         grid-template-columns: 100%;
         width: 329px;
         height: 1000px;
@@ -242,12 +244,14 @@
         grid-template-columns: 22% 22% 22% 22%;
     }
     .box-map{
-        margin: 10px;
+        margin: 5px;
         width: 295px ;
         height: 200px;
         overflow: hidden;
+        border-radius: 5px;
     }
     .submit{
+        margin-top:5px;
         width: 10rem;
         height: 2rem;
     }

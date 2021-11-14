@@ -15,6 +15,7 @@ import greenRect from "../assets/images/greenRect.svg";
 import halfcircle from "../assets/images/halfcircle.svg";
 import yellowCircleHalf from "../assets/images/yellowCircleHalf.jpg";
 import rgbyCircle from "../assets/images/rgbyCircle.svg";
+import rgby2 from "../assets/images/rgby2.svg";
 import SendIcon from "@mui/icons-material/Send";
 
 import { TextField, makeStyles, Button } from "@material-ui/core";
@@ -163,8 +164,8 @@ const useStyles = makeStyles({
   },
   red3:{
     position:"absolute",
-    top:"111%",
-    left:"40%",
+    top:"110%",
+    left:"55%",
     width:"30px",
     height:"30px",
     opacity:"60%",
@@ -176,6 +177,13 @@ const useStyles = makeStyles({
     width:"25px",
     height:"25px",
     opacity:"80%",
+  },
+  rgby2:{
+    position:"absolute" , 
+    marginTop:"1002px",
+    left:"75%",
+    width:"105px",
+    height:"105px",
   },
   blue1d:{
     position:"absolute",
@@ -506,6 +514,9 @@ export const Contact = () => {
         <div className={classes.greenR}>
           <img src={greenRect} alt="" />
         </div>
+        <div class={classes.rgby2}>
+          <img src={rgby2} alt=""/>
+        </div>
       </div>
 
       <div className="images-desktop">
@@ -567,9 +578,6 @@ export const Contact = () => {
         <div className={classes.green3d}>
           <img src={greenCircle} alt="" />
         </div>
-        {/*<div className={classes.green4d}>
-          <img src={greenCircle} alt="" />
-        </div>*/}
         <div className={classes.green5d}>
           <img src={greenCircle} alt="" />
         </div>
@@ -715,7 +723,7 @@ export const Contact = () => {
                   size="2x"
                 />
               </div>
-              <div className="detail h-28 text-xl font-semibold  py-3">
+              <div className="detail h-28 text-lg font-semibold  py-3">
                 No. U-15, J.V.P.D. Scheme, Bhaktivedanta Swami Rd, Opp.Cooper
                 Hospital, Vile Parle, Mumbai, Maharashtra 400056{" "}
               </div>
@@ -728,7 +736,7 @@ export const Contact = () => {
                   size="2x"
                 />
               </div>
-              <div className="detail h-28 text-xl w-200 pl-3 p-6 font-semibold">
+              <div className="detail h-28 text-lg w-200 pl-3 p-6 font-semibold">
                 +91 939282927
               </div>
             </div>
@@ -761,14 +769,18 @@ export const Contact = () => {
                 alt=""
               />
               </a>
+              <a href="https://www.linkedin.com/company/gdsc-djsce/">
               <img
                 src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png"
                 alt=""
               />
+              </a>
+              <a href="https://www.instagram.com/gdsc.djsce/">
               <img
                 src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png"
                 alt=""
               />
+              </a>
             </div>
           </div>
         </div>
