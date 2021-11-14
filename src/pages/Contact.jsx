@@ -24,13 +24,13 @@ var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
-      width: "23rem",
+      width: "21rem",
       height: "100px",
     },
   },
   root1: {
     "& .MuiOutlinedInput-root": {
-      width: "23rem",
+      width: "21rem",
     },
   },
 
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   },
   inputbox: {
     marginBottom: "1rem",
-    width: "18rem",
+    width: "17rem",
     borderColor: "blue",
   },
   signbtn: {
@@ -373,10 +373,10 @@ const useStyles = makeStyles({
   },
   rgbyCircle1:{
     position:"absolute",
-    marginTop:"730px",
-    left:"88%",
-    width:"150px",
-    height:"150px",
+    marginTop:"720px",
+    left:"87%",
+    width:"160px",
+    height:"160px",
   }
 
 
@@ -598,7 +598,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div class="box shadow" style={{height:"770px", margin:"50px"}}>
+      <div class="box shadow" >
         <div className="box-primary">
           <div class="inner-Box mb-4 mt-8 ml-20">
             <div className="head text-3xl mb-14 font-bold">
