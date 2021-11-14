@@ -509,6 +509,7 @@ export const Contact = () => {
       </div>
 
       <div className="images-desktop">
+        
         <div class="greenR-d">
           <img src={greenRect} alt="" />
         </div>
@@ -643,7 +644,7 @@ export const Contact = () => {
             </div>
             <div
               style={{
-                marginTop: "-15px",
+                marginTop: "2px",
                 paddingBottom: "15px",
                 color: "red",
                 fontSize: "0.9rem",
@@ -754,10 +755,12 @@ export const Contact = () => {
                 src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png"
                 alt=""
               />
+              <a href="mailto:prachipp999@gmail.com">
               <img
                 src="https://img.icons8.com/color/48/000000/gmail-new.png"
                 alt=""
               />
+              </a>
               <img
                 src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png"
                 alt=""
