@@ -8,23 +8,29 @@ import blueCircle from "../assets/images/blueCircle.png";
 import blueCircleHalf from "../assets/images/blueCircleHalf.jpg";
 import redCircle from "../assets/images/redCircle.svg";
 import redCircleHalf from "../assets/images/redCircle.jpg";
-//import redRect from "../assets/images/redRect.svg";
 import Contactpage from "../assets/images/Contactpage.gif"
 import blueRect from "../assets/images/blueRect.svg";
 import yellowRect from "../assets/images/yellowRect.svg";
 import greenRect from "../assets/images/greenRect.svg";
 import halfcircle from "../assets/images/halfcircle.svg";
 import yellowCircleHalf from "../assets/images/yellowCircleHalf.jpg";
+import rgbyCircle from "../assets/images/rgbyCircle.svg";
 import SendIcon from "@mui/icons-material/Send";
 
 import { TextField, makeStyles, Button } from "@material-ui/core";
+
 
 var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
   root: {
     "& .MuiOutlinedInput-root": {
-      width: "18rem",
+      width: "23rem",
       height: "100px",
+    },
+  },
+  root1: {
+    "& .MuiOutlinedInput-root": {
+      width: "23rem",
     },
   },
 
@@ -59,6 +65,13 @@ const useStyles = makeStyles({
     height: "2.5rem",
     color: "black",
     fontSize: "1.1rem",
+  },
+  box:{
+    width:"1180px",
+    height:"820",
+    marginLeft:"10px",
+    marginRight:"10px",
+
   },
   blue2:{
     position: "absolute",
@@ -124,7 +137,7 @@ const useStyles = makeStyles({
   },
   yellowR3:{
     position:"absolute",
-    top:"101%",
+    top:"103%",
     left:"65%",
     width:"15px",
     height:"15px",
@@ -156,17 +169,27 @@ const useStyles = makeStyles({
     height:"30px",
     opacity:"60%",
   },
+  redRect1:{
+    position:"absolute" , 
+    marginTop:"775px",
+    left:"20%",
+    width:"25px",
+    height:"25px",
+    opacity:"80%",
+  },
   blue1d:{
     position:"absolute",
-    top:"58%",
+    marginTop:"180px",
     left:"85%",
     width:"25px",
     height:"25px",
     opacity:"50%",
+    border:"2rem",
+    borderColor:"black",
   },
   blue2d:{
     position:"absolute",
-    top:"145%",
+    marginTop:"720px",
     left:"55%",
     width:"25px",
     height:"25px",
@@ -174,7 +197,7 @@ const useStyles = makeStyles({
   },
   blue3d:{
     position:"absolute",
-    top:"152%",
+    marginTop:"750px",
     left:"80%",
     width:"25px",
     height:"25px",
@@ -182,7 +205,7 @@ const useStyles = makeStyles({
   },
   blue4d:{
     position:"absolute",
-    top:"48%",
+    marginTop:"80px",
     left:"6%",
     width:"25px",
     height:"25px",
@@ -190,7 +213,7 @@ const useStyles = makeStyles({
   },
   blue5d:{
     position:"absolute",
-    top:"147%",
+    marginTop:"710px",
     left:"10%",
     width:"20px",
     height:"20px",
@@ -206,7 +229,7 @@ const useStyles = makeStyles({
   },
   blue7d:{
     position:"absolute",
-    top:"75%",
+    marginTop:"255px",
     left:"5%",
     width:"12px",
     height:"12px",
@@ -214,7 +237,7 @@ const useStyles = makeStyles({
   },
   blue8d:{
     position:"absolute",
-    top:"68%",
+    marginTop:"220px",
     left:"47%",
     width:"10px",
     height:"10px",
@@ -222,7 +245,7 @@ const useStyles = makeStyles({
   },
   blue9d:{
     position:"absolute",
-    top:"95%",
+    marginTop:"380px",
     left:"35%",
     width:"12px",
     height:"12px",
@@ -230,7 +253,7 @@ const useStyles = makeStyles({
   },
   blue10d:{
     position:"absolute",
-    top:"151%",
+    marginTop:"750px",
     left:"22%",
     width:"10px",
     height:"10px",
@@ -238,7 +261,7 @@ const useStyles = makeStyles({
   },
   blue11d:{
     position:"absolute",
-    top:"148%",
+    marginTop:"720px",
     left:"28%",
     width:"10px",
     height:"10px",
@@ -246,7 +269,7 @@ const useStyles = makeStyles({
   },
   blue12d:{
     position:"absolute",
-    top:"142%",
+    marginTop:"690px",
     left:"34%",
     width:"10px",
     height:"10px",
@@ -254,7 +277,7 @@ const useStyles = makeStyles({
   },
   green1d:{
     position:"absolute",
-    top:"128%",
+    marginTop:"600px",
     left:"92%",
     width:"25px",
     height:"25px",
@@ -262,7 +285,7 @@ const useStyles = makeStyles({
   },
   green2d:{
     position:"absolute",
-    top:"135%",
+    marginTop:"650px",
     left:"88%",
     width:"10px",
     height:"10px",
@@ -270,7 +293,7 @@ const useStyles = makeStyles({
   },
   green3d:{
     position:"absolute",
-    top:"144%",
+    marginTop:"700px",
     left:"85%",
     width:"10px",
     height:"10px",
@@ -286,7 +309,7 @@ const useStyles = makeStyles({
   },
   green5d:{
     position:"absolute",
-    top:"64%",
+    marginTop:"200px",
     left:"42%",
     width:"15px",
     height:"15px",
@@ -294,7 +317,7 @@ const useStyles = makeStyles({
   },
   yellow1d:{
     position:"absolute",
-    top:"52%",
+    marginTop:"120px",
     left:"55%",
     width:"10px",
     height:"10px",
@@ -302,7 +325,7 @@ const useStyles = makeStyles({
   },
   yellow2d:{
     position:"absolute",
-    top:"75%",
+    marginTop:"250px",
     left:"38%",
     width:"15px",
     height:"15px",
@@ -310,7 +333,7 @@ const useStyles = makeStyles({
   },
   yellow3d:{
     position:"absolute",
-    top:"55%",
+    marginTop:"150px",
     left:"35%",
     width:"10px",
     height:"10px",
@@ -318,7 +341,7 @@ const useStyles = makeStyles({
   },
   yellow4d:{
     position:"absolute",
-    top:"99%",
+    marginTop:"410px",
     left:"58%",
     width:"22px",
     height:"22px",
@@ -326,7 +349,7 @@ const useStyles = makeStyles({
   },
   yellow5d:{
     position:"absolute",
-    top:"160%",
+    marginTop:"770px",
     left:"38%",
     width:"25px",
     height:"25px",
@@ -334,7 +357,7 @@ const useStyles = makeStyles({
   },
   yellow6d:{
     position:"absolute",
-    top:"149%",
+    marginTop:"720px",
     left:"72%",
     width:"15px",
     height:"15px",
@@ -342,12 +365,19 @@ const useStyles = makeStyles({
   },
   yellow7d:{
     position:"absolute",
-    top:"130%",
+    marginTop:"600px",
     left:"81%",
     width:"20px",
     height:"20px",
     opacity:"40%",
   },
+  rgbyCircle1:{
+    position:"absolute",
+    marginTop:"730px",
+    left:"88%",
+    width:"150px",
+    height:"150px",
+  }
 
 
   
@@ -423,7 +453,7 @@ export const Contact = () => {
 
   return (
     <div>
-      <div class="header font-black">Contact Us</div>
+      <div class="header font-bold">Contact Us</div>
       <div className="sub-header">
         Any Questions or Remarks? Just write us a Question
       </div>
@@ -485,7 +515,7 @@ export const Contact = () => {
         <div className="blueR-d">
           <img src={blueRect.default} alt="" />
         </div>
-        <div style={{position:"absolute" , top:"155%",left:"20%",width:"25px",height:"25px",opacity:"80%",overflow:"hidden"}}>
+        <div className={classes.redRect1}>
           <img src={redRect.default} alt="" />
         </div>
         <div className="yellowR-d">
@@ -536,9 +566,9 @@ export const Contact = () => {
         <div className={classes.green3d}>
           <img src={greenCircle} alt="" />
         </div>
-        <div className={classes.green4d}>
+        {/*<div className={classes.green4d}>
           <img src={greenCircle} alt="" />
-        </div>
+        </div>*/}
         <div className={classes.green5d}>
           <img src={greenCircle} alt="" />
         </div>
@@ -563,9 +593,12 @@ export const Contact = () => {
         <div className={classes.yellow7d}>
           <img src={yellowCircle} alt="" />
         </div>
+        <div className={classes.rgbyCircle1}>
+          <img src={rgbyCircle} alt=""/>
+        </div>
       </div>
 
-      <div class="box shadow w-1190 h-820 bg-white  mb-1 ml-12  mr-12 mt-20">
+      <div class="box shadow" style={{height:"770px", margin:"50px"}}>
         <div className="box-primary">
           <div class="inner-Box mb-4 mt-8 ml-20">
             <div className="head text-3xl mb-14 font-bold">
@@ -594,9 +627,9 @@ export const Contact = () => {
             >
               {errors.fnerror}
             </div>
-
+            <div className="message-box">
             <TextField
-              className={classes.inputbox}
+              className={classes.root1}
               label="Your Email"
               name="email"
               onChange={handleChanges}
@@ -605,6 +638,7 @@ export const Contact = () => {
               variant="outlined"
               onBlur={blur}
             />
+            </div>
             <div
               style={{
                 marginTop: "-15px",
