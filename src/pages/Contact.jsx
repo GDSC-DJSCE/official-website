@@ -17,10 +17,13 @@ import yellowCircleHalf from "../assets/images/yellowCircleHalf.jpg";
 import rgbyCircle from "../assets/images/rgbyCircle.svg";
 import rgby2 from "../assets/images/rgby2.svg";
 import SendIcon from "@mui/icons-material/Send";
-
+import emailjs from "emailjs-com"
 import { TextField, makeStyles, Button } from "@material-ui/core";
 
-
+var user = process.env.REACT_APP_ACCESS_TOKEN
+console.log(user);
+var apikey = process.env.REACT_APP_EMAIL_ID
+console.log(apikey)
 var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
   root: {
@@ -456,9 +459,19 @@ export const Contact = () => {
       mesgerror: mesgerror,
     });
   };
-
   const classes = useStyles();
 
+  let templateParams = {
+    email:value.email,
+    to_email:'prachipp999@gmail.com',
+    message: value.message,
+  }
+  const onsubmit =() =>{
+    console.log(value.message)
+    console.log(value.firstname)
+    console.log(value.email)
+    emailjs.sendForm('gmail',apikey,templateParams,user)
+  }
   return (
     <div>
       <div class="header font-bold">Contact Us</div>
@@ -626,6 +639,7 @@ export const Contact = () => {
               type="text"
               variant="outlined"
               onBlur={blur}
+              
             />
             <div
               style={{
@@ -697,6 +711,7 @@ export const Contact = () => {
                 backgroundColor: "rgba(67, 133, 243, 1)",
                 color: "white",
               }}
+              onClick={onsubmit}
             >
               Submit
             </Button>
@@ -763,7 +778,7 @@ export const Contact = () => {
                 src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png"
                 alt=""
               />
-              <a href="mailto:prachipp999@gmail.com">
+              <a href="mailto:gdsc.djsce@gmail.com">
               <img
                 src="https://img.icons8.com/color/48/000000/gmail-new.png"
                 alt=""
