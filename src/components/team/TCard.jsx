@@ -59,7 +59,6 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
   container: {
     border: "2px",
-    margin: "0 23px",
     width: "165px",
     height: "180px",
     boxShadow:
