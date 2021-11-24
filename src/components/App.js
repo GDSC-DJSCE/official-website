@@ -35,6 +35,7 @@ function App() {
         <Route exact path="/team/outreach-events" component={OutreachEvents} />
         <Redirect to="/" />
       </Switch>
+
       <Footer />
     </>
   );
