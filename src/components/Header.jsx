@@ -67,7 +67,7 @@ export const  Header = () =>{
               {/*<div style={{display:"grid" , gridTemplateColumns:"20% 80%" ,justifyContent:"center" , alignItems:"center" , }}>*/}
               <img src={logo} alt="logo" style={{width:"50px" , height:"35px" , paddingTop:"1vh" , marginLeft:"35%"}}/>
               
-              <Typography className={classes.logo} style={{fontSize:"0.9rem" , margin:"15px"}}>
+              <Typography className={classes.logo} style={{fontSize:"0.7rem" , margin:"15px"}}>
               Developer Students Club
               </Typography>
             
