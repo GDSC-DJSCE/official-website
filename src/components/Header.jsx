@@ -73,7 +73,7 @@ export const  Header = () =>{
               
           </div>
           <div >
-              <img src={lighttheme} alt="logo" style={{width:"50px" , height:"50px" , paddingTop:"1vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
+              <img src={lighttheme} alt="logo" style={{width:"50px" , height:"50px" , paddingTop:"2vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
               </div>
           
         </div>
