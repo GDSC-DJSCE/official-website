@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginLeft:"120px",
     display: "flex",
-  paddingTop:"2.5vh"
+    paddingTop:"2.5vh"
   },
   logo: {
     justifyContent:"center",
@@ -73,7 +73,7 @@ export const  Header = () =>{
               
           </div>
           <div >
-              <img src={lighttheme} alt="logo" style={{width:"50px" , height:"50px" , paddingTop:"2vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
+              <img src={lighttheme} alt="logo" style={{width:"46px" , height:"50px" , paddingTop:"2vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
               </div>
           
         </div>
