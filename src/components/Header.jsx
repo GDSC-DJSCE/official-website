@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 export const  Header = () =>{
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
       <AppBar className={classes.roots} style={{position:"relative"}}>
@@ -67,14 +67,14 @@ export const  Header = () =>{
               {/*<div style={{display:"grid" , gridTemplateColumns:"20% 80%" ,justifyContent:"center" , alignItems:"center" , }}>*/}
               <img src={logo} alt="logo" style={{width:"50px" , height:"35px" , paddingTop:"1vh" , marginLeft:"35%"}}/>
               
-              <Typography className={classes.logo} style={{fontSize:"0.7rem" , margin:"15px"}}>
+              <Typography className={classes.logo} style={{fontSize:"0.7rem" , margin:"20px"}}>
               Developer Students Club
               </Typography>
             
               
           </div>
           <div >
-              <img src={lighttheme} alt="logo" style={{width:"46px" , height:"50px" , paddingTop:"2vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
+              <img src={lighttheme} alt="logo" style={{width:"45px" , height:"50px" , paddingTop:"1.5vh" ,alignItems:"flex-end" ,marginLeft:"60%"}}/>
               </div>
           
         </div>
