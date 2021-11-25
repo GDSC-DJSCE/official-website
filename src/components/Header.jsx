@@ -16,9 +16,10 @@ import logo from "../assets/images/logo.png" ;
 import lighttheme from "../assets/images/lighttheme.png"
 const useStyles = makeStyles((theme) => ({
   navlinks: {
+    
     marginLeft:"120px",
     display: "flex",
-    paddingTop:"2.5vh"
+    paddingTop:"2.5vh",
   },
   logo: {
     justifyContent:"center",
@@ -55,7 +56,7 @@ export const  Header = () =>{
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-      <AppBar className={classes.roots}>
+      <AppBar className={classes.roots} style={{position:"relative"}}>
       <Toolbar>
         
         {isMobile ? (
