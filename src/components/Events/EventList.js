@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import {Grid,Card} from '@material-ui/core/';
 import AllEvents from './AllEvents';
@@ -30,19 +30,37 @@ const useStyles = makeStyles((theme) => ({
 
 const EventsList = () => {
   const classes = useStyles();
+  const [type, setType] = useState(0)
+  
+  var eventList;
+  if(type===1){
+    eventList = Data.filter(element => element.type === "session");
+  }
+  else if(type===2){
+    eventList = Data.filter(element => element.type === "workshop");
+  }
+  else if(type===0){
+    eventList = Data;
+  }
+
   return (
     <div className={classes.app}>
         <div className={classes.grid}>
             <Grid container spacing={2} justify="flex-start" alignItems="flex-start">
                 <Grid item xs={12} sm={12} md={12}>
                     <Card className={classes.selectBar}>
-                        <h6 className={classes.select} style={{borderBottom: "5px solid #E94436"}}>All</h6>
-                        <h6 className={classes.select}>Event Type</h6>                        
-                        <h6 className={classes.select}>Event Type</h6>                        
-                        <h6 className={classes.select}>Event Type</h6>                        
+                        <Grid item xs={12} sm={12} md={4}>
+                          <button className={classes.select} onClick={() => setType(0)}>All</button>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={4}>
+                          <button className={classes.select} onClick={() => setType(1)}>Sessions</button>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={4}>
+                          <button className={classes.select} onClick={() => setType(2)}>Workshop</button>
+                        </Grid>
                     </Card>
                 </Grid>
-              {Data.map(event => (
+              {eventList.map(event => (
                   <Grid item xs={12} sm={12} md={3}  key={event.id}>
                       <AllEvents
                           key={event.id}

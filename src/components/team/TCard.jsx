@@ -1,50 +1,3 @@
-// import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faGithub,
-//   faInstagram,
-//   faLinkedin,
-// } from "@fortawesome/free-brands-svg-icons";
-// import { Link } from "react-router-dom";
-
-// export const TCard = () => {
-//   return (
-//     <>
-//       <div
-//         id="team-card"
-//         className="border-2 mx-5 tcard-max-d tcard-shadow  rounded-2xl"
-//       >
-//         <div className="mt-4">
-//           <img
-//             className="rounded-full mx-auto border-blue border-4"
-//             src="http://lorempixel.com/150/150/people/"
-//             alt="profile"
-//             width="70px"
-//           />
-//         </div>
-//         <div className="mx-auto text-center w-max mt-1">
-//           <p className="font-medium text-lg ">Soham Dave</p>
-//           <p className="text-sm -mt-1">GDSC DJSCE LEAD</p>
-//         </div>
-//         <div
-//           id="team-icons"
-//           className="text-center flex justify-between px-7 text-white mt-2"
-//         >
-//           <Link to="/team/lead">
-//             <FontAwesomeIcon icon={faLinkedin} size="lg" />
-//           </Link>
-//           <Link to="/team/lead">
-//             <FontAwesomeIcon icon={faInstagram} size="lg" />
-//           </Link>
-//           <Link to="/team/lead">
-//             <FontAwesomeIcon icon={faGithub} size="lg" />
-//           </Link>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -59,9 +12,10 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
   container: {
     border: "2px",
-    margin: "0 23px",
     width: "165px",
-    height: "180px",
+    height: "195px",
+    display: "flex",
+    flexDirection: "column",
     boxShadow:
       "4px 0px 20px rgba(0, 0, 0, 0.05),-4px 10px 20px rgba(0, 0, 0, 0.05)",
     borderRadius: "1rem",
@@ -101,11 +55,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "17px",
     margin: "0 26px",
     display: "flex",
+    height: "max",
     justifyContent: "space-between",
+    alignItems: "flex-end",
   },
 }));
 
-export const TCard = () => {
+export const TCard = (props) => {
   const classes = useStyles();
 
   return (
@@ -120,7 +76,7 @@ export const TCard = () => {
         />
         <CardContent className={classes.content}>
           <Typography className={classes.p1}>Soham Dave</Typography>
-          <p className={classes.p2}>GDSC DJSCE LEAD</p>
+          <p className={classes.p2}>GDSC DJSCE Lead</p>
         </CardContent>
         <div className={classes.action}>
           <Link to="/team/lead">

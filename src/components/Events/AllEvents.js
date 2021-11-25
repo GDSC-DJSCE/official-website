@@ -20,22 +20,22 @@ const AllEvents = ({ id, title, date, summary, bgimage }) => {
 
   return (
     <div className="main">
-      <Card style={{backgroundImage: ""}}>
-      <Card className={classes.innerCard}>
-        <div className={classes.item}>
-          <Link to={`/events/${id}`} className={classes.links}>
-              <Typography variant="h4" component="h4">
-              {title}
-              </Typography>
-          </Link>
-          <Typography variant="p" component="p">
-            {date}
-          </Typography>
-          <Typography variant="p" component="p">
-            {summary}
-          </Typography>
-        </div>
-      </Card>
+      <Card style={{background: `${bgimage}`}}>
+        <Card className={classes.innerCard}>
+          <div className={classes.item}>
+            <Link to={`/events/${id}`} className={classes.links}>
+                <Typography variant="h4" component="h4">
+                {title}
+                </Typography>
+            </Link>
+            <Typography variant="p" component="p">
+              {date}
+            </Typography>
+            <Typography variant="p" component="p">
+              {summary}
+            </Typography>
+          </div>
+        </Card>
       </Card>
     </div>
   );

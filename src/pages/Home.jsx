@@ -11,8 +11,15 @@ import featured_2 from "../assets/images/featured2.png"
 import featured_3 from "../assets/images/featured3.png"
 import { HomeDots } from "../components/HomeDots";
 import {FeaturedBox} from "../components/FeaturedBox" ;
+import {BannerBox} from '../components/BannerBox' ;
+import homeBanner from "../assets/images/HomeBanner.svg" ;
 
-import banner_img from "../assets/images/banner_img.svg" ;
+import yellowCircle from '../assets/images/yellowCircle.svg';
+import greenCircle from '../assets/images/greenCircle.svg';
+import blueCircle from '../assets/images/blueCircle.png';
+import redCircle from '../assets/images/redCircle.svg';
+import yellowRect from '../assets/images/yellowRect.svg';
+import greenRect from '../assets/images/greenRect.svg';
 
 
 export const Home = () => {
@@ -22,8 +29,57 @@ export const Home = () => {
 
       {/* BANNER */}
       <div className="banner">
+				
+        <div className="blue1">
+        <img src={blueCircle} alt="B1" />
+        </div>
 
-        <div className="triangle">
+        <div className="blue2">
+        <img src={blueCircle} alt="B2" />
+        </div>
+        <div className="blue3">
+        <img src={blueCircle} alt="B3" />
+        </div>
+        <div className="blue4">
+        <img src={blueCircle} alt="B4" />
+        </div>
+        <div className="blue5">
+        <img src={blueCircle} alt="B5" />
+        </div>
+
+        <div className="yellowRect1">
+        <img src={yellowRect} alt="YR1" />
+        </div>
+        
+        <div className="yellowRect2">
+        <img src={yellowRect} alt="YR2" />
+        </div>
+
+        <div className="greenCircle1">
+        <img src={greenCircle} alt="GC1" />
+        </div>
+        <div className="greenCircle2">
+        <img src={greenCircle} alt="GC2" />
+        </div>
+
+        <div className="yellowCircle1">
+        <img src={yellowCircle} alt="YC1" />
+        </div>
+
+        <div className="redCircle2">
+        <img src={redCircle} alt="RC2" />
+        </div>
+
+        <div className="greenRect1">
+        <img src={greenRect} alt="GR1" />
+        </div>
+
+        <div className="redCircle1">
+        <img src={redCircle} alt="RC1" />
+        </div>
+
+
+        {/* <div className="triangle">
           <img src={triangle} alt="" />
         </div>
 
@@ -33,26 +89,37 @@ export const Home = () => {
 
         <div className="rectangle">
           <img src={rectangle} alt="" />
-        </div>
+        </div> */}
 
         <div className="banner_content">
 
           <div className="left_content">
-            <div className="logo">
-            <img src={logo} alt="" />
-            </div>
-            <div className="gdsc">
-              <span>GDSC</span>
-              <span className="span1">DJSCE</span>
-            </div>
+
+              <div className="logo">
+              <img src={logo} alt="" />
+              </div>
+            
+              <div className="gdsc">
+                  <span className="banner_header">GDSC DJSCE</span>
+                  <span className="banner_header_sm">
+                    <p>GDSC</p><p className="span1">DJSCE</p>
+                  </span>
+
+                  <span className="banner_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla facilis soluta. Ea nihil 
+                    doloribus impedit consequuntur. Sed atque nesciunt ad debitis voluptates? Sequi, iure fugit omnis 
+                    error porro inventore!
+                  </span>
+              </div>
+
           </div> 
 
           <div className="right_content">
-              {/* < BannerSVG  className="banner_img"/> */}
-            {/* <ReactSVG src= {banner_img} className="banner_img" /> */}
-            <img src={banner_img} className="banner_img"  alt="" />
+            <img src={homeBanner} className="banner_img"  alt="" />
             </div> 
         </div>
+
+        <BannerBox />
 
       </div>
       {/* closes BANNER */}
