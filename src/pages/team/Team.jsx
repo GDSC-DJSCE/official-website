@@ -12,18 +12,28 @@ export const Team = () => (
   <>
     <div>
       <img alt="background" className="topimg" src={background} />
+      <div className="topcard">
+        <TCard name="Soham Dave" role="GDSC DJSCE Lead" />
+      </div>
       <div className="headSm">
         <THead />
       </div>
       <div className="container1">
         <div className="cont1card">
-          <TCard />
+          <Link to="/team/domain-head">
+            <TCard name="Amay Gada" role="Technical Coordinator" />
+          </Link>
         </div>
         <div className="cont1head">
           <THead />
         </div>
-        <div className="cont1card">
+        <div className="topcard-cont1">
           <TCard />
+        </div>
+        <div className="cont1card">
+          <Link to="/team/domain-head">
+            <TCard name="Rushank Shah" role="Technical Coordinator" />
+          </Link>
         </div>
       </div>
       <div className="container2">
@@ -31,21 +41,28 @@ export const Team = () => (
           <img alt="vector" src={vector1} />
         </div>
         <div className="cardend">
-          <TCard />
+          <Link to="/team/content-editoral">
+            <TCard
+              name="Shivam Vora"
+              role="Content and Editorial Coordinator"
+            />
+          </Link>
         </div>
         <div className="vector2">
           <img alt="vector" src={vector2} />
         </div>
         <div className="cardcenter">
-          <Link to="team/domain-head">
-            <TCard />
+          <Link to="/team/project-team">
+            <TCard name="Ansh Mehta" role="Project Coordinator" />
           </Link>
         </div>
         <div className="vector3">
           <img alt="vector" src={vector3} />
         </div>
         <div className="cardend">
-          <TCard />
+          <Link to="/team/outreach-events">
+            <TCard name="Heth Gala" role="Events and Outreach Coordinator" />
+          </Link>
         </div>
         <div className="vectorend">
           <img alt="vector" src={vector4} />
@@ -61,6 +78,9 @@ export const Team = () => (
         <TCard />
         <TCard />
       </div>
+    </div>
+    <div className="bottom-card">
+      <TCard />
     </div>
     <br />
     <br />

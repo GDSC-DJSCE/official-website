@@ -32,15 +32,19 @@ export const DomainHead = () => (
     <img className="img" src={tree} alt="branches" />
     <div className="cards">
       <div className="cards-end">
+        <p>AI/ML and Cloud Head</p>
         <TCard />
       </div>
       <div className="cards-center">
+        <p>Web and BlockChain Head</p>
         <TCard />
       </div>
       <div className="cards-center">
+        <p>App and CP Head</p>
         <TCard />
       </div>
       <div className="cards-end">
+        <p>AR/VR and Iot Head</p>
         <TCard />
       </div>
     </div>

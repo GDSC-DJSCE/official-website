@@ -10,6 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const Header = () => {
   return (
+    <>
+    <div style={{width:"100%" , overflow:"hidden"}}>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -40,5 +42,9 @@ export const Header = () => {
         </Toolbar>
       </AppBar>
     </Box>
+
+    </div>
+   
+    </>
   );
 };
