@@ -55,7 +55,6 @@ export const  Header = () =>{
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-<<<<<<< HEAD
       <AppBar className={classes.roots}>
       <Toolbar>
         
@@ -104,9 +103,6 @@ export const  Header = () =>{
             <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundColor:"#2871FA" , color:"white"}}
             >Login</Button>
-            <Link to="#" className={classes.link}>
-               
-            </Link>
             <Link to="#">
             <img src={lighttheme} alt="logo" style={{width:"35px" , height:"35px"  , marginLeft:"2vh"  , alignItems:"center"}}/>
             </Link>
@@ -115,44 +111,6 @@ export const  Header = () =>{
         )}
       </Toolbar>
       </AppBar>
-=======
-    <>
-    <div style={{width:"100%" , overflow:"hidden"}}>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            LOGO
-          </Typography>
-          <Button color="inherit">
-            <NavLink to="/">Home</NavLink>
-          </Button>
-          <Button color="inherit">
-            <NavLink to="/events">Events</NavLink>
-          </Button>
-          <Button color="inherit">
-            <NavLink to="/team">Team</NavLink>
-          </Button>
-          <Button color="inherit">
-            <NavLink to="/contact">Contact</NavLink>
-          </Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-
-    </div>
-   
-    </>
->>>>>>> f8e2dc6224918b830d9f352c5b43fe2f9d4d7db9
   );
 }
 

@@ -6,6 +6,7 @@ import {
   ListItem,
   ListItemText,
   makeStyles,
+  Button,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -13,11 +14,18 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles(()=>({
     link:{
+        justifyContent:"cenetr",
+        alignContent:"center",
+        alignItems:"center",
         textDecoration:"none",
-        color: "blue",
+        color: "#979797",
         paddingLeft:"15vh",
         paddingRight:"15vh",
         fontSize: "20px",
+        fontWeight:"600",
+        "&:hover": {
+          color: "black",
+        },
     },
     icon:{
         color: "black"
@@ -54,7 +62,11 @@ function DrawerComponent() {
               <Link to="/contact" className={classes.link}>Contact</Link>
             </ListItemText>
           </ListItem>
-          
+          <div style={{paddingLeft:"14vh",paddingRight:"14vh"}}>
+          <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
+            backgroundColor:"#2871FA" , color:"white"}}
+            >Login</Button>
+          </div>
         </List>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={classes.icon}>

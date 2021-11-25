@@ -610,7 +610,7 @@ export const Contact = () => {
 				</div>
 			</div>
 
-			<div class="box shadow">
+			<div class="box ">
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
 						<div className="head text-3xl mb-14 font-bold">Lets Talk ?</div>

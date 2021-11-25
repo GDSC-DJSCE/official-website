@@ -95,6 +95,7 @@
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 150px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 .mainbody{
     position: relative;
@@ -149,7 +150,7 @@
     }
    
 }
-@media screen and (min-width: 432px ) and (max-width:850px){
+@media screen and (min-width: 650px ) and (max-width:850px){
 
     
     .images-phone{
@@ -195,7 +196,7 @@
     
 }
 
-@media screen and (max-width: 432px) and (min-width:0px){
+@media screen and (max-width: 650px) and (min-width:0px){
     .header{
         font-size: 40px;
     }
