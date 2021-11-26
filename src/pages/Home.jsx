@@ -4,9 +4,9 @@ import { HomeDots } from "../components/Home/HomeDots";
 import {FeaturedBox} from "../components/Home/FeaturedBox" ;
 import {BannerBox} from '../components/Home/BannerBox' ;
 
-import triangle from "../assets/images/Triangle.png" ;
-import circle from "../assets/images/Circle.png" ;
-import rectangle from "../assets/images/Rectangle.png" ;
+// import triangle from "../assets/images/Triangle.png" ;
+// import circle from "../assets/images/Circle.png" ;
+// import rectangle from "../assets/images/Rectangle.png" ;
 import logo from "../assets/images/logo.png" ;
 import about_img from "../assets/images/about.png" ;
 import vision_img from "../assets/images/vision.png" ;
@@ -176,8 +176,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 1"
       color = "#1E88E5"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercita tionem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_1}
       href="#" 
@@ -186,8 +185,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 2"
       color = "#E94436"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitat ionem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_2}
       href="#" 
@@ -197,8 +195,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 3"
       color = "#FBC02D"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exer citationem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_3}
       href="#" 
