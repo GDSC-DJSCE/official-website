@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/home.css";
+import { HomeDots } from "../components/Home/HomeDots";
+import {FeaturedBox} from "../components/Home/FeaturedBox" ;
+import {BannerBox} from '../components/Home/BannerBox' ;
+
 import triangle from "../assets/images/Triangle.png" ;
 import circle from "../assets/images/Circle.png" ;
 import rectangle from "../assets/images/Rectangle.png" ;
@@ -9,11 +13,7 @@ import vision_img from "../assets/images/vision.png" ;
 import featured_1 from "../assets/images/featured1.png"
 import featured_2 from "../assets/images/featured2.png"
 import featured_3 from "../assets/images/featured3.png"
-import { HomeDots } from "../components/HomeDots";
-import {FeaturedBox} from "../components/FeaturedBox" ;
-import {BannerBox} from '../components/BannerBox' ;
 import homeBanner from "../assets/images/HomeBanner.svg" ;
-
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
