@@ -22,7 +22,7 @@ const useStyles = makeStyles(()=>({
         paddingLeft:"15vh",
         paddingRight:"15vh",
         fontSize: "20px",
-        fontWeight:"600",
+        fontWeight:"400",
         "&:hover": {
           color: "black",
         },
@@ -41,7 +41,7 @@ function DrawerComponent() {
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
       >
-        <List style={{backgroundColor:"#E5E5E5"}}>
+        <List style={{backgroundColor:"#F5F5F5" ,height:"100%"}}>
         <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/" className={classes.link}>Home</Link>
@@ -64,7 +64,7 @@ function DrawerComponent() {
           </ListItem>
           <div style={{paddingLeft:"14vh",paddingRight:"14vh"}}>
           <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
-            backgroundColor:"#2871FA" , color:"white"}}
+            backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
             >Login</Button>
           </div>
         </List>
