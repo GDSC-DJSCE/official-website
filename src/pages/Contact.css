@@ -198,8 +198,7 @@
 
 @media screen and (max-width: 650px) and (min-width:0px){
     .header{
-        display: block;
-        font-size: 40px;
+        display: flex;
     }
     .head{
         font-size: 30px;
@@ -235,7 +234,7 @@
         height: 1000px;
         /*border: 1px solid black;*/
         margin-left: 30px;
-        margin-bottom: 100px;
+        margin-bottom: 30vh;
         box-shadow: none;
         /*margin-bottom: 1000px;*/
     }
