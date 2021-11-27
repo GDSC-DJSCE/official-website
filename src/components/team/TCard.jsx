@@ -6,7 +6,6 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
     height: "195px",
     display: "flex",
     flexDirection: "column",
+    color: "black",
+    textDecoration: "none",
     boxShadow:
       "4px 0px 20px rgba(0, 0, 0, 0.05),-4px 10px 20px rgba(0, 0, 0, 0.05)",
     borderRadius: "1rem",
@@ -53,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "17px",
   },
   action: {
-    color: "white",
     fontSize: "17px",
     margin: "0 26px",
     display: "flex",
@@ -69,32 +69,41 @@ export const TCard = (props) => {
   return (
     <>
       <span className="tcard">
-        <Card className={classes.container}>
-          <CardMedia
-            component="img"
+        <div className={classes.container}>
+          <img
             src="http://picsum.photos/100"
             alt="profile"
             height="70px"
             className={classes.image}
           />
-          <CardContent className={classes.content}>
-            <div className="card-content">
-              <Typography className={classes.p1}>Soham Dave</Typography>
-              <p className={classes.p2}>GDSC DJSCE Lead</p>
-            </div>
-          </CardContent>
+          <div className={classes.content}>
+            <p className={classes.p1}>{props.name}</p>
+            <p className={classes.p2}>{props.role}</p>
+          </div>
           <div className={classes.action}>
             <Link to="/team/lead">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                size="lg"
+                style={{ color: "white" }}
+              />
+            </Link>
+            <Link to="/team/lead" style={{ color: "white" }}>
+              <FontAwesomeIcon
+                icon={faInstagram}
+                size="lg"
+                style={{ color: "white" }}
+              />
             </Link>
             <Link to="/team/lead">
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
-            </Link>
-            <Link to="/team/lead">
-              <FontAwesomeIcon icon={faGithub} size="lg" />
+              <FontAwesomeIcon
+                icon={faGithub}
+                size="lg"
+                style={{ color: "white" }}
+              />
             </Link>
           </div>
-        </Card>
+        </div>
       </span>
     </>
   );

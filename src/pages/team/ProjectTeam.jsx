@@ -38,6 +38,7 @@ export const ProjectTeam = () => (
             fontFamily: "Montserrat",
             textTransform: "none",
             fontWeight: "400",
+            height: "30px",
           }}
         >
           Project Team
@@ -46,44 +47,40 @@ export const ProjectTeam = () => (
     </div>
 
     <div style={{ marginTop: "18px" }} className="topcard-branch">
-      <TCard />
+      <TCard name="Ansh Mehta" role="Project Coordinator" />
     </div>
     <img className="img" src={tree} alt="branches" />
     <div className="cards">
       <div className="cards-end">
-        <p className="text-center">Frontend Team</p>
-        <TCard />
+        <TCard name="Jinish Shah" role="Frontend Team" />
       </div>
       <div className="cards-center">
-        <p className="text-center">Backend Team</p>
-        <TCard />
+        <TCard name="Chaitanya Kumbhar" role="Backend Team" />
       </div>
       <div className="cards-center">
-        <p className="text-center">Full Stack Developer</p>
-        <TCard />
+        <TCard name="Yash Jhaveri" role="Full Stack Developer" />
       </div>
       <div className="cards-end">
-        <p className="text-center">App Team</p>
-        <TCard />
+        <TCard name="Ojas Karmaker" role="App Team" />
       </div>
     </div>
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Prachi Patel" role="Frontend Team" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Chirag Jain" role="Backend Team" />
       </div>
       <div className="cards-center">
         <div style={{ width: "165px" }}></div>
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Tanmai Kamat" role="App Team" />
       </div>
     </div>
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Meith Navlakha" role="Frontend Team" />
       </div>
       <div className="cards-center">
         <div style={{ width: "165px" }}></div>
@@ -98,45 +95,45 @@ export const ProjectTeam = () => (
 
     <div className="bottom-div">
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Jinish Shah" role="Frontend Team" />
+        <TCard name="Prachi Patel" role="Frontend Team" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Meith Navlakha" role="Frontend Team" />
+        <TCard name="Chaitanya Kumbhar" role="Backend Team" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Chirag Jain" role="Backend Team" />
+        <TCard name="Yash Jhaveri" role="Full Stack Developer" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Ojas Karmakar" role="App Team" />
+        <TCard name="Tanmai Kamat" role="App Team" />
       </div>
     </div>
     <div className="bottom-div-mob">
       <div className="bottom-card">
         <Link to="/team">
-          <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" />
+          <TCardMob name="Ansh Mehta" role="Project Coordinator" />
         </Link>
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Jinish Shah" role="Frontend Team" />
+        <TCardMob name="Prachi Patel" role="Frontend Team" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Meith Navlakha" role="Frontend Team" />
+        <TCardMob name="Chaitanya Kumbhar" role="Backend Team" />
       </div>
     </div>
     <div className="bottom-div-mob">
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Chirag Jain" role="Backend Team" />
+        <TCardMob name="Yash Jhaveri" role="Full Stack Developer" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Ojas Karmakar" role="App Team" />
+        <TCardMob name="Tanmai Kamat" role="App Team" />
       </div>
     </div>
     <Link to="/team">

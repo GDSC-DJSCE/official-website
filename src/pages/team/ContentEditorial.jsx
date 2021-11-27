@@ -38,6 +38,7 @@ export const ContentEditorial = () => (
             fontFamily: "Montserrat",
             textTransform: "none",
             fontWeight: "400",
+            height: "70px",
           }}
         >
           Content & Editorial Team
@@ -46,40 +47,40 @@ export const ContentEditorial = () => (
     </div>
 
     <div style={{ marginTop: "18px" }} className="topcard-branch">
-      <TCard />
+      <TCard name="Shivam Vora" role="Content & Editorial Coordinator" />
     </div>
     <img className="img" src={tree} alt="branches" />
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Samyak Shah" role="Soft Creatives" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Vedant Gandhi" role="Soft Creatives" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Mihir Panchal" role="Video Editing" />
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Aarya Bagde" role="Editorial" />
       </div>
     </div>
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Nimish Sabnis" role="Soft Creatives" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Kashish Mistry" role="Soft Creatives" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Allan Almeida" role="Video Editing" />
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Naitik Vora" role="Editorial" />
       </div>
     </div>
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Vedit Beladia" role="Soft Creatives" />
       </div>
       <div className="cards-center">
         <div style={{ width: "165px" }}></div>
@@ -88,7 +89,7 @@ export const ContentEditorial = () => (
         <div style={{ width: "165px" }}></div>
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Prathamesh Nayak" role="Editorial" />
       </div>
     </div>
     <div className="cards">
@@ -117,30 +118,30 @@ export const ContentEditorial = () => (
         <div style={{ width: "165px" }}></div>
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Shweta Joshi" role="Editorial" />
       </div>
     </div>
 
     <div className="bottom-div">
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Samyak Shah" role="Soft Creatives" />
+        <TCard name="Vedant Gandhi" role="Soft Creatives" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Nimish Sabnis" role="Soft Creatives" />
+        <TCard name="Kashish Mistry" role="Soft Creatives" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Vedit Beladia" role="Soft Creatives" />
+        <TCard name="Mihir Panchal" role="Video Editing" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Allan Almeida" role="Video Editing" />
+        <TCard name="Aarya Bagde" role="Editorial" />
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCard name="Naitik Vora" role="Editorial" />
+        <TCard name="Prathamesh Nayak" role="Editorial" />
       </div>
       <div className="bottom-div-col">
         <Link to="/team">
@@ -158,37 +159,43 @@ export const ContentEditorial = () => (
             </Typography>
           </div>
         </Link>
-        <TCard />
+        <TCard name="Shweta Joshi" role="Editorial" />
       </div>
     </div>
     <div className="bottom-div-mob">
       <div className="bottom-card">
         <Link to="/team">
-          <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" />
+          <TCardMob name="Shivam Vora" role="Content & Editorial" />
         </Link>
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Samyak Shah" role="Soft Creatives" />
+        <TCardMob name="Vedant Gandhi" role="Soft Creatives" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Nimish Sabnis" role="Soft Creatives" />
+        <TCardMob name="Kashish Mistry" role="Soft Creatives" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Vedit Beladia" role="Soft Creatives" />
+        <TCardMob name="Mihir Panchal" role="Video Editing" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Allan Almeida" role="Video Editing" />
+        <TCardMob name="Aarya Bagde" role="Editorial" />
       </div>
       <div className="bottom-div-col">
-        <TCardMob />
-        <TCardMob />
+        <TCardMob name="Naitik Vora" role="Editorial" />
+        <TCardMob name="Prathamesh Nayak" role="Editorial" />
       </div>
-      <div className="bottom-div-col">
-        <TCardMob />
+      <div
+        style={{
+          paddingTop: "8px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <TCardMob name="Shweta Joshi" role="Editorial" />
       </div>
     </div>
     <br />
