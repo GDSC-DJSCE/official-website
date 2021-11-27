@@ -455,7 +455,7 @@ export const Contact = () => {
 	};
 	return (
 		<div className="mainbody" >
-			<div class="header font-bold">Contact Us</div>
+			<div class="header font-semibold" style={{fontSize:"50px"}}>Contact Us</div>
 			<div className="sub-header">Any Questions or Remarks? Just write us a Question</div>
 			<div className="images-phone w-0">
 				<div className="yellow">
