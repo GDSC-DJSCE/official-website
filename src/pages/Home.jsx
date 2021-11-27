@@ -1,19 +1,19 @@
 import React from "react";
 import "../styles/home.css";
-import triangle from "../assets/images/Triangle.png" ;
-import circle from "../assets/images/Circle.png" ;
-import rectangle from "../assets/images/Rectangle.png" ;
+import { HomeDots } from "../components/Home/HomeDots";
+import {FeaturedBox} from "../components/Home/FeaturedBox" ;
+import {BannerBox} from '../components/Home/BannerBox' ;
+
+// import triangle from "../assets/images/Triangle.png" ;
+// import circle from "../assets/images/Circle.png" ;
+// import rectangle from "../assets/images/Rectangle.png" ;
 import logo from "../assets/images/logo.png" ;
 import about_img from "../assets/images/about.png" ;
 import vision_img from "../assets/images/vision.png" ;
 import featured_1 from "../assets/images/featured1.png"
 import featured_2 from "../assets/images/featured2.png"
 import featured_3 from "../assets/images/featured3.png"
-import { HomeDots } from "../components/HomeDots";
-import {FeaturedBox} from "../components/FeaturedBox" ;
-import {BannerBox} from '../components/BannerBox' ;
 import homeBanner from "../assets/images/HomeBanner.svg" ;
-
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
@@ -176,8 +176,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 1"
       color = "#1E88E5"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercita tionem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_1}
       href="#" 
@@ -186,8 +185,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 2"
       color = "#E94436"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitat ionem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_2}
       href="#" 
@@ -197,8 +195,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 3"
       color = "#FBC02D"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem porro neque eaque, tempore quam est?
-      Ratione, a necessitatibus! Optio sit modi tempore voluptatibus itaque libero cumque inventore nobis molestias 
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exer citationem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_3}
       href="#" 

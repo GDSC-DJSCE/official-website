@@ -5,7 +5,7 @@ import vector1 from "../../assets/images/team/Vector4.svg";
 import vector2 from "../../assets/images/team/Vector5.svg";
 import vector3 from "../../assets/images/team/Vector1.svg";
 import vector4 from "../../assets/images/team/Vector2.svg";
-import { TCard, THead } from "../../components";
+import { TCard, THead, TCardMob } from "../../components";
 import { Link } from "react-router-dom";
 
 export const Team = () => (
@@ -71,17 +71,61 @@ export const Team = () => (
     </div>
     <div className="bottom-div">
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <Link to="/team/domain-head">
+          <TCard name="Amay Gada" role="Technical Coordinator" />
+        </Link>
+        <Link to="/team/domain-head">
+          <TCard name="Rushank Shah" role="Technical Coordinator" />
+        </Link>
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <Link to="/team/content-editoral">
+          <TCard name="Shivam Vora" role="Content and Editorial Coordinator" />
+        </Link>
+        <Link to="/team/outreach-events">
+          <TCard name="Heth Gala" role="Events and Outreach Coordinator" />
+        </Link>
+      </div>
+      <div className="bottom-card" style={{ marginTop: "20px" }}>
+        <Link to="/team/project-team">
+          <TCard name="Ansh Mehta" role="Project Coordinator" />
+        </Link>
       </div>
     </div>
-    <div className="bottom-card">
-      <TCard />
+
+    {/* for mobile view */}
+    <div className="bottom-div-mob">
+      <div className="bottom-card">
+        <Link to="/team">
+          <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" />
+        </Link>
+      </div>
+      <div className="bottom-div-col">
+        <Link to="/team/domain-head">
+          <TCardMob name="Amay Gada" role="Technical Coordinator" />
+        </Link>
+        <Link to="/team/domain-head">
+          <TCardMob name="Rushank Shah" role="Technical Coordinator" />
+        </Link>
+      </div>
+      <div className="bottom-div-col">
+        <Link to="/team/content-editoral">
+          <TCardMob
+            name="Shivam Vora"
+            role="Content and Editorial Coordinator"
+          />
+        </Link>
+        <Link to="/team/outreach-events">
+          <TCardMob name="Heth Gala" role="Events and Outreach Coordinator" />
+        </Link>
+      </div>
+      <div className="bottom-card" style={{ marginTop: "5px" }}>
+        <Link to="/team/project-team">
+          <TCardMob name="Ansh Mehta" role="Project Coordinator" />
+        </Link>
+      </div>
     </div>
+
     <br />
     <br />
     <br />
