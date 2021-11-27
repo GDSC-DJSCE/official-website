@@ -50,6 +50,7 @@ const useStyles = makeStyles({
 		height: 'auto',
 		justifyContent: 'center',
 		padding: '10px',
+		paddingTop:"5px"
 	},
 	inputbox: {
 		marginBottom: '1rem',
@@ -201,7 +202,7 @@ const useStyles = makeStyles({
 	blue3d: {
 		position: 'absolute',
 		marginTop: '750px',
-		left: '80%',
+		left: '77%',
 		width: '25px',
 		height: '25px',
 		opacity: '50%',
@@ -209,7 +210,7 @@ const useStyles = makeStyles({
 	blue4d: {
 		position: 'absolute',
 		marginTop: '80px',
-		left: '6%',
+		left: '13%',
 		width: '25px',
 		height: '25px',
 		opacity: '40%',
@@ -217,23 +218,23 @@ const useStyles = makeStyles({
 	blue5d: {
 		position: 'absolute',
 		marginTop: '710px',
-		left: '10%',
+		left: '17%',
 		width: '20px',
 		height: '20px',
 		opacity: '40%',
 	},
 	blue6d: {
 		position: 'absolute',
-		top: '120%',
-		left: '5%',
+		top: '100%',
+		left: '12%',
 		width: '20px',
 		height: '20px',
 		opacity: '40%',
 	},
 	blue7d: {
 		position: 'absolute',
-		marginTop: '255px',
-		left: '5%',
+		marginTop: '120%',
+		left: '12%',
 		width: '12px',
 		height: '12px',
 		opacity: '40%',
@@ -280,8 +281,8 @@ const useStyles = makeStyles({
 	},
 	green1d: {
 		position: 'absolute',
-		marginTop: '600px',
-		left: '92%',
+		marginTop: '620px',
+		left: '87%',
 		width: '25px',
 		height: '25px',
 		opacity: '40%',
@@ -289,7 +290,7 @@ const useStyles = makeStyles({
 	green2d: {
 		position: 'absolute',
 		marginTop: '650px',
-		left: '88%',
+		left: '84%',
 		width: '10px',
 		height: '10px',
 		opacity: '40%',
@@ -297,7 +298,7 @@ const useStyles = makeStyles({
 	green3d: {
 		position: 'absolute',
 		marginTop: '700px',
-		left: '85%',
+		left: '80%',
 		width: '10px',
 		height: '10px',
 		opacity: '40%',
@@ -377,7 +378,7 @@ const useStyles = makeStyles({
 	rgbyCircle1: {
 		position: 'absolute',
 		marginTop: '720px',
-		left: '87%',
+		left: '83%',
 		width: '160px',
 		height: '160px',
 	},
@@ -463,7 +464,7 @@ export const Contact = () => {
 		emailjs.send(service_id, template_id, templateParams, user_id).then(res => console.log(res));
 	};
 	return (
-		<div>
+		<div className="mainbody" >
 			<div class="header font-bold">Contact Us</div>
 			<div className="sub-header">Any Questions or Remarks? Just write us a Question</div>
 			<div className="images-phone w-0">
@@ -609,7 +610,7 @@ export const Contact = () => {
 				</div>
 			</div>
 
-			<div class="box shadow">
+			<div class="box ">
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
 						<div className="head text-3xl mb-14 font-bold">Lets Talk ?</div>
@@ -662,7 +663,7 @@ export const Contact = () => {
 
 						<div className="message-box">
 							<TextField
-								className={classes.root}
+								className={classes.root1}
 								label="Your Message"
 								name="message"
 								onChange={handleChanges}
@@ -675,7 +676,7 @@ export const Contact = () => {
 						<div
 							style={{
 								marginTop: '2px',
-								paddingBottom: '5px',
+								paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '4rem',

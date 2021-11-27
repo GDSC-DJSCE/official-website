@@ -11,7 +11,8 @@ export const BannerBox = () => {
         </span>
 
         <span className="right_arrow"> 
-          <p>/</p><FontAwesomeIcon icon={faAngleRight}  size="2x" /> 
+        <p>/</p>
+         <FontAwesomeIcon icon={faAngleRight}  size="2x" /> 
         </span>
         
         <div className="banner_span">

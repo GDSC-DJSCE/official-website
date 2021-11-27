@@ -9,7 +9,7 @@
 }
 .yellow{
     position: absolute;
-    top: 50%;
+    top: 50vh;
     left: -5px;
     width: 100px;
     overflow: hidden;
@@ -20,7 +20,7 @@
 }
 .green{
     position: absolute;
-    top: 31.5%;
+    top: 30vh;
     left: 76%;
     width: 100px;
     height: auto;
@@ -30,7 +30,7 @@
 }
 .red{
     position: absolute;
-    top: 120%;
+    top: 90vh;
     left: 2%;
     width: 100px;
     height: auto;
@@ -40,7 +40,7 @@
 }
 .blue{
     position: absolute;
-    top: 80%;
+    top: 115vh;
     left: 92.25%;
     width: 50px;
     height: auto;
@@ -50,8 +50,8 @@
 }
 .greenR-d{
     position: absolute;
-    top: 85%;
-    left : 90%;
+    top: 50%;
+    left : 85%;
     width: 30px;
     height: 30px;
     overflow: hidden;
@@ -81,7 +81,6 @@
     height: 25px;
     overflow: hidden;
 }
-
 .sub-header{
     text-align: center;
     font-size: 20px;
@@ -90,12 +89,19 @@
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
-    height: 770px;
+    /*height: 770px;*/
     margin-top: 40px;
     border-radius: 24px;
     margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 60px;
+    margin-right: 150px;
+    margin-left: 150px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.mainbody{
+    position: relative;
+    height:150vh;
+    overflow:hidden;
+
 }
 .head{
     font-family: 'Montserrat', sans-serif;
@@ -144,7 +150,7 @@
     }
    
 }
-@media screen and (min-width: 432px ) and (max-width:850px){
+@media screen and (min-width: 650px ) and (max-width:850px){
 
     
     .images-phone{
@@ -190,9 +196,14 @@
     
 }
 
-@media screen and (max-width: 432px) and (min-width:0px){
+@media screen and (max-width: 650px) and (min-width:0px){
     .header{
         font-size: 40px;
+    }
+    .mainbody{
+        position: relative;
+        height: 180vh;
+        overflow: hidden;
     }
     .sub-header{
         font-size: 20px;
