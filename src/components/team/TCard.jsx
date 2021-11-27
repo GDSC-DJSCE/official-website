@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1rem",
     "&:hover": {
       backgroundColor: "#4385f3",
+      color: "white",
+      transform: "scale(1.1)",
     },
   },
   image: {
@@ -66,30 +68,34 @@ export const TCard = (props) => {
 
   return (
     <>
-      <Card className={classes.container}>
-        <CardMedia
-          component="img"
-          src="http://lorempixel.com/150/150/people/"
-          alt="profile"
-          height="70px"
-          className={classes.image}
-        />
-        <CardContent className={classes.content}>
-          <Typography className={classes.p1}>Soham Dave</Typography>
-          <p className={classes.p2}>GDSC DJSCE Lead</p>
-        </CardContent>
-        <div className={classes.action}>
-          <Link to="/team/lead">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          </Link>
-          <Link to="/team/lead">
-            <FontAwesomeIcon icon={faInstagram} size="lg" />
-          </Link>
-          <Link to="/team/lead">
-            <FontAwesomeIcon icon={faGithub} size="lg" />
-          </Link>
-        </div>
-      </Card>
+      <span className="tcard">
+        <Card className={classes.container}>
+          <CardMedia
+            component="img"
+            src="http://picsum.photos/100"
+            alt="profile"
+            height="70px"
+            className={classes.image}
+          />
+          <CardContent className={classes.content}>
+            <div className="card-content">
+              <Typography className={classes.p1}>Soham Dave</Typography>
+              <p className={classes.p2}>GDSC DJSCE Lead</p>
+            </div>
+          </CardContent>
+          <div className={classes.action}>
+            <Link to="/team/lead">
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            </Link>
+            <Link to="/team/lead">
+              <FontAwesomeIcon icon={faInstagram} size="lg" />
+            </Link>
+            <Link to="/team/lead">
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </Link>
+          </div>
+        </Card>
+      </span>
     </>
   );
 };

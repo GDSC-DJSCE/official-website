@@ -32,14 +32,16 @@ export const THead = () => {
 
   return (
     <>
-      <Container className={classes.container}>
-        <p className={classes.head}>Our Team</p>
-        <p className={classes.body}>
-          Meet the team that makes GDSC DJSCE Successful! Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Voluptates laudantium accusamus
-          itaque in dolorum rem culpa amet impedit. Voluptas, totam.
-        </p>
-      </Container>
+      <div className="thead">
+        <Container className={classes.container}>
+          <p className={classes.head}>Our Team</p>
+          <p className={classes.body}>
+            Meet the team that makes GDSC DJSCE Successful! Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Voluptates laudantium
+            accusamus itaque in dolorum rem culpa amet impedit. Voluptas, totam.
+          </p>
+        </Container>
+      </div>
     </>
   );
 };

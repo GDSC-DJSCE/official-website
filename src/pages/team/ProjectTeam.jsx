@@ -3,13 +3,31 @@ import "../../styles/team.css";
 import tree from "../../assets/images/team/Tree.svg";
 import back from "../../assets/images/team/Union.svg";
 import { Button, Typography } from "@mui/material";
-import { TCard } from "../../components";
+import { TCard, TCardMob, THead } from "../../components";
 import { Link } from "react-router-dom";
 
 export const ProjectTeam = () => (
   <>
     <p className="header">Our Team</p>
-    <div className="center">
+    <div className="headSm-branch">
+      <THead />
+    </div>
+    <Link to="/team">
+      <div className="back-top">
+        <img src={back} alt="back" style={{ width: "20px" }} />
+        <Typography
+          style={{
+            fontFamily: " Montserrat",
+            fontSize: "13px",
+            lineHeight: "16px",
+            padding: "0 10px",
+          }}
+        >
+          Back
+        </Typography>
+      </div>
+    </Link>
+    <div className="button">
       <Button
         style={{ borderRadius: "15px", width: "225px" }}
         variant="contained"
@@ -26,25 +44,26 @@ export const ProjectTeam = () => (
         </p>
       </Button>
     </div>
-    <div style={{ marginTop: "18px" }} className="center">
+
+    <div style={{ marginTop: "18px" }} className="topcard-branch">
       <TCard />
     </div>
     <img className="img" src={tree} alt="branches" />
     <div className="cards">
       <div className="cards-end">
-        <p>Frontend Team</p>
+        <p className="text-center">Frontend Team</p>
         <TCard />
       </div>
       <div className="cards-center">
-        <p>Backend Team</p>
+        <p className="text-center">Backend Team</p>
         <TCard />
       </div>
       <div className="cards-center">
-        <p>Full Stack Developer</p>
+        <p className="text-center">Full Stack Developer</p>
         <TCard />
       </div>
       <div className="cards-end">
-        <p>App Team</p>
+        <p className="text-center">App Team</p>
         <TCard />
       </div>
     </div>
@@ -76,7 +95,16 @@ export const ProjectTeam = () => (
         <div style={{ width: "165px" }}></div>
       </div>
     </div>
+
     <div className="bottom-div">
+      <div className="bottom-div-col">
+        <TCard />
+        <TCard />
+      </div>
+      <div className="bottom-div-col">
+        <TCard />
+        <TCard />
+      </div>
       <div className="bottom-div-col">
         <TCard />
         <TCard />
@@ -86,14 +114,29 @@ export const ProjectTeam = () => (
         <TCard />
       </div>
     </div>
-    <div className="bottom-div">
-      <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+    <div className="bottom-div-mob">
+      <div className="bottom-card">
+        <Link to="/team">
+          <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" />
+        </Link>
       </div>
       <div className="bottom-div-col">
-        <TCard />
-        <TCard />
+        <TCardMob />
+        <TCardMob />
+      </div>
+      <div className="bottom-div-col">
+        <TCardMob />
+        <TCardMob />
+      </div>
+    </div>
+    <div className="bottom-div-mob">
+      <div className="bottom-div-col">
+        <TCardMob />
+        <TCardMob />
+      </div>
+      <div className="bottom-div-col">
+        <TCardMob />
+        <TCardMob />
       </div>
     </div>
     <Link to="/team">
