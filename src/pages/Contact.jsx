@@ -166,7 +166,7 @@ const useStyles = makeStyles({
 	},
 	rgby2: {
 		position: 'absolute',
-		marginTop:"260%",
+		marginTop:"264%",
 		left: '75%',
 		width: '105px',
 		height: '105px',
@@ -456,7 +456,7 @@ export const Contact = () => {
 	};
 	return (
 		<div className="mainbody" >
-			<div className="header font-semibold" style={{fontSize:"40px" ,marginTop:"5vh"}}>Contact Us</div>
+			<div className="header-conatct font-semibold" style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"5vh" ,textAlign:"center"}}>Contact Us</div>
 			<div className="sub-header">Any Questions or Remarks? Just write us a Question</div>
 			<div className="images-phone w-0">
 				<div className="yellow">

@@ -141,6 +141,10 @@
     padding-right: 9px;
 }
 
+.header-contact{
+    display: none;
+}
+
 @media screen and (min-width: 850px ){
     .box-map{
         display: none;
@@ -193,12 +197,17 @@
     .box-social{
         margin-top: 250px;
     }
+    .header-contact{
+        display: none;
+    }
     
 }
 
 @media screen and (max-width: 650px) and (min-width:0px){
-    .header{
-        display: flex;
+    .header-contact{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .head{
         font-size: 30px;
@@ -228,7 +237,7 @@
         align-items: center;
     }
     .box{
-        grid-template-rows: 62% 38%;
+        grid-template-rows: 67% 33%;
         grid-template-columns: 100%;
         width: 329px;
         height: 1000px;
