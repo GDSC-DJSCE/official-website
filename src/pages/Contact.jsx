@@ -166,7 +166,7 @@ const useStyles = makeStyles({
 	},
 	rgby2: {
 		position: 'absolute',
-		marginTop: '230%',
+		marginTop: '265%',
 		left: '75%',
 		width: '105px',
 		height: '105px',
