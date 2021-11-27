@@ -6,7 +6,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 
 export const Footer = () => {
   return (
-    <AppBar position="relative" color="primary" sx={{ top: "auto", bottom: 0 }}>
+    <AppBar position="relative" color="primary" sx={{ top: "auto", bottom: 0 }} >
       <Toolbar>
         <IconButton color="inherit" aria-label="open drawer">
           <MenuIcon />

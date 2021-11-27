@@ -26,17 +26,7 @@ var user = process.env.REACT_APP_ACCESS_TOKEN;
 var user_id = process.env.REACT_APP_USERID;
 var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
-	root: {
-		'& .MuiOutlinedInput-root': {
-			width: '19rem',
-			height: '100px',
-		},
-	},
-	root1: {
-		'& .MuiOutlinedInput-root': {
-			width: '19rem',
-		},
-	},
+	
 
 	mainContainer: {
 		display: 'grid',
@@ -54,7 +44,7 @@ const useStyles = makeStyles({
 	},
 	inputbox: {
 		marginBottom: '1rem',
-		width: '17rem',
+		width: '19rem',
 		borderColor: 'blue',
 	},
 	signbtn: {
@@ -79,7 +69,7 @@ const useStyles = makeStyles({
 	},
 	blue2: {
 		position: 'absolute',
-		top: '60%',
+		top: '57vh',
 		left: '40%',
 		width: '10px',
 		height: '10px',
@@ -88,7 +78,7 @@ const useStyles = makeStyles({
 	},
 	red1: {
 		position: 'absolute',
-		top: '67%',
+		top: '61vh',
 		left: '42px',
 		width: '15px',
 		height: '15px',
@@ -96,7 +86,7 @@ const useStyles = makeStyles({
 	},
 	red2: {
 		position: 'absolute',
-		top: '42%',
+		top: '40vh',
 		left: '9%',
 		width: '18px',
 		height: '18px',
@@ -104,7 +94,7 @@ const useStyles = makeStyles({
 	},
 	green1: {
 		position: 'absolute',
-		top: '84%',
+		top: '80vh',
 		left: '75%',
 		width: '17px',
 		height: '17px',
@@ -112,7 +102,7 @@ const useStyles = makeStyles({
 	},
 	blue1: {
 		position: 'absolute',
-		top: '40%',
+		top: '38vh',
 		left: '80%',
 		width: '30px',
 		height: '30px',
@@ -120,7 +110,7 @@ const useStyles = makeStyles({
 	},
 	yellowR1: {
 		position: 'absolute',
-		top: '40%',
+		top: '38vh',
 		left: '50%',
 		width: '18px',
 		height: '18px',
@@ -128,7 +118,7 @@ const useStyles = makeStyles({
 	},
 	yellowR2: {
 		position: 'absolute',
-		top: '97%',
+		top: '95vh',
 		left: '7.5%',
 		width: '15px',
 		height: '15px',
@@ -136,7 +126,7 @@ const useStyles = makeStyles({
 	},
 	yellowR3: {
 		position: 'absolute',
-		top: '103%',
+		top: '100vh',
 		left: '65%',
 		width: '15px',
 		height: '15px',
@@ -144,7 +134,7 @@ const useStyles = makeStyles({
 	},
 	blueR: {
 		position: 'absolute',
-		top: '78%',
+		top: '74vh',
 		left: '46%',
 		width: '19px',
 		height: '19px',
@@ -152,7 +142,7 @@ const useStyles = makeStyles({
 	},
 	greenR: {
 		position: 'absolute',
-		top: '54%',
+		top: '52vh',
 		left: '85%',
 		width: '20px',
 		height: '20px',
@@ -160,7 +150,7 @@ const useStyles = makeStyles({
 	},
 	red3: {
 		position: 'absolute',
-		top: '110%',
+		top: '103vh',
 		left: '55%',
 		width: '30px',
 		height: '30px',
@@ -176,7 +166,7 @@ const useStyles = makeStyles({
 	},
 	rgby2: {
 		position: 'absolute',
-		marginTop: '1002px',
+		marginTop: '230%',
 		left: '75%',
 		width: '105px',
 		height: '105px',
@@ -377,8 +367,8 @@ const useStyles = makeStyles({
 	},
 	rgbyCircle1: {
 		position: 'absolute',
-		marginTop: '720px',
-		left: '83%',
+		marginTop: '750px',
+		left: '84%',
 		width: '160px',
 		height: '160px',
 	},
@@ -639,7 +629,7 @@ export const Contact = () => {
 						</div>
 						<div className="message-box">
 							<TextField
-								className={classes.root1}
+								className={classes.inputbox}
 								label="Your Email"
 								name="email"
 								onChange={handleChanges}
@@ -652,7 +642,7 @@ export const Contact = () => {
 						<div
 							style={{
 								marginTop: '2px',
-								paddingBottom: '15px',
+								//paddingBottom: '15px',
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '4rem',
@@ -663,7 +653,7 @@ export const Contact = () => {
 
 						<div className="message-box">
 							<TextField
-								className={classes.root1}
+								className={classes.inputbox}
 								label="Your Message"
 								name="message"
 								onChange={handleChanges}
@@ -676,7 +666,7 @@ export const Contact = () => {
 						<div
 							style={{
 								marginTop: '2px',
-								paddingBottom: '2px',
+								//paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '4rem',

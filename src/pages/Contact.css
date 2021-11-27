@@ -200,6 +200,10 @@
     .header{
         font-size: 40px;
     }
+    .head{
+        font-size: 30px;
+        margin-top: 6vh;
+    }
     .mainbody{
         position: relative;
         height: 180vh;
@@ -224,7 +228,7 @@
         align-items: center;
     }
     .box{
-        grid-template-rows: 67% 33%;
+        grid-template-rows: 62% 38%;
         grid-template-columns: 100%;
         width: 329px;
         height: 1000px;
