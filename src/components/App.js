@@ -13,6 +13,8 @@ import EventsDetail from "../pages/EventsDetail";
 import { Header, Footer } from "./";
 
 function App() {
+
+  
   return (
     <>
       <Header />
@@ -38,5 +40,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
