@@ -56,7 +56,7 @@ export const Home = () => {
         </div>
 
         <div className="blue2">
-        <img src={blueCircle} alt="B2" />
+
         </div>
         <div className="blue3">
         <img src={blueCircle} alt="B3" />
@@ -64,23 +64,20 @@ export const Home = () => {
         <div className="blue4">
         <img src={blueCircle} alt="B4" />
         </div>
-        <div className="blue5">
-        <img src={blueCircle} alt="B5" />
+        <div className="yellow2">
         </div>
 
         <div className="yellowRect1">
-        <img src={yellowRect} alt="YR1" />
         </div>
         
         <div className="yellowRect2">
-        <img src={yellowRect} alt="YR2" />
+        {/* <img src={yellowRect} alt="YR2" /> */}
         </div>
 
         <div className="greenCircle1">
         <img src={greenCircle} alt="GC1" />
         </div>
         <div className="greenCircle2">
-        <img src={greenCircle} alt="GC2" />
         </div>
 
         <div className="yellowCircle1">
