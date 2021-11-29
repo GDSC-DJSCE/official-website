@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   },
   roots:{
   "&.MuiAppBar-colorPrimary":{
-    
     backgroundColor:"#F5F5F5",
   },
   "&.MuiPaper-elevation4":{
@@ -72,7 +71,7 @@ export const  Header = () =>{
               <img src={logo} alt="logo" style={{width:"50px" , height:"35px" , paddingTop:"1vh" , marginLeft:"35%"}}/>
               
               <Typography className={classes.logo} style={{fontSize:"1rem" , margin:"20px"}}>
-              Developer Students Club
+              Developer Student Clubs
               </Typography>
             
               

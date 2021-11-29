@@ -26,7 +26,7 @@ var user = process.env.REACT_APP_ACCESS_TOKEN;
 var user_id = process.env.REACT_APP_USERID;
 var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
-	
+
 
 	mainContainer: {
 		display: 'grid',
