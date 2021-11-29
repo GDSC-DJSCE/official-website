@@ -57,7 +57,10 @@
 .team-cont1 {
   margin: 0 7%;
 }
-
+a {
+  text-decoration: none;
+  color: initial;
+}
 /* team.jsx */
 .topimg {
   width: 100%;

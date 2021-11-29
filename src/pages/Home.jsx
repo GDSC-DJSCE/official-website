@@ -1,8 +1,16 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import "../styles/home.css";
+// Animations Library
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import LightSpeed from 'react-reveal/LightSpeed';
+import RubberBand from 'react-reveal/RubberBand';
+
 import { HomeDots } from "../components/Home/HomeDots";
 import {FeaturedBox} from "../components/Home/FeaturedBox" ;
 import {BannerBox} from '../components/Home/BannerBox' ;
+
 
 // import triangle from "../assets/images/Triangle.png" ;
 // import circle from "../assets/images/Circle.png" ;
@@ -23,6 +31,19 @@ import greenRect from '../assets/images/greenRect.svg';
 
 
 export const Home = () => {
+
+   useEffect(() => {
+        AOS.init({
+          offset: 100,
+          duration: 600,
+          easing: 'ease-in-sine',
+          startEvent: 'load'
+          
+        });
+      }, []);
+
+      // AOS.refresh();
+
   return (
     <>
       {/* <p className="text-3xl">GDSC Djsce Home</p> */}
@@ -35,7 +56,7 @@ export const Home = () => {
         </div>
 
         <div className="blue2">
-        <img src={blueCircle} alt="B2" />
+
         </div>
         <div className="blue3">
         <img src={blueCircle} alt="B3" />
@@ -43,23 +64,20 @@ export const Home = () => {
         <div className="blue4">
         <img src={blueCircle} alt="B4" />
         </div>
-        <div className="blue5">
-        <img src={blueCircle} alt="B5" />
+        <div className="yellow2">
         </div>
 
         <div className="yellowRect1">
-        <img src={yellowRect} alt="YR1" />
         </div>
         
         <div className="yellowRect2">
-        <img src={yellowRect} alt="YR2" />
+        {/* <img src={yellowRect} alt="YR2" /> */}
         </div>
 
         <div className="greenCircle1">
         <img src={greenCircle} alt="GC1" />
         </div>
         <div className="greenCircle2">
-        <img src={greenCircle} alt="GC2" />
         </div>
 
         <div className="yellowCircle1">
@@ -94,22 +112,36 @@ export const Home = () => {
         <div className="banner_content">
 
           <div className="left_content">
-
+            
+              <RubberBand>
               <div className="logo">
               <img src={logo} alt="" />
               </div>
+              </RubberBand>
             
-              <div className="gdsc">
-                  <span className="banner_header">GDSC DJSCE</span>
-                  <span className="banner_header_sm">
-                    <p>GDSC</p><p className="span1">DJSCE</p>
-                  </span>
+              <div className="gdsc" >
+               
+                <LightSpeed left> 
+                  <h1 className="banner_header" >
+                    DJSCE GDSC
+                  </h1>
+                </LightSpeed >
 
-                  <span className="banner_text">
+                <LightSpeed left> 
+                  <h1 className="banner_header_sm">
+                    <p >GDSC</p>
+                    <p className="span1" >DJSCE</p>
+                  </h1>
+                  </LightSpeed >
+
+                  
+                  <span className="banner_text" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla facilis soluta. Ea nihil 
                     doloribus impedit consequuntur. Sed atque nesciunt ad debitis voluptates? Sequi, iure fugit omnis 
                     error porro inventore!
                   </span>
+                  
+
               </div>
 
           </div> 
@@ -134,9 +166,9 @@ export const Home = () => {
         </div>
         <HomeDots />
        
-        <h1 className="header">ABOUT US</h1>
+        <h1 className="header" data-aos="fade-right">ABOUT US</h1>
         <div className="content_box">
-          <div className="content">
+          <div className="content" data-aos="fade-right"  data-aos-duration="300" data-aos-delay="500" >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum perferendis doloribus consectetur
             quae corrupti, impedit odit vitae fuga. Fuga culpa facere earum illo eius. Nobis harum voluptatibus neque 
             at? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas alias delectus laudantium voluptas 
@@ -152,14 +184,14 @@ export const Home = () => {
         </div>
         <HomeDots />
         <div className="content_box">
-          <div className="content">
+          <div className="content" data-aos="fade-left"  data-aos-delay="500">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum perferendis doloribus consectetur
             quae corrupti, impedit odit vitae fuga. Fuga culpa facere earum illo eius. Nobis harum voluptatibus neque 
             at? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas alias delectus laudantium voluptas 
             aperiam impeditiste neque sed, odit ad tempora ea ipsam totam, cupiditate nisi. Sapiente fugit nisi praesentium!
           </div>
         </div>
-        <h1 className="header">OUR VISION</h1>
+        <h1 className="header" data-aos="fade-left" data-offset="100">OUR VISION</h1>
 
       </div>
 
@@ -169,7 +201,7 @@ export const Home = () => {
 
   {/* FEATURED */}
   <div className="featured">
-  <h1 className="header">FEATURED</h1>
+  <h1 className="header" data-aos="fade-down">FEATURED</h1>
 
   <div className="featured_container" >
 
@@ -180,6 +212,7 @@ export const Home = () => {
       ratione!"
       img={featured_1}
       href="#" 
+     
     />
 
     < FeaturedBox 

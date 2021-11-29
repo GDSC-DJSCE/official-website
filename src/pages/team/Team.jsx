@@ -28,7 +28,7 @@ export const Team = () => (
           <THead />
         </div>
         <div className="topcard-cont1">
-          <TCard />
+          <TCard name="Soham Dave" role="GDSC DJSCE Lead" />
         </div>
         <div className="cont1card">
           <Link to="/team/domain-head">

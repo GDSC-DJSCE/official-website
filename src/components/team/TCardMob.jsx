@@ -6,22 +6,18 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     border: "2px",
     width: "135px",
-    height: "140px",
+    height: "145px",
     display: "flex",
     flexDirection: "column",
     boxShadow:
       "4px 0px 20px rgba(0, 0, 0, 0.05),-4px 10px 20px rgba(0, 0, 0, 0.05)",
     borderRadius: "1rem",
-    "&:hover": {
-      backgroundColor: "#4385f3",
-    },
   },
   image: {
     borderRadius: "50%",
@@ -67,18 +63,17 @@ export const TCardMob = (props) => {
 
   return (
     <>
-      <Card className={classes.container}>
-        <CardMedia
-          component="img"
+      <div className={classes.container}>
+        <img
           src="http://picsum.photos/100"
           alt="profile"
           height="70px"
           className={classes.image}
         />
-        <CardContent className={classes.content}>
-          <Typography className={classes.p1}>Soham Dave</Typography>
-          <p className={classes.p2}>GDSC DJSCE Lead</p>
-        </CardContent>
+        <div className={classes.content}>
+          <p className={classes.p1}>{props.name}</p>
+          <p className={classes.p2}>{props.role}</p>
+        </div>
         <div className={classes.action}>
           <Link to="/team/lead">
             <FontAwesomeIcon icon={faLinkedin} />
@@ -90,7 +85,7 @@ export const TCardMob = (props) => {
             <FontAwesomeIcon icon={faGithub} />
           </Link>
         </div>
-      </Card>
+      </div>
     </>
   );
 };

@@ -38,6 +38,7 @@ export const DomainHead = () => (
             fontFamily: "Montserrat",
             textTransform: "none",
             fontWeight: "400",
+            height: "30px",
           }}
         >
           Domain Head
@@ -51,16 +52,16 @@ export const DomainHead = () => (
     <img className="img" src={tree} alt="branches" />
     <div className="cards">
       <div className="cards-end">
-        <TCard />
+        <TCard name="Sanket Shah" role="AI/ML & Cloud" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Dhruv Jain" role="Web & Blockchain" />
       </div>
       <div className="cards-center">
-        <TCard />
+        <TCard name="Jenish Hirpara" role="App & CP" />
       </div>
       <div className="cards-end">
-        <TCard />
+        <TCard name="Ayush Shah" role="AR/VR & IOT" />
       </div>
     </div>
 
