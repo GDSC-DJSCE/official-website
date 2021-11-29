@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme)=>({
       gridTemplateColumns:"40% 10% 50%",
       paddingTop:"1.5vh",
       paddingBottom:"1vh",
-      fontSize:"2vh",
+      fontSize:"1.7vh",
       boxShadow:"none",
     },
     icons:{
@@ -116,7 +116,7 @@ export const FooterMobile = () => {
     <div>
       <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh"}}/>
     </div>
-    <div style={{fontSize:"1.4vh" , marginTop:"3vh"}}>
+    <div style={{fontSize:"1.2vh" , marginTop:"3vh"}}>
     Made By @GDSC DJSCE Frontend Team
     </div>
   </div>
