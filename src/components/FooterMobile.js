@@ -114,7 +114,7 @@ export const FooterMobile = () => {
     &copy; GDSC DJSCE 2021
     </div>
     <div>
-      <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh"}}/>
+      <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/>
     </div>
     <div style={{fontSize:"1.2vh" , marginTop:"3vh"}}>
     Made By @GDSC DJSCE Frontend Team
