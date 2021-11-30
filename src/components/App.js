@@ -5,6 +5,7 @@ import {
   Contact,
   ContentEditorial,
   DomainHead,
+  DomainHead2,
   ProjectTeam,
   OutreachEvents,
   Team,
@@ -13,8 +14,6 @@ import EventsDetail from "../pages/EventsDetail";
 import { Header, Footer } from "./";
 
 function App() {
-
-  
   return (
     <>
       <Header />
@@ -25,6 +24,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/team" component={Team} />
         <Route exact path="/team/domain-head" component={DomainHead} />
+        <Route exact path="/team/domain-head2" component={DomainHead2} />
         <Route path="/events/:id" component={EventsDetail} />
         <Route
           exact
@@ -40,6 +40,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export const DomainHead = () => {
+export const DomainHead2 = () => {
   AOS.init({
     offset: 100,
-    duration: 200,
+    duration: 100,
     easing: "ease-in-sine",
     startEvent: "load",
   });
@@ -56,24 +56,24 @@ export const DomainHead = () => {
       </div>
 
       <div style={{ marginTop: "18px" }} className="topcard-branch">
-        <TCard name="Rushank Shah" role="Technical Coordinator" />
+        <TCard name="Amay Gada" role="Technical Coordinator" />
       </div>
       <img className="img" src={tree} alt="branches" />
       <div className="cards">
         <div className="cards-end"></div>
         <div data-aos="zoom-in" className="cards-center">
-          <TCard name="Sanket Shah" role="AI/ML & Cloud" />
+          <TCard name="Dhruv Jain" role="Web & Blockchain" />
         </div>
         <div data-aos="zoom-in" className="cards-center">
-          <TCard name="Jenish Hirpara" role="App & CP" />
+          <TCard role="AR/VR & IOT" />
         </div>
         <div className="cards-end"></div>
       </div>
 
       <div className="bottom-div">
         <div data-aos="zoom-in" className="bottom-div-col">
-          <TCard name="Sanket Shah" role="AI/ML & Cloud" />
-          <TCard name="Jenish Hirpara" role="App & CP" />
+          <TCard name="Dhruv Jain" role="Web & Blockchain" />
+          <TCard name="Ayush Shah" role="AR/VR & IOT" />
         </div>
       </div>
       <Link to="/team">
@@ -94,12 +94,12 @@ export const DomainHead = () => {
       <div className="bottom-div-mob">
         <div className="bottom-card">
           <Link to="/team">
-            <TCardMob name="Rushank Shah" role="Technical Coordinator" />
+            <TCardMob name="Amay Gada" role="Technical Coordinator" />
           </Link>
         </div>
         <div data-aos="zoom-in" className="bottom-div-col">
-          <TCardMob name="Sanket Shah" role="AI/ML & Cloud" />
-          <TCardMob name="Jenish Hirpara" role="App & CP" />
+          <TCardMob name="Dhruv Jain" role="Web & Blockchain" />
+          <TCardMob name="Ayush Shah" role="AR/VR & IOT" />
         </div>
       </div>
       <br />

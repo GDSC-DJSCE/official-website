@@ -1,7 +1,7 @@
 import { Home } from "./Home";
 import { Contact } from "./Contact";
 import { Events } from "./Events";
-import { Lead } from "./team/Lead";
+import { DomainHead2 } from "./team/DomainHead2";
 import { ContentEditorial } from "./team/ContentEditorial";
 import { DomainHead } from "./team/DomainHead";
 import { OutreachEvents } from "./team/OutreachEvents";
@@ -12,7 +12,7 @@ export {
   Home,
   Contact,
   Events,
-  Lead,
+  DomainHead2,
   ContentEditorial,
   DomainHead,
   OutreachEvents,

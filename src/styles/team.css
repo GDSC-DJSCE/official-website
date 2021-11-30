@@ -90,7 +90,7 @@ a {
   margin-bottom: 10px;
 }
 .cont1card {
-  margin-bottom: -24px;
+  margin-bottom: 0;
   display: none;
   padding: 0 23px;
 }
@@ -206,11 +206,8 @@ a {
   .container1 {
     margin: 0 7%;
   }
-  .cont1card {
-    margin-bottom: -24px;
-  }
   .cont1head {
-    width: 50%;
+    width: 55%;
   }
   .container1 {
     justify-content: space-between;
@@ -219,6 +216,9 @@ a {
 @media only screen and (min-width: 1350px) {
   .vectorend {
     display: block;
+  }
+  .cont1card {
+    margin-bottom: -24px;
   }
 }
 
