@@ -15,8 +15,6 @@
     overflow: hidden;
     z-index:100;
 
-    /*border: 1px solid black;*/
-
 }
 .green{
     position: absolute;
@@ -48,6 +46,59 @@
     /* border: 1px soid rgb(0, 255, 136); */
 
 }
+.floatgreen1{
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    animation: floatgreen1 10s linear infinite;
+}
+@keyframes floatgreen1 {
+    0%,100%{
+        transform: translateX(50px) translateY(30px);
+      }
+      50%{
+        transform: translateX(-20px) translateY(-10px);
+        width:20px;
+        height: 20px;
+      }
+}
+.floatblue1{
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    animation: floatblue1 5s linear infinite;
+}
+@keyframes floatblue1 {
+    0%,100%{
+        width:15px;
+        height: 15px;
+      }
+      50%{
+        width:30px;
+        height: 30px;
+      }
+}
+.floatred1{
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    animation: floatred1 5s linear infinite;
+}
+@keyframes floatred1 {
+    0%,100%{
+        transform: translateX(50px) translateY(30px);
+      }
+      50%{
+        transform: translateX(-20px) translateY(-10px);
+        width:15px;
+        height: 15px;
+      }
+}
+
+
+.circle1 {
+    animation: spin 9s infinite linear;
+}
 .greenR-d{
     position: absolute;
     top: 50%;
@@ -55,6 +106,15 @@
     width: 30px;
     height: 30px;
     overflow: hidden;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 .blueR-d{
     position: absolute;
@@ -81,6 +141,329 @@
     height: 25px;
     overflow: hidden;
 }
+.floatyellowR-d{
+    width:25px;
+    height: 25px;
+    animation: spin 6s linear infinite;
+}
+.floatblue1d{
+    width:25px;
+    height: 25px;
+    animation: MoveSide 6s linear infinite;
+}
+@keyframes MoveSide {
+    0%,100%{
+        transform: translateX(50px) translateY(50px);
+      }
+      50%{
+        transform: translateX(-130px) translateY(-130px);
+        width:50px;
+        height: 50px;
+      }
+}
+.floatblue2d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue2d 10s linear infinite;
+}
+@keyframes floatblue2d {
+    0% , 100%{
+        transform: translateY(50px) translateX(50px);
+      }
+      50% {
+        transform: translateY(-150px) translateX(-150px);
+        width:25px;
+        height: 25px;
+    }
+    25% ,75%{
+        width: 40px;
+        height: 40px;
+    }
+}
+.floatblue3d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue3d 3s linear infinite;
+}
+@keyframes floatblue3d {
+    0%,100%{
+        transform: translateY(20px) translateX(100px);
+      }
+      50% {
+        transform: translateY(60px);
+      }
+}
+
+.floatblue4d{
+    width: 25px;
+    height: 25px;
+    animation: MoveUpDown 6s linear infinite;
+}
+@keyframes MoveUpDown {
+    0%{
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(50px);
+      }
+}
+.floatblue5d{
+    width: 20px;
+    height: 20px;
+    animation: floatblue5d 4s linear infinite;
+}
+@keyframes floatblue5d {
+    0%, 100%{
+        transform: translateX(-100px) translateY(-150px);
+      }
+      50% {
+        transform: translateX(50px) translateY(20px);
+      }
+}
+.floatblue6d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue6d 6s linear infinite;
+}
+@keyframes floatblue6d {
+    0%{
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(50px);
+      }
+}
+.floatblue7d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue7d 6s linear infinite;
+}
+@keyframes floatblue7d {
+    0%{
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(50px);
+      }
+}
+.floatblue8d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue8d 6s linear infinite;
+}
+@keyframes floatblue8d {
+    0%{
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(50px);
+      }
+}
+.floatblue9d{
+    width: 15px;
+    height: 15px;
+    animation: floatblue9d 6s linear infinite;
+}
+@keyframes floatblue9d {
+    0% ,100%{
+        transform: translateY(0px) translateX(70px);
+      }
+      50% {
+        transform: translateY(50px) translateX(-70px);
+      }
+}
+.floatblue10d{
+    width: 20px;
+    height: 20px;
+    animation: floatblue10d 6s linear infinite;
+}
+@keyframes floatblue10d {
+    0%,100%{
+        transform: translateY(-450px) translateX(50px);
+      }
+      50% {
+        transform: translateY(-200px);
+      }
+}
+.floatblue11d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue11d 10s linear infinite;
+}
+@keyframes floatblue11d {
+    0%,100%{
+        transform: translateY(50px) translateX(5px);
+        width: 25px;
+        height: 25px;
+      }
+      25% ,75%{
+          width:10px;
+          height: 10px;
+      }
+      50% {
+        transform: translateY(-200px) ;
+        width:40px;
+        height: 40px;
+      }
+}
+.floatblue12d{
+    width: 25px;
+    height: 25px;
+    animation: floatblue12d 5s linear infinite;
+}
+@keyframes floatblue12d{
+    0%, 100%{
+        transform: translateY(0px) translateX(-50px);
+        width: 30px;
+        height: 30px;
+      }
+      50%{
+        transform: translateY(-50px) translateX(70px);
+        width:20px;
+        height: 20px;
+      }
+}
+.floatgreen2d{
+    width: 20px;
+    height: 20px;
+    animation: floatgreen2d 5s linear infinite;
+}
+@keyframes floatgreen2d{
+    0%, 100%{
+        width: 25px;
+        height: 25px;
+      }
+      50%{
+        width:60px;
+        height: 60px;
+      }
+}
+.floatgreen1d{
+    width: 15px;
+    height: 15px;
+    animation: floatgreen1d 5s linear infinite;
+}
+@keyframes floatgreen1d{
+    0%, 100%{
+        transform: translateY(-100px) translateX(-100px);
+        width: 30px;
+        height: 30px;
+      }
+      50%{
+        transform: translateY(-50px) translateX(5px);
+        width:10px;
+        height: 10px;
+      }
+}
+.floatgreen3d{
+    width: 15px;
+    height: 15px;
+    animation: floatgreen3d 5s linear infinite;
+}
+@keyframes floatgreen3d{
+    0%, 100%{
+        transform: translateY(10px) translateX(-280px);
+        width: 20px;
+        height: 20px;
+      }
+      50%{
+        transform: translateY(-150px) translateX(-50px);
+        width:10px;
+        height: 10px;
+      }
+}
+.floatgreen5d{
+    width: 25px;
+    height: 25px;
+    animation: floatgreen5d 5s linear infinite;
+}
+@keyframes floatgreen5d{
+    0%, 100%{
+        transform: translateY(0px) translateX(-50px);
+        width: 30px;
+        height: 30px;
+      }
+      50%{
+        transform: translateY(-50px) translateX(70px);
+        width:20px;
+        height: 20px;
+      }
+}
+.floatyellow1d{
+    width: 25px;
+    height: 25px;
+    animation: floatyellow1d 2s alternate infinite;
+}
+@keyframes floatyellow1d{
+    0%, 100%{
+        transform: translateY(0px);
+        width: 10px;
+        height: 10px;
+      }
+      50%{
+        transform: translateY(-50px);
+        width:20px;
+        height: 20px;
+      }
+}
+.floatyellow2d{
+    width: 25px;
+    height: 25px;
+    animation: floatyellow2d 7s linear infinite;
+}
+@keyframes floatyellow2d{
+    0%, 100%{
+        transform: translateY(300px) translateX(50px);
+        width: 30px;
+        height: 30px;
+      }
+      50%{
+        transform: translateY(-20px) translateX(-90px);
+        width:20px;
+        height: 20px;
+      }
+}
+.floatyellow3d{
+    width: 25px;
+    height: 25px;
+    margin-top: -40px;
+    margin-left: -40px;
+    animation: floatyellow3d 5s linear infinite;
+}
+@keyframes floatyellow3d{
+    0%, 100%{
+        
+        transform: translateX(-20px);
+        width: 15px;
+        height: 15px;
+      }
+      50%{
+          transform: translateX(20px);
+        width:10px;
+        height: 10px;
+      }
+}
+.floatyellow5d{
+    width: 25px;
+    height: 25px;
+    margin-top: -40px;
+    margin-left: -40px;
+    animation: floatyellow5d 3s linear infinite;
+}
+@keyframes floatyellow5d{
+    0%, 100%{
+        
+        width: 50px;
+        height: 50px;
+      }
+      50%{
+          transform: translateX(20px);
+        width:25px;
+        height: 25px;
+      }
+}
+
+
 .sub-header{
     text-align: center;
     font-size: 20px;
@@ -99,7 +482,7 @@
 }
 .mainbody{
     position: relative;
-    height:150vh;
+    height:180vh;
     overflow:hidden;
 
 }
@@ -145,7 +528,7 @@
     display: none;
 }
 
-@media screen and (min-width: 850px ){
+@media screen and (min-width: 1000px ){
     .box-map{
         display: none;
     }
@@ -154,7 +537,7 @@
     }
    
 }
-@media screen and (min-width: 650px ) and (max-width:850px){
+@media screen and (min-width: 650px ) and (max-width:1000px){
 
     
     .images-phone{
@@ -216,7 +599,6 @@
     .mainbody{
         position: relative;
         height: 180vh;
-        overflow: hidden;
     }
     .sub-header{
         font-size: 20px;
@@ -237,10 +619,10 @@
         align-items: center;
     }
     .box{
-        grid-template-rows: 67% 33%;
+        grid-template-rows: 85vh 55vh;
         grid-template-columns: 100%;
         width: 329px;
-        height: 1000px;
+        height: 140vh;
         /*border: 1px solid black;*/
         margin-left: 30px;
         margin-bottom: 30vh;

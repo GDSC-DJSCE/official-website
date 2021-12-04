@@ -5,17 +5,17 @@ import { faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
-import blueCircleHalf from '../assets/images/blueCircleHalf.jpg';
+import blueCircleHalf from '../assets/images/blueCircleHalf.png';
 import redCircle from '../assets/images/redCircle.svg';
-import redCircleHalf from '../assets/images/redCircle.jpg';
+import redCircleHalf from '../assets/images/redCircle.png';
 import Contactpage from '../assets/images/Contactpage.gif';
 import blueRect from '../assets/images/blueRect.svg';
 import yellowRect from '../assets/images/yellowRect.svg';
 import greenRect from '../assets/images/greenRect.svg';
-import halfcircle from '../assets/images/halfcircle.svg';
-import yellowCircleHalf from '../assets/images/yellowCircleHalf.jpg';
+import halfcircle from '../assets/images/greenhalfcircle.png';
+import yellowCircleHalf from '../assets/images/yellowCircleHalf.png';
 import rgbyCircle from '../assets/images/rgbyCircle.svg';
-import rgby2 from '../assets/images/rgby2.svg';
+import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import { TextField, makeStyles, Button } from '@material-ui/core';
@@ -166,11 +166,13 @@ const useStyles = makeStyles({
 	},
 	rgby2: {
 		position: 'absolute',
-		marginTop:"264%",
+		marginTop:"130vh",
 		left: '75%',
 		width: '105px',
 		height: '105px',
-		overflow:"hidden"
+		overflow:"hidden",
+		borderRadius:"30%",
+		borderTopLeftRadius:"50%"
 	},
 	blue1d: {
 		position: 'absolute',
@@ -276,7 +278,7 @@ const useStyles = makeStyles({
 		left: '87%',
 		width: '25px',
 		height: '25px',
-		opacity: '40%',
+		opacity:"60%"
 	},
 	green2d: {
 		position: 'absolute',
@@ -284,7 +286,7 @@ const useStyles = makeStyles({
 		left: '84%',
 		width: '10px',
 		height: '10px',
-		opacity: '40%',
+		opacity:"60%"
 	},
 	green3d: {
 		position: 'absolute',
@@ -292,7 +294,7 @@ const useStyles = makeStyles({
 		left: '80%',
 		width: '10px',
 		height: '10px',
-		opacity: '40%',
+		opacity:"60%"
 	},
 	green4d: {
 		position: 'absolute',
@@ -348,7 +350,7 @@ const useStyles = makeStyles({
 		left: '38%',
 		width: '25px',
 		height: '25px',
-		opacity: '40%',
+		opacity: '60%',
 	},
 	yellow6d: {
 		position: 'absolute',
@@ -475,37 +477,59 @@ export const Contact = () => {
 					<img src={yellowCircle} alt="" />
 				</div>
 				<div className={classes.green1}>
+					<div className="floatgreen1">
 					<img src={greenCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue1}>
+					<div className="floatblue1">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.red1}>
+					<div className="floatred1">
 					<img src={redCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue2}>
+					<div className="floatblue2">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.red2}>
+					<div className="floatred2">
 					<img src={redCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.red3}>
+					<div className="floatred3">
 					<img src={redCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellowR1}>
+					<div className="floatyellowR1">
 					<img src={yellowRect} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellowR2}>
+					<div className="floatyellowR2">
 					<img src={yellowRect} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellowR3}>
+					<div className="floatyellowR3">
 					<img src={yellowRect} alt="" />
+					</div>
 				</div>
 				<div className={classes.blueR}>
+					<div className="floatblueR">
 					<img src={blueRect} alt="" />
+					</div>
 				</div>
 				<div className={classes.greenR}>
+					<div className="floatgreenR">
 					<img src={greenRect} alt="" />
+					</div>
 				</div>
 				<div class={classes.rgby2}>
 					<img src={rgby2} alt="" />
@@ -523,70 +547,114 @@ export const Contact = () => {
 					<img src={redRect.default} alt="" />
 				</div>
 				<div className="yellowR-d">
+					<div className="floatyellowR-d">
 					<img src={yellowRect} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue1d}>
+					<div className="floatblue1d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue2d}>
+					<div className="floatblue2d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue3d}>
+					<div className="floatblue3d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue4d}>
+					<div className="floatblue4d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue5d}>
+					<div className="floatblue5d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue6d}>
+					<div className="floatblue6d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue7d}>
+					<div className="floatblue7d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue8d}>
+					<div className="floatblue8d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue9d}>
+					<div className="floatblue9d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue10d}>
+					<div className="floatblue10d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue11d}>
+					<div className="floatblue11d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.blue12d}>
+					<div className="floatblue12d">
 					<img src={blueCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.green1d}>
+				<div class="floatgreen1d">
 					<img src={greenCircle} alt="" />
+				</div>
 				</div>
 				<div className={classes.green2d}>
+					<div className="floatgreen2d">
 					<img src={greenCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.green3d}>
+					<div className="floatgreen3d">
 					<img src={greenCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.green5d}>
+					<div className="floatgreen5d">
 					<img src={greenCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow1d}>
+					<div className="floatyellow1d">
 					<img src={yellowCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow2d}>
+					<div className="floatyellow2d">
 					<img src={yellowCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow3d}>
+					<div className="floatyellow3d">
 					<img src={yellowCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow4d}>
+					<div className="floatyellow4d">
 					<img src={yellowCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow5d}>
+					<div className="floatyellow5d">
 					<img src={yellowCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.yellow6d}>
 					<img src={yellowCircle} alt="" />
@@ -596,7 +664,9 @@ export const Contact = () => {
 				</div>
 				<div className="circle">
 					<div className={classes.rgbyCircle1}>
+						<div className="circle1">
 						<img src={rgbyCircle} alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
