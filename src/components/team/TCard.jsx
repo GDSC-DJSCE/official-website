@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import { ThemeContext } from "../../ThemeContext";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     color: "black",
     textDecoration: "none",
+    backgroundColor: "white",
     boxShadow:
       "4px 0px 20px rgba(0, 0, 0, 0.05),-4px 10px 20px rgba(0, 0, 0, 0.05)",
     borderRadius: "1rem",
@@ -66,17 +68,29 @@ const useStyles = makeStyles((theme) => ({
 export const TCard = (props) => {
   const classes = useStyles();
 
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
       <span className="tcard">
-        <div className={classes.container}>
+        <div
+          style={{
+            backgroundColor: darkMode ? "#FFFFFF1F" : null,
+          }}
+          className={classes.container}
+        >
           <img
             src="http://picsum.photos/100"
             alt="profile"
             height="70px"
             className={classes.image}
           />
-          <div className={classes.content}>
+          <div
+            className={classes.content}
+            style={{
+              color: darkMode ? "#adadad" : null,
+            }}
+          >
             <p className={classes.p1}>{props.name}</p>
             <p className={classes.p2}>{props.role}</p>
           </div>
