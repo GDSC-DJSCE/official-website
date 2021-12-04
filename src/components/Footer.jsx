@@ -10,7 +10,7 @@ import arrow from "../assets/images/arrow.png";
 const useStyles = makeStyles((theme)=>({
   roots:{
     "&.MuiAppBar-colorPrimary":{
-      backgroundColor:"inherit",
+      backgroundColor:"#F6F6F4",
       height:"27vh",
       top:"auto",
       bottom:"0",
@@ -22,9 +22,27 @@ const useStyles = makeStyles((theme)=>({
       margin:0,
     },
   },
+  darkroots:{
+    "&.MuiAppBar-colorPrimary":{
+      backgroundColor:"#1b1b1b",
+      height:"27vh",
+      top:"auto",
+      bottom:"0",
+      paddingTop:"5vh",
+      paddingBottom:"5vh",
+      display: "grid",
+      gridTemplateColumns: "35% 65%",
+      boxShadow:"none",
+      margin:0,
+    },
+    "& .MuiTypography-root":{
+      color:"white",
+    },
+  },
   footerdetails:{
     display: "grid",
     gridTemplateColumns: "37% 37% 26%",
+    color:"white",
   },
   community:{
     color:"black",
@@ -47,6 +65,17 @@ const useStyles = makeStyles((theme)=>({
     boxShadow:"none",
     overflow:"visble"
   },
+  darkfooterBottom:{
+    height:"9vh" , 
+    backgroundColor:"#2B2B2B" ,
+    display:"grid" , 
+    gridTemplateColumns:"60% 5% 35%",
+    paddingTop:"1.5vh",
+    paddingBottom:"1vh",
+    fontSize:"2.2vh",
+    boxShadow:"none",
+    overflow:"visble"
+  },
   arrow:{
     position:"absolute",
     marginLeft:"50%",
@@ -61,12 +90,12 @@ export const Footer = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <div className={darkMode? 'darkBG':'lightBG'}>
+    <div>
    
     {isMobile ? (
       <FooterMobile/> ) : (
     <div>
-    <AppBar position="relative" sx={{ top: "auto", bottom: 20 }} className={classes.roots}>
+    <AppBar position="relative" sx={{ top: "auto", bottom: 20 }} className={darkMode ? classes.darkroots : classes.roots}>
      
        <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"30% 70%" }}>
               <img src={logo} alt="logo" style={{width:"15vh" , height:"5vh" ,paddingLeft:"7vh"}}/>
@@ -98,7 +127,7 @@ export const Footer = () => {
       </div>
      
     </AppBar>
-    <div className={classes.footerBottom}>
+    <div className={darkMode ? classes.darkfooterBottom : classes.footerbottom}>
       <div style={{marginLeft:"7vh"}}>
       &copy; GDSC DJSCE 2021
       </div>

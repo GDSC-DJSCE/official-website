@@ -576,6 +576,12 @@
         grid-template-columns: 100%;
         height: 1000px;
     }
+    .box-dark{
+        box-shadow: none;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 100%;
+        height: 1000px;
+    }
 
     .box-detail{
         grid-template-rows: 0%  70% 30%;
@@ -649,6 +655,18 @@
         box-shadow: none;
         /*margin-bottom: 1000px;*/
     }
+    .box-dark{
+        grid-template-rows: 85vh 55vh;
+        grid-template-columns: 100%;
+        width: 329px;
+        height: 140vh;
+        /*border: 1px solid black;*/
+        margin-left: 30px;
+        margin-bottom: 30vh;
+        box-shadow: none;
+        /*margin-bottom: 1000px;*/
+    }
+
     .form-message{
         width: 280px;
 

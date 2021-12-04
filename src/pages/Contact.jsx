@@ -62,7 +62,7 @@ const useStyles = makeStyles({
 	},
 	inputboxdark: {
 		"&.MuiFormControl-root":{
-			backgroundColor: "#95a5a6"
+			backgroundColor: "#ecf0f1"
 		},
 		marginBottom: '1rem',
 		width: '20rem',
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
 	},
 	mobileboxdark: {
 		"&.MuiFormControl-root":{
-			backgroundColor: "#95a5a6"
+			backgroundColor: "#ecf0f1"
 		},
 		marginBottom: '1rem',
 		width: '15rem',
@@ -708,7 +708,7 @@ export const Contact = () => {
 				</div>
 			</div>
 
-			<div class={darkMode ? "box-dark" : "box" }>
+			<div className={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
 						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Lets Talk ?</div>
