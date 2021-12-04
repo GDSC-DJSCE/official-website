@@ -1,4 +1,6 @@
-import * as React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "../ThemeContext";
+
 import {  AppBar, useMediaQuery, makeStyles,useTheme,Typography } from "@material-ui/core";
 import { FooterMobile } from "./FooterMobile";
 
@@ -8,7 +10,7 @@ import arrow from "../assets/images/arrow.png";
 const useStyles = makeStyles((theme)=>({
   roots:{
     "&.MuiAppBar-colorPrimary":{
-      backgroundColor:"#F5F5F5",
+      backgroundColor:"inherit",
       height:"27vh",
       top:"auto",
       bottom:"0",
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme)=>({
   },
   footerBottom:{
     height:"9vh" , 
-    backgroundColor:"#E5E5E5" ,
+    backgroundColor:"inherit" ,
     display:"grid" , 
     gridTemplateColumns:"60% 5% 35%",
     paddingTop:"1.5vh",
@@ -53,14 +55,14 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 export const Footer = () => {
+
+  const {darkMode} = useContext(ThemeContext) ;
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <div>
-    {/*<div className={classes.arrow} >
-      <img src={arrow} alt="arrow" />
-  </div>*/}
+    <div className={darkMode? 'darkBG':'lightBG'}>
+   
     {isMobile ? (
       <FooterMobile/> ) : (
     <div>

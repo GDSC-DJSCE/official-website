@@ -4,6 +4,7 @@
 *{
     padding:0 ;
     margin: 0;
+    transition: all 0.3s linear;
 }
 
 body{
@@ -577,6 +578,17 @@ body{
     line-height: 2px;
 }
 
+.banner .banner_content .left_content .gdsc .banner_text.banner_dark{
+    color: #ececec;
+
+}
+
+.banner .banner_content .left_content .gdsc .banner_text.banner_light{
+    color: #3F3F3F;
+
+}
+
+
 
 .banner .banner_content .right_content{
     width: calc(40% - 2px);
@@ -608,8 +620,17 @@ body{
     height: 50px;
     padding: 2px 5px;
     margin: 25px auto;
-    background-color: rgba(189, 188, 188, 0.281);
+    /* background-color: rgba(189, 188, 188, 0.281); */
     /* border: 1px solid red; */
+}
+
+.banner .banner_box.light{
+    background-color: rgba(189, 188, 188, 0.281);
+
+}
+.banner .banner_box.dark{
+    background-color: rgba(189, 188, 188, 0.281);
+
 }
 
 .banner_box .left_arrow{
@@ -884,6 +905,7 @@ body{
 
 .featured .featured_container{
     width: calc(80% - 0px);
+    /* height: fit-content; */
     display: flow-root;
     margin: 0 auto;
     /* border: 1px solid green ; */
@@ -893,9 +915,10 @@ body{
 
 .featured .featured_container .featured_box{
     width: calc( 33% - 42px);
+    /* height: 460px; */
     margin: 20px 20px;
     float: left;
-    border: 1px solid rgb(196, 196, 196);
+    border: 1px solid rgba(196, 196, 196, 0.76);
     overflow: hidden;
     border-radius: 10px;
     background: #F5F5F5;
@@ -957,7 +980,7 @@ body{
 
 .featured .featured_container .featured_box .featured_img{
     /* border: 1px solid red; */
-    width: calc(80% - 0px);
+    width: calc(70% - 0px);
     margin: 0 auto;
     margin-top: 20px;
 

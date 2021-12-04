@@ -1,20 +1,18 @@
-import React ,{useEffect} from "react";
+import React ,{useEffect, useContext} from "react";
+import { ThemeContext } from "../ThemeContext";
 import "../styles/home.css";
 // Animations Library
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LightSpeed from 'react-reveal/LightSpeed';
 import RubberBand from 'react-reveal/RubberBand';
 
+// Home Compoments
 import { HomeDots } from "../components/Home/HomeDots";
 import {FeaturedBox} from "../components/Home/FeaturedBox" ;
 import {BannerBox} from '../components/Home/BannerBox' ;
 
-
-// import triangle from "../assets/images/Triangle.png" ;
-// import circle from "../assets/images/Circle.png" ;
-// import rectangle from "../assets/images/Rectangle.png" ;
+// ASSESTS
 import logo from "../assets/images/logo.png" ;
 import about_img from "../assets/images/about.png" ;
 import vision_img from "../assets/images/vision.png" ;
@@ -26,13 +24,18 @@ import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
 import redCircle from '../assets/images/redCircle.svg';
-import yellowRect from '../assets/images/yellowRect.svg';
 import greenRect from '../assets/images/greenRect.svg';
+// import triangle from "../assets/images/Triangle.png" ;
+// import circle from "../assets/images/Circle.png" ;
+// import rectangle from "../assets/images/Rectangle.png" ;
 
 
 export const Home = () => {
 
-   useEffect(() => {
+  const {darkMode} = useContext(ThemeContext) ; 
+
+  // ON SCROLL ANIMATIONS 
+  useEffect(() => {
         AOS.init({
           offset: 100,
           duration: 600,
@@ -42,11 +45,9 @@ export const Home = () => {
         });
       }, []);
 
-      // AOS.refresh();
 
   return (
     <>
-      {/* <p className="text-3xl">GDSC Djsce Home</p> */}
 
       {/* BANNER */}
       <div className="banner">
@@ -135,10 +136,12 @@ export const Home = () => {
                   </LightSpeed >
 
                   
-                  <span className="banner_text" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
+                  <span data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
+                    <span className= {darkMode ? "banner_text banner_dark":"banner_text banner_light"} >
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla facilis soluta. Ea nihil 
                     doloribus impedit consequuntur. Sed atque nesciunt ad debitis voluptates? Sequi, iure fugit omnis 
                     error porro inventore!
+                    </span>
                   </span>
                   
 
@@ -228,7 +231,7 @@ export const Home = () => {
     < FeaturedBox 
       title="Title 3"
       color = "#FBC02D"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exer citationem porro neque eaque, tempore quam est?
+      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercita tionem porro neque eaque, tempore quam est?
       ratione!"
       img={featured_3}
       href="#" 

@@ -1,5 +1,6 @@
 
-import React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "../ThemeContext";
 import {
   AppBar,
   Toolbar,
@@ -31,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
   },
   roots:{
   "&.MuiAppBar-colorPrimary":{
-    backgroundColor:"#F5F5F5",
+    backgroundColor:"inherit",
   },
   "&.MuiPaper-elevation4":{
     boxShadow:"none",
   },
   },
   link: {
-    backgroundColor:"#F5F5F5",
+    backgroundColor:"inherit",
     justifyContent:"center",
     alignItems:"center",
     textDecoration: "none",
@@ -54,11 +55,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const  Header = () =>{
+
+  const {darkMode, setDarkMode} = useContext(ThemeContext) ;
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+  // const HandleTheme = ()=> {
+  //   setDarkMode(!darkMode);
+  // }
+
   return (
+
+    <div className={darkMode? 'darkBG':'lightBG'}>
       <AppBar className={classes.roots} style={{position:"relative"}}>
       <Toolbar>
         
@@ -76,7 +85,7 @@ export const  Header = () =>{
             
               
           </div>
-          <div >
+          <div  onClick={() => setDarkMode(!darkMode)}>
               <img src={lighttheme} alt="logo" style={{width:"45px" , height:"50px" , paddingTop:"1.5vh" ,alignItems:"flex-end" }}/>
               </div>
           
@@ -107,7 +116,7 @@ export const  Header = () =>{
             <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
             >Login</Button>
-            <Link to="#">
+            <Link to="#"  onClick={() => setDarkMode(!darkMode)}>
             <img src={lighttheme} alt="logo" style={{width:"35px" , height:"35px"  , marginLeft:"2vh"  , alignItems:"center"}}/>
             </Link>
           </div>
@@ -115,6 +124,9 @@ export const  Header = () =>{
         )}
       </Toolbar>
       </AppBar>
+
+    </div>
+     
   );
 }
 
