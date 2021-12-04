@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import "../../styles/team.css";
 import tree from "../../assets/images/team/Tree.svg";
 import back from "../../assets/images/team/Union.svg";
@@ -9,16 +10,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const ContentEditorial = () => {
-  AOS.init({
-    offset: 0,
-    duration: 200,
-    easing: "ease-in-sine",
-    startEvent: "load",
-  });
+  const { darkMode } = useContext(ThemeContext);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 0,
+      duration: 200,
+      easing: "ease-in-sine",
+      startEvent: "DOMContentLoaded",
+    });
+  }, []);
 
   return (
     <>
-      <p className="header">Our Team</p>
+      <p className="header" style={{ color: darkMode ? "#8e918f" : null }}>
+        Our Team
+      </p>
       <div className="headSm-branch">
         <THead />
       </div>
@@ -31,6 +38,7 @@ export const ContentEditorial = () => {
               fontSize: "13px",
               lineHeight: "16px",
               padding: "0 10px",
+              color: darkMode ? "#8e918f" : "black",
             }}
           >
             Back
@@ -48,7 +56,7 @@ export const ContentEditorial = () => {
               fontFamily: "Montserrat",
               textTransform: "none",
               fontWeight: "400",
-              height: "70px",
+              // height: "70px",
             }}
           >
             Content & Editorial Team
@@ -126,6 +134,7 @@ export const ContentEditorial = () => {
                   lineHeight: "29px",
                   padding: "0 10px",
                   width: "120px",
+                  color: darkMode ? "#8e918f" : "black",
                 }}
               >
                 Back
@@ -199,6 +208,7 @@ export const ContentEditorial = () => {
                   fontSize: "24px",
                   lineHeight: "29px",
                   padding: "0 10px",
+                  color: darkMode ? "#8e918f" : "black",
                 }}
               >
                 Back

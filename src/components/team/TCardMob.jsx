@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ThemeContext } from "../../ThemeContext";
 import {
   faGithub,
   faInstagram,
@@ -61,9 +62,17 @@ const useStyles = makeStyles((theme) => ({
 export const TCardMob = (props) => {
   const classes = useStyles();
 
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <>
-      <div className={classes.container}>
+      <div
+        className={classes.container}
+        style={{
+          backgroundColor: darkMode ? "#FFFFFF1F" : null,
+          color: darkMode ? "#8e918f" : null,
+        }}
+      >
         <img
           src="http://picsum.photos/100"
           alt="profile"
@@ -75,13 +84,13 @@ export const TCardMob = (props) => {
           <p className={classes.p2}>{props.role}</p>
         </div>
         <div className={classes.action}>
-          <Link to="/team/lead">
+          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
             <FontAwesomeIcon icon={faLinkedin} />
           </Link>
-          <Link to="/team/lead">
+          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
             <FontAwesomeIcon icon={faInstagram} />
           </Link>
-          <Link to="/team/lead">
+          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
             <FontAwesomeIcon icon={faGithub} />
           </Link>
         </div>

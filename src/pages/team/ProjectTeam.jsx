@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import "../../styles/team.css";
 import tree from "../../assets/images/team/Tree.svg";
 import back from "../../assets/images/team/Union.svg";
@@ -9,28 +10,35 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const ProjectTeam = () => {
-  AOS.init({
-    offset: 50,
-    duration: 200,
-    easing: "ease-in-sine",
-    startEvent: "load",
-  });
+  const { darkMode } = useContext(ThemeContext);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 50,
+      duration: 200,
+      easing: "ease-in-sine",
+      startEvent: "DOMContentLoaded",
+    });
+  }, []);
 
   return (
     <>
-      <p className="header">Our Team</p>
+      <p className="header" style={{ color: darkMode ? "#8e918f" : null }}>
+        Our Team
+      </p>
       <div className="headSm-branch">
         <THead />
       </div>
       <Link to="/team">
         <div className="back-top">
-          <img src={back} alt="back" style={{ width: "20px" }} />
+          <img src={back} color="white" alt="back" style={{ width: "20px" }} />
           <Typography
             style={{
               fontFamily: " Montserrat",
               fontSize: "13px",
               lineHeight: "16px",
               padding: "0 10px",
+              color: darkMode ? "#8e918f" : "black",
             }}
           >
             Back
@@ -48,7 +56,7 @@ export const ProjectTeam = () => {
               fontFamily: "Montserrat",
               textTransform: "none",
               fontWeight: "400",
-              height: "30px",
+              // height: "30px",
             }}
           >
             Project Team
@@ -195,6 +203,7 @@ export const ProjectTeam = () => {
               fontSize: "24px",
               lineHeight: "29px",
               padding: "0 10px",
+              color: darkMode ? "#8e918f" : "black",
             }}
           >
             Back

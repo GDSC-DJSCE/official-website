@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import { Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -13,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "78px",
     fontWeight: "700",
     fontFamily: "Montserrat",
-    color: "#404040",
   },
   body: {
     marginTop: "15px",
@@ -23,19 +23,27 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: " 400",
     lineHeight: "33px",
     letterSpacing: "0em",
-    color: "#535353",
   },
 }));
 
 export const THead = () => {
   const classes = useStyles();
+  const { darkMode } = useContext(ThemeContext);
 
   return (
     <>
       <div className="thead">
         <Container className={classes.container}>
-          <p className={classes.head}>Our Team</p>
-          <p className={classes.body}>
+          <p
+            className={classes.head}
+            style={{ color: darkMode ? "#adadad" : "#404040" }}
+          >
+            Our Team
+          </p>
+          <p
+            className={classes.body}
+            style={{ color: darkMode ? "#adadad" : "#535353" }}
+          >
             Meet the team that makes GDSC DJSCE Successful! Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Voluptates laudantium
             accusamus itaque in dolorum rem culpa amet impedit. Voluptas, totam.

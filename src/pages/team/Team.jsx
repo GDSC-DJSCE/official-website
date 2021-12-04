@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import "../../styles/team.css";
+import { ThemeContext } from "../../ThemeContext";
 import background from "../../assets/images/team/Team-bg.svg";
 import vector1 from "../../assets/images/team/Vector4.svg";
 import vector2 from "../../assets/images/team/Vector5.svg";
@@ -11,12 +12,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const Team = () => {
-  AOS.init({
-    offset: 50,
-    duration: 200,
-    easing: "ease-in-sine",
-    startEvent: "load",
-  });
+  const darkMode = useContext(ThemeContext);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 50,
+      duration: 200,
+      easing: "ease-in-sine",
+      startEvent: "DOMContentLoaded",
+    });
+  }, []);
 
   return (
     <>
