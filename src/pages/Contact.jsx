@@ -1,24 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
+
+import { ThemeContext } from "../ThemeContext";
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
+import blueCircleHalfdark from '../assets/images/blueCircleHalfdark.jpg';
 import blueCircleHalf from '../assets/images/blueCircleHalf.png';
 import redCircle from '../assets/images/redCircle.svg';
+import redCircleHalfdark from '../assets/images/redCircledark.jpg';
 import redCircleHalf from '../assets/images/redCircle.png';
+import Contactpagedark from '../assets/images/Contactpagedark.gif';
 import Contactpage from '../assets/images/Contactpage.gif';
 import blueRect from '../assets/images/blueRect.svg';
 import yellowRect from '../assets/images/yellowRect.svg';
 import greenRect from '../assets/images/greenRect.svg';
+import halfcircledark from '../assets/images/greenhalfcircledark.jpg';
 import halfcircle from '../assets/images/greenhalfcircle.png';
+import yellowCircleHalfdark from '../assets/images/yellowCircleHalfdark.jpg';
 import yellowCircleHalf from '../assets/images/yellowCircleHalf.png';
 import rgbyCircle from '../assets/images/rgbyCircle.svg';
+import rgby2dark from '../assets/images/rgby2.jpg';
 import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
-import { TextField, makeStyles, Button } from '@material-ui/core';
+import { TextField, makeStyles, Button ,useMediaQuery,useTheme} from '@material-ui/core';
 
 var service_id = process.env.REACT_APP_SERVICE_ID;
 var template_id = process.env.REACT_APP_TEMPLATE_ID;
@@ -44,7 +52,28 @@ const useStyles = makeStyles({
 	},
 	inputbox: {
 		marginBottom: '1rem',
-		width: '19rem',
+		width: '20rem',
+		borderColor: '#4385F3',
+	},
+	mobilebox: {
+		marginBottom: '1rem',
+		width: '15rem',
+		borderColor: 'blue',
+	},
+	inputboxdark: {
+		"&.MuiFormControl-root":{
+			backgroundColor: "#95a5a6"
+		},
+		marginBottom: '1rem',
+		width: '20rem',
+		color: 'yellow',
+	},
+	mobileboxdark: {
+		"&.MuiFormControl-root":{
+			backgroundColor: "#95a5a6"
+		},
+		marginBottom: '1rem',
+		width: '15rem',
 		borderColor: 'blue',
 	},
 	signbtn: {
@@ -172,7 +201,8 @@ const useStyles = makeStyles({
 		height: '105px',
 		overflow:"hidden",
 		borderRadius:"30%",
-		borderTopLeftRadius:"50%"
+		borderTopLeftRadius:"50%",
+		
 	},
 	blue1d: {
 		position: 'absolute',
@@ -378,6 +408,9 @@ const useStyles = makeStyles({
 });
 
 export const Contact = () => {
+	const {darkMode} = useContext(ThemeContext) ; 
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 	let [errors, setErrors] = useState({
 		fnerror: '',
 		mesgerror: '',
@@ -458,20 +491,24 @@ export const Contact = () => {
 	};
 	return (
 		<div className="mainbody" >
-			<div className="header-conatct font-semibold" style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"5vh" ,textAlign:"center"}}>Contact Us</div>
-			<div className="sub-header">Any Questions or Remarks? Just write us a Question</div>
+			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"5vh" ,textAlign:"center"}}>Contact Us</div>
+			<div className={darkMode ? "sub-header-dark" : "sub-header" }>Any Questions or Remarks? Just write us a Question</div>
+			
+			
 			<div className="images-phone w-0">
 				<div className="yellow">
-					<img src={yellowCircleHalf} alt="" />
+				{darkMode ? (<img src={yellowCircleHalfdark} alt=""/>): (<img src={yellowCircleHalf} alt="" />)  }
+					
 				</div>
 				<div className="green">
-					<img src={halfcircle} alt="" />
+					{darkMode ? (<img src={halfcircledark} alt=""/>): (<img src={halfcircle} alt="" />)  }
 				</div>
 				<div className="blue">
-					<img src={blueCircleHalf} alt="" />
+				{darkMode ? (<img src={blueCircleHalfdark} alt=""/>): (<img src={blueCircleHalf} alt="" />)  }
+					<img  alt="" />
 				</div>
 				<div className="red">
-					<img src={redCircleHalf} alt="" />
+				{darkMode ? (<img src={redCircleHalfdark} alt=""/>): (<img src={redCircleHalf} alt="" />)  }
 				</div>
 				<div className="yellow1">
 					<img src={yellowCircle} alt="" />
@@ -532,12 +569,12 @@ export const Contact = () => {
 					</div>
 				</div>
 				<div class={classes.rgby2}>
-					<img src={rgby2} alt="" />
+					{darkMode ? <img src={rgby2dark} alt =" " /> :<img src={rgby2} alt="" /> }
 				</div>
 			</div>
 
 			<div className="images-desktop">
-				<div class="greenR-d">
+				<div className="greenR-d">
 					<img src={greenRect} alt="" />
 				</div>
 				<div className="blueR-d">
@@ -671,22 +708,35 @@ export const Contact = () => {
 				</div>
 			</div>
 
-			<div class="box ">
+			<div class={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
-						<div className="head text-3xl mb-14 font-bold">Lets Talk ?</div>
-
+						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Lets Talk ?</div>
+						{isMobile ?
 						<TextField
-							className={classes.inputbox}
+							className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 							autoFocus="1"
 							label="Your Name"
 							name="firstname"
 							onChange={handleChanges}
 							value={value.firstname}
 							type="text"
-							variant="outlined"
+							variant="filled"
+							autoComplete="off"
 							onBlur={blur}
 						/>
+						: <TextField
+						className={darkMode ? classes.inputboxdark : classes.inputbox}
+						autoFocus="1"
+						label="Your Name"
+						name="firstname"
+						onChange={handleChanges}
+						value={value.firstname}
+						type="text"
+						variant="filled"
+						autoComplete="off"
+						onBlur={blur}
+						/>}
 						<div
 							style={{
 								marginTop: '-15px',
@@ -699,21 +749,32 @@ export const Contact = () => {
 							{errors.fnerror}
 						</div>
 						<div className="message-box">
-							<TextField
-								className={classes.inputbox}
+							{isMobile ? <TextField
+								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 								label="Your Email"
 								name="email"
 								onChange={handleChanges}
 								value={value.email}
 								type="email"
-								variant="outlined"
+								variant="filled"
+								autoComplete="off"
 								onBlur={blur}
-							/>
+							/>: <TextField
+							className={darkMode ? classes.inputboxdark : classes.inputbox}
+							label="Your Email"
+							name="email"
+							onChange={handleChanges}
+							value={value.email}
+							type="email"
+							variant="filled"
+							autoComplete="off"
+							onBlur={blur}
+						/>}
+							
 						</div>
 						<div
 							style={{
 								marginTop: '2px',
-								//paddingBottom: '15px',
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '4rem',
@@ -723,16 +784,28 @@ export const Contact = () => {
 						</div>
 
 						<div className="message-box">
-							<TextField
-								className={classes.inputbox}
+							{isMobile ?<TextField
+								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 								label="Your Message"
 								name="message"
 								onChange={handleChanges}
 								value={value.message}
 								type="text"
-								variant="outlined"
+								variant="filled"
+								autoComplete="off"
 								onBlur={blur}
-							/>
+							/> : <TextField
+							className={darkMode ? classes.inputboxdark : classes.inputbox}
+							label="Your Message"
+							name="message"
+							onChange={handleChanges}
+							value={value.message}
+							type="text"
+							variant="filled"
+							autoComplete="off"
+							onBlur={blur}
+						/> }
+							
 						</div>
 						<div
 							style={{
@@ -765,17 +838,26 @@ export const Contact = () => {
 				</div>
 				<div className="box-secondary">
 					<div className="box-image">
-						<img
+						{darkMode ? 
+							<img
 							style={{
 								height: '700px',
 								marginTop: '-120px',
 								marginLeft: '-50px',
 							}}
-							src={Contactpage}
+							src={Contactpagedark}
 							alt=""
-						/>
+						/> : <img
+						style={{
+							height: '700px',
+							marginTop: '-120px',
+							marginLeft: '-50px',
+						}}
+						src={Contactpage}
+						alt=""
+					/> }
 					</div>
-					<div className="box-detail h-56 mr-14 w-11/12 ">
+					<div className={darkMode ? "box-detail h-56 mr-14 w-11/12 text-white" : "box-detail h-56 mr-14 w-11/12 "}>
 						<div className="box-address">
 							<div class="h-28 w-28 p-7 ml-5">
 								<FontAwesomeIcon icon={faMapMarkerAlt} color="rgba(16, 157, 88, 1)" size="2x" />
@@ -810,15 +892,22 @@ export const Contact = () => {
 							</div>
 						</div>
 						<div class="box-social ml-28 ">
-							<img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="" />
+						{darkMode ? 
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADnUlEQVRoge2ZT4gbZRjGf+/sqqBtvYgHraJIPaigFO1N24pCERUU1J2ZrD3sQZtkbaUeioosVPFQWGtNthVND20m2V2P/ivowdKLYK2XLohtBVkUEUHp2rKbbub1kA1OspnJfLMT00N+x/dlnnmezHx87zeBAQMGDOgnEtU8XK3e4dd1P8IO4KZAaxGYAz2cdZyjIqI9dRlBaIAPjh270xoa/ha4OUpAYTLvOntTdxYTK7QxNLyfLuYBBF49Ui7fk6orA0IDAI/G1JA61pNpmElCVIDYiLApDZ0kRAX41UDntrUaSUpEAIkdQJXb0zCThIgA/s+xVeSqfAJ8b6Cz7sPZ2RvXaiYJoQHE908b6OhSrdaXzSw0wB8XLpwD/ownoz+8kslcTMmTEaEBJiYmfEG/jKGx7PvW1bcTr/Bpl35dVHaOj9rfpGXIlMgA1y0ungAuhbSXBbWzGbuSvq34RAYYGxtbAJnu0KqLys6s637SI1+x6TpK+BZHVldlX79/+SZdA4zb9mmEU61V7dvw1k6sYc6vy1ttpa2FcvWZHvgxJvJEFqToVb4CHguUfhP0vqzr/pW+rfjEHqdV2KNQC5RuUZVDPfBkROwAeceZE+VAS1HITJWrL6fuygCjA831V5beBuaCNV/0/anj1YdTdWVA7DXQpDA9fbfU/e+ADYHyRfWt7fnRkTPpWYuH8ZEyPzLyk6IvAcHpc4NY/heHjk/fb6pXKpXWl0ql9abXNTF+Ak0Knve6IO+0lf8WX57OjtqnOl4UoOh520EmgQdWSpcUfrFgHpgHPS/1oc93vThyNkoncYCGicpBYHewplCzVHZnM3aHHbxBoVJ5XhQPGO52D4XJnGO/FvbxbE0BVFWmKtX3aAuxgifoePs+YWL+v/vIWD5jH+3UW9NnFRHRnOvsUfQNWtcEgKvI2aLnPdssTHnec6bmG/fRXaE9I8cRFMvVFxD9COi0IE+CfAb6LobmG+jlnOve0KmTyoctgFzGnvGFLQidFt1W0AMkMg8g14R1UgsAMO44Pw4vLGwWdB+wlKZ2GKm9Qu0UKpV7RTlI6wCYlCs517m2UyPVJxAk7zhzOdd5XIRtq88TxoROvD0L0CTrOCdzjvOIb8lDAh8D/ySQORHW6NkrFEZxdnYdtfoORJ8CnqD1n5/VKL8zJFtytj3fqf2/BwiiqlKcmdlkLeuDaulmlLtAbwXZSGNf+RpL3gwzP2DAgAH9518IwRIJe+OBSwAAAABJRU5ErkJggg==" alt="" />
+						: <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="" />
+						}	
 							<a href="mailto:gdsc.djsce@gmail.com">
 								<img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="" />
 							</a>
 							<a href="https://www.linkedin.com/company/gdsc-djsce/">
-								<img src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png" alt="" />
+								{darkMode ?
+								<img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzk1YTVhNiI+PHBhdGggZD0iTTEzNi4xNjY2NywyMS41aC0xMDAuMzMzMzNjLTcuOTE5MTcsMCAtMTQuMzMzMzMsNi40MTQxNyAtMTQuMzMzMzMsMTQuMzMzMzN2MTAwLjMzMzMzYzAsNy45MTkxNyA2LjQxNDE3LDE0LjMzMzMzIDE0LjMzMzMzLDE0LjMzMzMzaDEwMC4zMzMzM2M3LjkxOTE3LDAgMTQuMzMzMzMsLTYuNDE0MTcgMTQuMzMzMzMsLTE0LjMzMzMzdi0xMDAuMzMzMzNjMCwtNy45MTkxNyAtNi40MTQxNywtMTQuMzMzMzMgLTE0LjMzMzMzLC0xNC4zMzMzM3pNNTUuNDU1NjcsMTIxLjgzMzMzdjBjLTQuOTk1MTcsMCAtOS4wNDQzMywtNC4wNDkxNyAtOS4wNDQzMywtOS4wNDQzM3YtMzIuMDg1MTdjMC4wMDcxNywtNC45ODggNC4wNTYzMywtOS4wMzcxNyA5LjA0NDMzLC05LjAzNzE3djBjNC45OTUxNywwIDkuMDQ0MzMsNC4wNDkxNyA5LjA0NDMzLDkuMDQ0MzN2MzIuMDg1MTdjMCw0Ljk4OCAtNC4wNDkxNyw5LjAzNzE3IC05LjA0NDMzLDkuMDM3MTd6TTU1LjE0MDMzLDYyLjQ3MTgzYy01LjUyNTUsMCAtOS4yMTYzMywtMy42ODM2NyAtOS4yMTYzMywtOC42YzAsLTQuOTE2MzMgMy42ODM2NywtOC42IDkuODI1NSwtOC42YzUuNTI1NSwwIDkuMjE2MzMsMy42ODM2NyA5LjIxNjMzLDguNmMwLDQuOTE2MzMgLTMuNjgzNjcsOC42IC05LjgyNTUsOC42ek0xMjAuMjQ5NSwxMjEuODMzMzN2MGMtNC44MzAzMywwIC04Ljc1MDUsLTMuOTIwMTcgLTguNzUwNSwtOC43NTA1di0xOC42NjkxN2MwLC03LjU4MjMzIC00LjY2NTUsLTguNDEzNjcgLTYuNDE0MTcsLTguNDEzNjdjLTEuNzQ4NjcsMCAtNy41ODIzMywwLjI1MDgzIC03LjU4MjMzLDguNDEzNjd2MTguNjY5MTdjMCw0LjgzMDMzIC0zLjkyMDE3LDguNzUwNSAtOC43NTA1LDguNzUwNWgtMC41ODA1Yy00LjgzMDMzLDAgLTguNzUwNSwtMy45MjAxNyAtOC43NTA1LC04Ljc1MDV2LTMyLjM3MTgzYzAsLTQuOTk1MTcgNC4wNDkxNywtOS4wNDQzMyA5LjA0NDMzLC05LjA0NDMzdjBjNC45OTUxNywwIDkuMDQ0MzMsNC4wNDkxNyA5LjA0NDMzLDkuMDQ0MzNjMCwwIDIuMDIxLC05LjA0NDMzIDE1Ljc1MjMzLC05LjA0NDMzYzguNzM2MTcsMCAxNS43MzgsNy4wMDE4MyAxNS43MzgsMjIuNzQ3djE4LjY2OTE3YzAsNC44MzAzMyAtMy45MjAxNyw4Ljc1MDUgLTguNzUwNSw4Ljc1MDV6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="/>
+								: <img src="https://img.icons8.com/material-rounded/48/000000/linkedin--v1.png" alt="" />}
 							</a>
 							<a href="https://www.instagram.com/gdsc.djsce/">
-								<img src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png" alt="" />
+							{darkMode ? 
+							<img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzk1YTVhNiI+PHBhdGggZD0iTTU3LjMzMzMzLDIxLjVjLTE5Ljc4NzE3LDAgLTM1LjgzMzMzLDE2LjA0NjE3IC0zNS44MzMzMywzNS44MzMzM3Y1Ny4zMzMzM2MwLDE5Ljc4NzE3IDE2LjA0NjE3LDM1LjgzMzMzIDM1LjgzMzMzLDM1LjgzMzMzaDU3LjMzMzMzYzE5Ljc4NzE3LDAgMzUuODMzMzMsLTE2LjA0NjE3IDM1LjgzMzMzLC0zNS44MzMzM3YtNTcuMzMzMzNjMCwtMTkuNzg3MTcgLTE2LjA0NjE3LC0zNS44MzMzMyAtMzUuODMzMzMsLTM1LjgzMzMzek0xMjksMzUuODMzMzNjMy45NTYsMCA3LjE2NjY3LDMuMjEwNjcgNy4xNjY2Nyw3LjE2NjY3YzAsMy45NTYgLTMuMjEwNjcsNy4xNjY2NyAtNy4xNjY2Nyw3LjE2NjY3Yy0zLjk1NiwwIC03LjE2NjY3LC0zLjIxMDY3IC03LjE2NjY3LC03LjE2NjY3YzAsLTMuOTU2IDMuMjEwNjcsLTcuMTY2NjcgNy4xNjY2NywtNy4xNjY2N3pNODYsNTAuMTY2NjdjMTkuNzg3MTcsMCAzNS44MzMzMywxNi4wNDYxNyAzNS44MzMzMywzNS44MzMzM2MwLDE5Ljc4NzE3IC0xNi4wNDYxNywzNS44MzMzMyAtMzUuODMzMzMsMzUuODMzMzNjLTE5Ljc4NzE3LDAgLTM1LjgzMzMzLC0xNi4wNDYxNyAtMzUuODMzMzMsLTM1LjgzMzMzYzAsLTE5Ljc4NzE3IDE2LjA0NjE3LC0zNS44MzMzMyAzNS44MzMzMywtMzUuODMzMzN6TTg2LDY0LjVjLTExLjg3NDEyLDAgLTIxLjUsOS42MjU4OCAtMjEuNSwyMS41YzAsMTEuODc0MTIgOS42MjU4OCwyMS41IDIxLjUsMjEuNWMxMS44NzQxMiwwIDIxLjUsLTkuNjI1ODggMjEuNSwtMjEuNWMwLC0xMS44NzQxMiAtOS42MjU4OCwtMjEuNSAtMjEuNSwtMjEuNXoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg=="/>
+							: <img src="https://img.icons8.com/material-rounded/48/000000/instagram-new.png" alt="" />}
 							</a>
 						</div>
 					</div>
