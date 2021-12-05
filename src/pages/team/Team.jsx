@@ -6,13 +6,17 @@ import vector1 from "../../assets/images/team/Vector4.svg";
 import vector2 from "../../assets/images/team/Vector5.svg";
 import vector3 from "../../assets/images/team/Vector1.svg";
 import vector4 from "../../assets/images/team/Vector2.svg";
+import vector1dark from "../../assets/images/team/Vector4dark.svg";
+import vector2dark from "../../assets/images/team/Vector5dark.svg";
+import vector3dark from "../../assets/images/team/Vector1dark.svg";
+import vector4dark from "../../assets/images/team/Vector2dark.svg";
 import { TCard, THead, TCardMob } from "../../components";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const Team = () => {
-  const darkMode = useContext(ThemeContext);
+  const { darkMode } = useContext(ThemeContext);
 
   useEffect(() => {
     AOS.init({
@@ -65,7 +69,7 @@ export const Team = () => {
             style={{ transitionDelay: "0.5s" }}
             className="vectorend"
           >
-            <img alt="vector" src={vector1} />
+            <img alt="vector" src={darkMode ? vector1dark : vector1} />
           </div>
           <div
             data-aos="zoom-in"
@@ -84,7 +88,7 @@ export const Team = () => {
             style={{ transitionDelay: "0.1s" }}
             className="vector2"
           >
-            <img alt="vector" src={vector2} />
+            <img alt="vector" src={darkMode ? vector2dark : vector2} />
           </div>
           <div data-aos="zoom-in" className="cardcenter">
             <Link to="/team/project-team">
@@ -96,7 +100,7 @@ export const Team = () => {
             style={{ transitionDelay: "0.1s" }}
             className="vector3"
           >
-            <img alt="vector" src={vector3} />
+            <img alt="vector" src={darkMode ? vector3dark : vector3} />
           </div>
           <div
             data-aos="zoom-in"
@@ -112,7 +116,7 @@ export const Team = () => {
             style={{ transitionDelay: "0.5s" }}
             className="vectorend"
           >
-            <img alt="vector" src={vector4} />
+            <img alt="vector" src={darkMode ? vector4dark : vector4} />
           </div>
         </div>
       </div>

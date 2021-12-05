@@ -3,6 +3,7 @@ import { ThemeContext } from "../../ThemeContext";
 import "../../styles/team.css";
 import tree from "../../assets/images/team/Tree2.svg";
 import back from "../../assets/images/team/Union.svg";
+import backdark from "../../assets/images/team/Uniondark.svg";
 import { Button, Typography } from "@mui/material";
 import { TCard, TCardMob, THead } from "../../components";
 import { Link } from "react-router-dom";
@@ -22,7 +23,7 @@ export const DomainHead = () => {
   }, []);
   return (
     <>
-      <p className="header" style={{ color: darkMode ? "#8e918f" : null }}>
+      <p className="header" style={{ color: darkMode ? "white" : null }}>
         Our Team
       </p>
       <div className="headSm-branch">
@@ -30,14 +31,18 @@ export const DomainHead = () => {
       </div>
       <Link to="/team">
         <div className="back-top">
-          <img src={back} alt="back" style={{ width: "20px" }} />
+          <img
+            src={darkMode ? backdark : back}
+            alt="back"
+            style={{ width: "20px" }}
+          />
           <Typography
             style={{
               fontFamily: " Montserrat",
               fontSize: "13px",
               lineHeight: "16px",
               padding: "0 10px",
-              color: darkMode ? "#8e918f" : "black",
+              color: darkMode ? "white" : "black",
             }}
           >
             Back
@@ -86,14 +91,14 @@ export const DomainHead = () => {
       </div>
       <Link to="/team">
         <div data-aos="zoom-in" className="back">
-          <img src={back} alt="back" />
+          <img src={darkMode ? backdark : back} alt="back" />
           <Typography
             style={{
               fontFamily: " Montserrat",
               fontSize: "24px",
               lineHeight: "29px",
               padding: "0 10px",
-              color: darkMode ? "#8e918f" : "black",
+              color: darkMode ? "white" : "black",
             }}
           >
             Back
