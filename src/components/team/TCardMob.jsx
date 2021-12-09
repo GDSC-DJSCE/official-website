@@ -11,7 +11,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    border: "2px",
+    border: "2px  solid #4385f3",
     width: "135px",
     height: "145px",
     display: "flex",
@@ -42,14 +42,13 @@ const useStyles = makeStyles((theme) => ({
   },
   p2: {
     fontFamily: "Montserrat, sans-serif",
-    margin: "4px 0",
+    margin: "2px 0",
     textAlign: "center",
     fontSize: "10px",
     fontWeight: "400",
     lineHeight: "11px",
   },
   action: {
-    color: "#2B2B2B",
     fontSize: "18px",
     margin: "0 25px",
     display: "flex",
@@ -69,8 +68,8 @@ export const TCardMob = (props) => {
       <div
         className={classes.container}
         style={{
-          backgroundColor: darkMode ? "#FFFFFF1F" : null,
-          color: darkMode ? "#8e918f" : null,
+          backgroundColor: darkMode ? "#FFFFFF4D" : null,
+          color: darkMode ? "#ffffff" : null,
         }}
       >
         <img
@@ -84,13 +83,22 @@ export const TCardMob = (props) => {
           <p className={classes.p2}>{props.role}</p>
         </div>
         <div className={classes.action}>
-          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
+          <Link
+            style={{ color: darkMode ? "white" : "#2B2B2B" }}
+            to="/team/lead"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </Link>
-          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
+          <Link
+            style={{ color: darkMode ? "white" : "#2B2B2B" }}
+            to="/team/lead"
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </Link>
-          <Link style={{ color: darkMode ? "white" : null }} to="/team/lead">
+          <Link
+            style={{ color: darkMode ? "white" : "#2B2B2B" }}
+            to="/team/lead"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </Link>
         </div>

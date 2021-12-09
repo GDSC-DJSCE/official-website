@@ -25,7 +25,25 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#4385f3",
       color: "white",
-      transform: "scale(1.1)",
+      transform: "scale(1.05)",
+    },
+  },
+  containerdark: {
+    border: "2px",
+    width: "165px",
+    height: "195px",
+    display: "flex",
+    flexDirection: "column",
+    color: "#ffffff",
+    textDecoration: "none",
+    backgroundColor: "#FFFFFF4D",
+    boxShadow:
+      "4px 0px 20px rgba(0, 0, 0, 0.05),-4px 10px 20px rgba(0, 0, 0, 0.05)",
+    borderRadius: "1rem",
+    "&:hover": {
+      backgroundColor: "#4385f3",
+      color: "white",
+      transform: "scale(1.05)",
     },
   },
   image: {
@@ -45,11 +63,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     margin: "0",
     lineHeight: "22px",
-    fontWeight: "600",
+    fontWeight: "500",
+    fontSize: "17px",
   },
   p2: {
     fontFamily: "Montserrat, sans-serif",
     marginBottom: "9px",
+    marginTop: "-3px",
     textAlign: "center",
     fontSize: "14px",
     fontWeight: "400",
@@ -73,47 +93,37 @@ export const TCard = (props) => {
   return (
     <>
       <span className="tcard">
-        <div
-          style={{
-            backgroundColor: darkMode ? "#FFFFFF1F" : null,
-          }}
-          className={classes.container}
-        >
+        <div className={darkMode ? classes.containerdark : classes.container}>
           <img
             src="http://picsum.photos/100"
             alt="profile"
             height="70px"
             className={classes.image}
           />
-          <div
-            className={classes.content}
-            style={{
-              color: darkMode ? "#adadad" : null,
-            }}
-          >
+          <div className={classes.content}>
             <p className={classes.p1}>{props.name}</p>
             <p className={classes.p2}>{props.role}</p>
           </div>
           <div className={classes.action}>
-            <Link to="/team/lead">
+            <Link to="/team/lead" className="icon-link">
               <FontAwesomeIcon
                 icon={faLinkedin}
+                className="card-icon"
                 size="lg"
-                style={{ color: "white" }}
               />
             </Link>
-            <Link to="/team/lead" style={{ color: "white" }}>
+            <Link to="/team/lead" className="icon-link">
               <FontAwesomeIcon
                 icon={faInstagram}
+                className="card-icon"
                 size="lg"
-                style={{ color: "white" }}
               />
             </Link>
-            <Link to="/team/lead">
+            <Link to="/team/lead" className="icon-link">
               <FontAwesomeIcon
                 icon={faGithub}
+                className="card-icon"
                 size="lg"
-                style={{ color: "white" }}
               />
             </Link>
           </div>

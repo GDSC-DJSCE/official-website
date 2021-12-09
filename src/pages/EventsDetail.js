@@ -1,4 +1,5 @@
-import React from 'react';
+import React ,{useContext} from "react";
+import { ThemeContext } from "../ThemeContext";
 import { useParams } from "react-router-dom";
 import {Grid,Card} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -79,6 +80,7 @@ export default function EventsDetail() {
     const classes = useStyles();
     const { id } = useParams();
     var event = Data.filter(element => element.id===Number(id));
+    const { darkMode } = useContext(ThemeContext);
     return (
         <div>
             {event.map(x => (

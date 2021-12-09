@@ -61,6 +61,14 @@ a {
   text-decoration: none;
   color: initial;
 }
+.icon-link {
+  text-decoration: none;
+  color: white;
+  display: none;
+}
+.tcard:hover .icon-link {
+  display: block;
+}
 /* team.jsx */
 .topimg {
   width: 100%;
@@ -272,6 +280,7 @@ a {
   margin-bottom: 10px;
 }
 .headSm-branch {
+  height: 350px;
   display: none;
 }
 @media only screen and (max-width: 1100px) {
