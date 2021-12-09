@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme)=>({
   },
   footerBottom:{
     height:"9vh" , 
-    backgroundColor:"inherit" ,
+    backgroundColor:"#fffff" ,
     display:"grid" , 
     gridTemplateColumns:"60% 5% 35%",
     paddingTop:"1.5vh",
@@ -127,7 +127,7 @@ export const Footer = () => {
       </div>
      
     </AppBar>
-    <div className={darkMode ? classes.darkfooterBottom : classes.footerbottom}>
+    <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom}>
       <div style={{marginLeft:"7vh"}}>
       &copy; GDSC DJSCE 2021
       </div>

@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
+
+import { ThemeContext } from "../ThemeContext";
 import {
   Drawer,
   IconButton,
@@ -18,7 +20,7 @@ const useStyles = makeStyles(()=>({
         alignContent:"center",
         alignItems:"center",
         textDecoration:"none",
-        color: "#979797",
+        color: "#ffffff",
         paddingLeft:"15vh",
         paddingRight:"15vh",
         fontSize: "20px",
@@ -29,10 +31,19 @@ const useStyles = makeStyles(()=>({
     },
     icon:{
         color: "black"
+    },
+    lightbg:{
+      backgroundColor:"#F5F5F5" , 
+      height:"100%"
+    },
+    darkbg:{
+        backgroundColor:"#2B2B2B" , 
+        height:"100%"
     }
 }));
 
 function DrawerComponent() {
+  const {darkMode} = useContext(ThemeContext) ;
     const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
@@ -41,7 +52,7 @@ function DrawerComponent() {
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
       >
-        <List style={{backgroundColor:"#F5F5F5" ,height:"100%"}}>
+        <List className={darkMode ? classes.darkbg : classes.lightbg}>
         <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/" className={classes.link}>Home</Link>
