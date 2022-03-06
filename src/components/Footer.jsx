@@ -3,9 +3,9 @@ import { ThemeContext } from "../ThemeContext";
 
 import {  AppBar, useMediaQuery, makeStyles,useTheme,Typography } from "@material-ui/core";
 import { FooterMobile } from "./FooterMobile";
-
-import logo from "../assets/images/logo.png" ;
-import arrow from "../assets/images/arrow.png";
+import { Link } from "react-router-dom";
+import GDSCLogo from "../assets/images/GDSC___DJSCE.png" ;
+import GDSCLogoDark from "../assets/images/GDSC_DJSCE_Dark.png" ;
 
 const useStyles = makeStyles((theme)=>({
   roots:{
@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme)=>({
       gridTemplateColumns: "35% 65%",
       boxShadow:"none",
       margin:0,
+    },
+    "& .MuiTypography-root:hover":{
+      cursor:'pointer'
     },
   },
   darkroots:{
@@ -57,8 +60,8 @@ const useStyles = makeStyles((theme)=>({
   footerBottom:{
     height:"9vh" , 
     backgroundColor:"#fffff" ,
-    display:"grid" , 
-    gridTemplateColumns:"60% 5% 35%",
+    textAlign:"center" , 
+    gridTemplateColumns:"100%",
     paddingTop:"1.5vh",
     paddingBottom:"1vh",
     fontSize:"2.2vh",
@@ -68,8 +71,8 @@ const useStyles = makeStyles((theme)=>({
   darkfooterBottom:{
     height:"9vh" , 
     backgroundColor:"#2B2B2B" ,
-    display:"grid" , 
-    gridTemplateColumns:"60% 5% 35%",
+    textAlign:"center" , 
+    gridTemplateColumns:"100%",
     paddingTop:"1.5vh",
     paddingBottom:"1vh",
     fontSize:"2.2vh",
@@ -97,31 +100,46 @@ export const Footer = () => {
     <div>
     <AppBar position="relative" sx={{ top: "auto", bottom: 20 }} className={darkMode ? classes.darkroots : classes.roots}>
      
-       <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"30% 70%" }}>
-              <img src={logo} alt="logo" style={{width:"15vh" , height:"5vh" ,paddingLeft:"7vh"}}/>
-              <Typography style={{ color:"#979797",fontSize:"2.5vh"}}>Google's Developer Students Clubs</Typography>
+    <div class="start-logo" style={{textAlign:'center',marginLeft:"2vh" }}>
+      { darkMode?
+                <img src={GDSCLogoDark} style={{height:'30px',marginTop:'10px',align:'center',width:'200px',marginLeft:'auto',marginRight:'auto'}} alt="logo"/>
+                :
+                <img src={GDSCLogo} style={{height:'30px',marginTop:'10px',align:'center',width:'200px',marginLeft:'auto',marginRight:'auto'}} alt="logo"/>
+                }
       </div>
       <div className={classes.footerdetails} >
           <div class="community">
               <Typography className={classes.community}>Community</Typography>
               <div className={classes.list}>
-                <Typography style={{marginBottom:"1.2vh"}}>About us</Typography>
-                <Typography style={{marginBottom:"1.2vh"}}>Blog</Typography>
-                <Typography style={{marginBottom:"1.2vh"}}>Upcoming Events</Typography>
+                <Link to={''} className={classes.links}>
+                  <Typography style={{marginBottom:"1.2vh"}}>About us</Typography>
+                </Link>
+                <Link to={'/team'} className={classes.links}>
+                  <Typography style={{marginBottom:"1.2vh"}}>Team</Typography>
+                </Link>
+                <Link to={'/events'} className={classes.links}>
+                  <Typography style={{marginBottom:"1.2vh"}}>Upcoming Events</Typography>
+                </Link>
               </div>
           </div>
           <div class="in-touch">
               <Typography className={classes.community}>Keep in touch</Typography>
               <div className={classes.list}>
-                <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+              <a href="mailto:gdsc.djsce@gmail.com" className={classes.links}>
+              <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+            </a>
                 {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
               </div>
           </div>
           <div class="follow-us"> 
               <Typography className={classes.community}>Follow Us</Typography>
               <div className={classes.list}>
+              <a href="https://www.instagram.com/gdsc.djsce/">
                 <Typography style={{marginBottom:"1.2vh"}}>Instagram</Typography>
+                </a>
+                <a href="https://www.linkedin.com/company/gdsc-djsce/">
                 <Typography style={{marginBottom:"1.2vh"}}>LinkedIn</Typography>
+                </a>
               </div>
           </div>
       </div>

@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import { ThemeContext } from "../ThemeContext";
 import {  AppBar, useMediaQuery, makeStyles,useTheme,Typography } from "@material-ui/core";
-
-import logo from "../assets/images/logo.png" ;
-import arrow from "../assets/images/arrow.png"
+import { Link } from "react-router-dom";
+import GDSCLogo from "../assets/images/GDSC___DJSCE.png" ;
+import GDSCLogoDark from "../assets/images/GDSC_DJSCE_Dark.png" ;
 const useStyles = makeStyles((theme)=>({
     roots:{
       "&.MuiAppBar-colorPrimary":{
@@ -58,29 +58,28 @@ const useStyles = makeStyles((theme)=>({
     footerBottom:{
       height:"10vh" , 
       backgroundColor:"#E5E5E5" ,
-      display:"grid" , 
-      gridTemplateColumns:"40% 10% 50%",
+      textAlign:"center" , 
+      gridTemplateColumns:"100%",
       paddingTop:"1.5vh",
-      paddingBottom:"1vh",
-      fontSize:"1.7vh",
+      paddingBottom:"0.1vh",
+      fontSize:"2vh",
       boxShadow:"none",
     },
     darkfooterBottom:{
       height:"10vh" , 
       backgroundColor:"#2b2b2b" ,
-      display:"grid" , 
-      gridTemplateColumns:"40% 10% 50%",
+      textAlign:"center" , 
+      gridTemplateColumns:"100%",
       paddingTop:"1.5vh",
-      paddingBottom:"1vh",
-      fontSize:"1.7vh",
+      paddingBottom:"0.1vh",
+      fontSize:"2vh",
       boxShadow:"none",
     },
     icons:{
       display:"grid",
       justifyContent: "center",
       gridTemplateColumns:"10vh 10vh",
-      paddingLeft:"2vh",
-      paddingRight:"1.5vh",
+      paddingLeft:"2.6vh",
     },
     socialicons:{
       borderWidth:"0.2vh",
@@ -95,9 +94,12 @@ export const FooterMobile = () => {
     return (
     <div>
     <AppBar position="relative" sx={{ top: "auto", bottom: 20 }} className={darkMode ? classes.darkroots : classes.roots}>
-      <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"10vh 30vh",marginLeft:"2.5vh" }}>
-          <img src={logo} alt="logo" style={{width:"8vh" , height:"3vh" ,paddingLeft:"3.3vh" ,paddingTop:"0.5vh"}}/>
-          <Typography style={{ color:"#979797",fontSize:"2.3vh"}}>Google's Developer Student Clubs</Typography>
+      <div class="start-logo" style={{textAlign:'center',marginLeft:"2vh" }}>
+      { darkMode?
+                <img src={GDSCLogoDark} style={{height:'40px',marginTop:'10px',align:'center',width:'250px',marginLeft:'auto',marginRight:'auto'}} alt="logo"/>
+                :
+                <img src={GDSCLogo} style={{height:'40px',marginTop:'10px',align:'center',width:'250px',marginLeft:'auto',marginRight:'auto'}} alt="logo"/>
+                }
       </div>
       <div className={classes.footerdetails} >
           <div>
@@ -105,16 +107,24 @@ export const FooterMobile = () => {
               <div class="community">
                 <Typography className={classes.community} style={{marginRight:"1.5vh"}}>Community</Typography>
                 <div className={classes.list}>
+                <Link to={''} className={classes.links}>
                   <Typography style={{marginBottom:"1.2vh"}}>About us</Typography>
-                  <Typography style={{marginBottom:"1.2vh"}}>Blog</Typography>
+                  </Link>
+                  <Link to={'/team'} className={classes.links}>
+                  <Typography style={{marginBottom:"1.2vh"}}>Team</Typography>
+                  </Link>
+                  <Link to={'/events'} className={classes.links}>
                   <Typography style={{marginBottom:"1.2vh"}}>Upcoming Events</Typography>
+                  </Link>
                 </div>
               </div>
               <div style={{borderLeftWidth:"0.2vh" , borderLeftColor:"#979797"  }}></div>
               <div class="in-touch">
                 <Typography className={classes.community}>Keep in touch</Typography>
                   <div className={classes.list}>
-                    <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+                  <a href="mailto:gdsc.djsce@gmail.com" className={classes.links}>
+              <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+            </a>
                     {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
                   </div>
               </div>
@@ -148,13 +158,13 @@ export const FooterMobile = () => {
       </div> 
     </AppBar>
     <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom }>
-    <div style={{marginLeft:"2vh" , marginTop:"2.7vh"}}>
+      <div style={{marginTop:"1.7vh"}}>
     &copy; GDSC DJSCE 2021
     </div>
     <div>
       {/* <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/> */}
     </div>
-    <div style={{fontSize:"1.2vh" , marginTop:"3vh"}}>
+    <div style={{fontSize:"1.2vh" , marginTop:"0.3vh"}}>
     Made with ❤ GDSC DJSCE
     </div>
   </div>
