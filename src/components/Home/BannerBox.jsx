@@ -36,7 +36,7 @@ export const BannerBox = () => {
               DEVELOP. 
             </span>
             <span style={{color:"#FBC02D"}}  data-aos="fade-down"  data-aos-delay="500" data-aos-offset="180">
-              BLAH BLAH
+              DEPLOY 
             </span>
         </div>
         

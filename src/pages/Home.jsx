@@ -9,16 +9,15 @@ import RubberBand from 'react-reveal/RubberBand';
 
 // Home Compoments
 import { HomeDots } from "../components/Home/HomeDots";
-import {FeaturedBox} from "../components/Home/FeaturedBox" ;
+// import {FeaturedBox} from "../components/Home/FeaturedBox" ;
+import FeaturesSection from "../components/Home/FeaturesSection" ;
+
 import {BannerBox} from '../components/Home/BannerBox' ;
 
 // ASSESTS
 import logo from "../assets/images/logo.png" ;
 import about_img from "../assets/images/about.png" ;
 import vision_img from "../assets/images/vision.png" ;
-import featured_1 from "../assets/images/featured1.png"
-import featured_2 from "../assets/images/featured2.png"
-import featured_3 from "../assets/images/featured3.png"
 import homeBanner from "../assets/images/HomeBanner.svg" ;
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
@@ -124,7 +123,7 @@ export const Home = () => {
                
                 <LightSpeed left> 
                   <h1 className="banner_header" >
-                    DJSCE GDSC
+                    GDSC DJSCE 
                   </h1>
                 </LightSpeed >
 
@@ -138,9 +137,8 @@ export const Home = () => {
                   
                   <span data-aos="fade-down" data-aos-duration="800" data-aos-delay="800" >
                     <span className= {darkMode ? "banner_text banner_dark":"banner_text banner_light"} >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate nulla facilis soluta. Ea nihil 
-                    doloribus impedit consequuntur. Sed atque nesciunt ad debitis voluptates? Sequi, iure fugit omnis 
-                    error porro inventore!
+                    GDSC DJSCE represents the Google Developer Student Club at the college level and is affiliated with Dwarkadas J. Sanghvi College of 
+                    Engineering
                     </span>
                   </span>
                   
@@ -172,10 +170,12 @@ export const Home = () => {
         <h1 className="header" data-aos="fade-right">ABOUT US</h1>
         <div className="content_box">
           <div className="content" data-aos="fade-right"  data-aos-duration="300" data-aos-delay="500" >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum perferendis doloribus consectetur
-            quae corrupti, impedit odit vitae fuga. Fuga culpa facere earum illo eius. Nobis harum voluptatibus neque 
-            at? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas alias delectus laudantium voluptas 
-            aperiam impeditiste neque sed, odit ad tempora ea ipsam totam, cupiditate nisi. Sapiente fugit nisi praesentium!
+            Google Developer Student Clubs (GDSC) are community groups for college interested in Google developer technologies. Students from 
+            all undergraduate or graduate programs with an interest in growing as a developer are welcome. GDSC DJSCE is the club made due to 
+            persistent efforts put by Soham Dave, a fourth-year student from the Department of Information Technology under the guidance of 
+            Dr. Hari Vasudevan, Principal of Dwarkadas J. Sanghvi College of Engineering and Dr. Vinaya Sawant, Head of the Department of Information
+             Technology and Prof. Neha Katre, faculty advisor.
+
           </div>
         </div>
       </div>
@@ -188,10 +188,10 @@ export const Home = () => {
         <HomeDots />
         <div className="content_box">
           <div className="content" data-aos="fade-left"  data-aos-delay="500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere rerum perferendis doloribus consectetur
-            quae corrupti, impedit odit vitae fuga. Fuga culpa facere earum illo eius. Nobis harum voluptatibus neque 
-            at? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas alias delectus laudantium voluptas 
-            aperiam impeditiste neque sed, odit ad tempora ea ipsam totam, cupiditate nisi. Sapiente fugit nisi praesentium!
+           To create a space for students, ranging from novice developers who are just starting, to advanced developers who want to further their 
+           skills where they can learn and collaborate as they solve real-world problems and to foster the ability to give back to society with the 
+           help of technology. We also aspire to imbibe a sense of responsibility amongst students by making them understand the importance of 
+           collectively and effectively working in a team
           </div>
         </div>
         <h1 className="header" data-aos="fade-left" data-offset="100">OUR VISION</h1>
@@ -203,44 +203,7 @@ export const Home = () => {
 
 
   {/* FEATURED */}
-  <div className="featured">
-  <h1 className="header" data-aos="fade-down">FEATURED</h1>
-
-  <div className="featured_container" >
-
-    < FeaturedBox 
-      title="Title 1"
-      color = "#1E88E5"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercita tionem porro neque eaque, tempore quam est?
-      ratione!"
-      img={featured_1}
-      href="#" 
-     
-    />
-
-    < FeaturedBox 
-      title="Title 2"
-      color = "#E94436"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitat ionem porro neque eaque, tempore quam est?
-      ratione!"
-      img={featured_2}
-      href="#" 
-    />
-
-
-    < FeaturedBox 
-      title="Title 3"
-      color = "#FBC02D"
-      text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercita tionem porro neque eaque, tempore quam est?
-      ratione!"
-      img={featured_3}
-      href="#" 
-    />
-
-
-  </div>
-      
-  </div>
+    {/* <FeaturesSection /> */}
   {/* closes FEATURED */}
 
 
