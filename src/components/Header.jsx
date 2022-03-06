@@ -100,7 +100,7 @@ export const  Header = () =>{
                 <img src={logo} alt="logo" style={{width:"80px" , height:"45px" , overflow:"hidden"}}/>
                 </div>
                 <Typography className={classes.logo} style={{marginLeft:"10px"}}>
-                Developer Students Club
+                Google's Developer Students Club
                 </Typography>
             </div>
             </Link>
