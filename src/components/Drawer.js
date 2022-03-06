@@ -20,7 +20,7 @@ const useStyles = makeStyles(()=>({
         alignContent:"center",
         alignItems:"center",
         textDecoration:"none",
-        color: "#ffffff",
+        color: "black",
         paddingLeft:"15vh",
         paddingRight:"15vh",
         fontSize: "20px",
@@ -73,11 +73,11 @@ function DrawerComponent() {
               <Link to="/contact" className={classes.link}>Contact</Link>
             </ListItemText>
           </ListItem>
-          <div style={{paddingLeft:"14vh",paddingRight:"14vh"}}>
+          {/* <div style={{paddingLeft:"14vh",paddingRight:"14vh"}}>
           <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
             >Login</Button>
-          </div>
+          </div> */}
         </List>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={classes.icon}>
