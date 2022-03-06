@@ -1,32 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
-import {Card, Typography} from '@material-ui/core/';
+import { makeStyles } from "@material-ui/core/styles";
+import { Card, Grid, Typography } from "@material-ui/core/";
 
 const useStyles = makeStyles((theme) => ({
-    item: {
-        margin: 10,
-        padding: 0,
-    },
-    innerCard: {
-        marginTop: 75,
-        marginBottom: 15,
-        marginLeft: 15,
-        marginRight: 15,
-    },
+  grid: {
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 200,
+    marginBottom: 20,
+  },
+  item: {
+    margin: 10,
+    padding: 0,
+  },
 }));
 const AllEvents = ({ id, title, date, summary, bgimage }) => {
   const classes = useStyles();
 
   return (
-    <div className="main">
-      <Card style={{background: `${bgimage}`}}>
-        <Card className={classes.innerCard}>
+    <Card
+      style={{
+        background: `url(${bgimage}) no-repeat`,
+        backgroundSize: "100% 66%",
+      }}
+    >
+      <Grid className={classes.grid} item xs={12} sm={12} md={12} key={id}>
+        <Card style={{ backgroundColor: "#F6F9FB" }}>
           <div className={classes.item}>
             <Link to={`/events/${id}`} className={classes.links}>
-                <Typography variant="h4" component="h4">
+              <Typography variant="h4" component="h4">
                 {title}
-                </Typography>
+              </Typography>
             </Link>
             <Typography variant="p" component="p">
               {date}
@@ -36,8 +41,8 @@ const AllEvents = ({ id, title, date, summary, bgimage }) => {
             </Typography>
           </div>
         </Card>
-      </Card>
-    </div>
+      </Grid>
+    </Card>
   );
 };
 export default AllEvents;

@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     grid: {
         marginLeft: 50,
         marginRight: 50,
-        marginTop: -100,
+        marginTop: -50,
         marginBottom: 50,
     },
     top: {
@@ -85,7 +85,7 @@ export default function EventsDetail() {
         <div>
             {event.map(x => (
                 <div>
-                    <Card style={{backgroundColor: "red",height: "500px"}}></Card>
+                    <Card style={{background: `url(${x.bannerimage}) no-repeat`,backgroundSize: "100% 100%",height: "450px"}}></Card>
                     <Grid className={classes.grid} item xs={12} sm={12} md={12}  key={x.id}>
                         <Card>
                             <div className={classes.top}>

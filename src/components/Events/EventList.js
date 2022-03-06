@@ -68,7 +68,7 @@ const EventsList = () => {
   return (
     <div className={classes.app}>
         <div className={classes.grid}>
-            <Grid container spacing={2} justify="flex-start" alignItems="flex-start">
+            <Grid container spacing={2} justify="flex-start" alignItems="stretch">
                 <Grid item xs={12} sm={12} md={12}>
                     <Card className={darkMode ? classes.selectBarDark : classes.selectBar}>
                         <Grid item xs={12} sm={12} md={4}>
@@ -87,7 +87,7 @@ const EventsList = () => {
                     </Card>
                 </Grid>
               {eventList.map(event => (
-                  <Grid item xs={12} sm={12} md={3}  key={event.id}>
+                  <Grid item xs={12} sm={12} md={3} container key={event.id}>
                       <AllEvents
                           key={event.id}
                           id={event.id}

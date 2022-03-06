@@ -99,7 +99,7 @@ export const Footer = () => {
      
        <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"30% 70%" }}>
               <img src={logo} alt="logo" style={{width:"15vh" , height:"5vh" ,paddingLeft:"7vh"}}/>
-              <Typography style={{ color:"#979797",fontSize:"2.5vh"}}>Developer Students Clubs</Typography>
+              <Typography style={{ color:"#979797",fontSize:"2.5vh"}}>Google's Developer Students Clubs</Typography>
       </div>
       <div className={classes.footerdetails} >
           <div class="community">
@@ -113,8 +113,8 @@ export const Footer = () => {
           <div class="in-touch">
               <Typography className={classes.community}>Keep in touch</Typography>
               <div className={classes.list}>
-                <Typography style={{marginBottom:"1.2vh"}}>djscegdsc@gmail.com</Typography>
-                <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography>
+                <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+                {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
               </div>
           </div>
           <div class="follow-us"> 
@@ -132,10 +132,10 @@ export const Footer = () => {
       &copy; GDSC DJSCE 2021
       </div>
       <div>
-      <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" , marginLeft:"-15vh" , marginTop:"-3vh"}}/>
+      {/* <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" , marginLeft:"-15vh" , marginTop:"-3vh"}}/> */}
       </div>
       <div style={{marginLeft:"7vh" , overflow:"hidden"}}>
-      Made By @GDSC DJSCE Frontend Team
+      Made with ❤ GDSC DJSCE
       </div>
     </div>
     </div>

@@ -74,17 +74,18 @@ export const  Header = () =>{
         {isMobile ? (
           <div style={{display:"grid" , gridTemplateColumns:"10% 80% 10%" , width:"100%"}}>
           <DrawerComponent style={{backgroundColor:"#E5E5E5"}}/>
+          <Link to="/" >
           <div style={{justifyContent:"center" , alignItems:"center" , display:"grid" , gridTemplateColumns:"20% 80%"}}>
-              
               {/*<div style={{display:"grid" , gridTemplateColumns:"20% 80%" ,justifyContent:"center" , alignItems:"center" , }}>*/}
               <img src={logo} alt="logo" style={{width:"50px" , height:"35px" , paddingTop:"1vh" , marginLeft:"35%"}}/>
               
               <Typography className={classes.logo} style={{fontSize:"1rem" , margin:"20px"}}>
               Developer Student Clubs
-              </Typography>
-            
-              
+              </Typography>  
+  
           </div>
+          </Link>
+
           <div  onClick={() => setDarkMode(!darkMode)}>
               <img src={lighttheme} alt="logo" style={{width:"45px" , height:"50px" , paddingTop:"1.5vh" ,alignItems:"flex-end" }}/>
               </div>
@@ -92,15 +93,20 @@ export const  Header = () =>{
         </div>
         ) : (
           <div style={{display:"grid" , gridTemplateColumns:"25% 75%" , width:"100%" }}>
+
+            <Link to="/" >
             <div style={{display:"grid" , gridTemplateColumns:"20% 80%" , paddingTop:"1.5vh" ,justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh"}}>
                 <div >
                 <img src={logo} alt="logo" style={{width:"80px" , height:"45px" , overflow:"hidden"}}/>
                 </div>
                 <Typography className={classes.logo} style={{marginLeft:"10px"}}>
-                Developer Students Club
+                Google's Developer Students Club
                 </Typography>
-                </div>
-          <div className={classes.navlinks} style={{paddingLeft:"30vh" , justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
+            </div>
+            </Link>
+               
+
+          <div className={classes.navlinks} style={{paddingLeft:"60vh" , justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
             <Link to="/" className={classes.link}>
               Home
             </Link>
@@ -113,9 +119,9 @@ export const  Header = () =>{
             <Link to="/contact" className={classes.link}>
               Contact
             </Link>
-            <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
+            {/* <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
-            >Login</Button>
+            >Login</Button> */}
             <Link to="#"  onClick={() => setDarkMode(!darkMode)}>
             <img src={lighttheme} alt="logo" style={{width:"35px" , height:"35px"  , marginLeft:"2vh"  , alignItems:"center"}}/>
             </Link>
