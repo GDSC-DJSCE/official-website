@@ -9,6 +9,7 @@ import { TCard, TCardMob, THead } from "../../components";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import contentTeam from "./Content";
 
 export const ContentEditorial = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -70,21 +71,26 @@ export const ContentEditorial = () => {
       </div>
 
       <div style={{ marginTop: "18px" }} className="topcard-branch">
-        <TCard name="Shivam Vora" role="Content & Editorial Coordinator" />
+        {/* <TCard name="Shivam Vora" role="Content & Editorial Coordinator" /> */}
+        <TCard member={contentTeam[0]} />
       </div>
       <img className="img" src={tree} alt="branches" />
       <div data-aos="zoom-in" className="cards">
         <div className="cards-end">
-          <TCard name="Samyak Shah" role="Soft Creatives" />
+          {/* <TCard name="Samyak Shah" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[1]} />
         </div>
         <div className="cards-center">
-          <TCard name="Vedant Gandhi" role="Soft Creatives" />
+          {/* <TCard name="Vedant Gandhi" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[2]} />
         </div>
         <div className="cards-center">
-          <TCard name="Mihir Panchal" role="Video Editing" />
+          {/* <TCard name="Mihir Panchal" role="Video Editing" /> */}
+          <TCard member={contentTeam[6]} />
         </div>
         <div className="cards-end">
-          <TCard name="Aarya Bagde" role="Editorial" />
+          {/* <TCard name="Aarya Bagde" role="Editorial" /> */}
+          <TCard member={contentTeam[8]} />
         </div>
       </div>
       <div
@@ -93,16 +99,20 @@ export const ContentEditorial = () => {
         className="cards"
       >
         <div className="cards-end">
-          <TCard name="Nimish Sabnis" role="Soft Creatives" />
+          {/* <TCard name="Nimish Sabnis" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[3]} />
         </div>
         <div className="cards-center">
-          <TCard name="Kashish Mistry" role="Soft Creatives" />
+          {/* <TCard name="Kashish Mistry" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[4]} />
         </div>
         <div className="cards-center">
-          <TCard name="Allan Almeida" role="Video Editing" />
+          {/* <TCard name="Allan Almeida" role="Video Editing" /> */}
+          <TCard member={contentTeam[7]} />
         </div>
         <div className="cards-end">
-          <TCard name="Naitik Vora" role="Editorial" />
+          {/* <TCard name="Naitik Vora" role="Editorial" /> */}
+          <TCard member={contentTeam[9]} />
         </div>
       </div>
       <div
@@ -111,7 +121,8 @@ export const ContentEditorial = () => {
         className="cards"
       >
         <div className="cards-end">
-          <TCard name="Vedit Beladia" role="Soft Creatives" />
+          {/* <TCard name="Vedit Beladia" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[5]} />
         </div>
         <div className="cards-center">
           <div style={{ width: "165px" }}></div>
@@ -120,7 +131,8 @@ export const ContentEditorial = () => {
           <div style={{ width: "165px" }}></div>
         </div>
         <div className="cards-end">
-          <TCard name="Prathamesh Nayak" role="Editorial" />
+          {/* <TCard name="Prathamesh Nayak" role="Editorial" /> */}
+          <TCard member={contentTeam[10]} />
         </div>
       </div>
       <div
@@ -154,7 +166,8 @@ export const ContentEditorial = () => {
           <div style={{ width: "165px" }}></div>
         </div>
         <div className="cards-end">
-          <TCard name="Shweta Joshi" role="Editorial" />
+          {/* <TCard name="Shweta Joshi" role="Editorial" /> */}
+          <TCard member={contentTeam[11]} />
         </div>
       </div>
 
@@ -164,40 +177,45 @@ export const ContentEditorial = () => {
           style={{ transitionDelay: "0.2s" }}
           className="bottom-div-col"
         >
-          <TCard name="Samyak Shah" role="Soft Creatives" />
-          <TCard name="Vedant Gandhi" role="Soft Creatives" />
+          {/* <TCard name="Samyak Shah" role="Soft Creatives" />
+          <TCard name="Vedant Gandhi" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[1]} /><TCard member={contentTeam[2]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.4s" }}
           className="bottom-div-col"
         >
-          <TCard name="Nimish Sabnis" role="Soft Creatives" />
-          <TCard name="Kashish Mistry" role="Soft Creatives" />
+          {/* <TCard name="Nimish Sabnis" role="Soft Creatives" />
+          <TCard name="Kashish Mistry" role="Soft Creatives" /> */}
+          <TCard member={contentTeam[3]} /><TCard member={contentTeam[4]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.6s" }}
           className="bottom-div-col"
         >
-          <TCard name="Vedit Beladia" role="Soft Creatives" />
-          <TCard name="Mihir Panchal" role="Video Editing" />
+          {/* <TCard name="Vedit Beladia" role="Soft Creatives" />
+          <TCard name="Mihir Panchal" role="Video Editing" /> */}
+          <TCard member={contentTeam[5]} /><TCard member={contentTeam[6]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.8s" }}
           className="bottom-div-col"
         >
-          <TCard name="Allan Almeida" role="Video Editing" />
-          <TCard name="Aarya Bagde" role="Editorial" />
+          {/* <TCard name="Allan Almeida" role="Video Editing" />
+          <TCard name="Aarya Bagde" role="Editorial" /> */}
+          <TCard member={contentTeam[7]} /><TCard member={contentTeam[8]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "1s" }}
           className="bottom-div-col"
         >
-          <TCard name="Naitik Vora" role="Editorial" />
-          <TCard name="Prathamesh Nayak" role="Editorial" />
+          {/* <TCard name="Naitik Vora" role="Editorial" />
+          <TCard name="Prathamesh Nayak" role="Editorial" /> */}
+          <TCard member={contentTeam[9]} /><TCard member={contentTeam[10]} />
         </div>
         <div
           data-aos="zoom-in"
@@ -220,7 +238,8 @@ export const ContentEditorial = () => {
               </Typography>
             </div>
           </Link>
-          <TCard name="Shweta Joshi" role="Editorial" />
+          {/* <TCard name="Shweta Joshi" role="Editorial" /> */}
+          <TCard member={contentTeam[11]} />
         </div>
       </div>
       <div className="bottom-div-mob">

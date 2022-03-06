@@ -9,6 +9,7 @@ import { TCard, TCardMob, THead } from "../../components";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import projectTeam from "./Project";
 
 export const ProjectTeam = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -71,21 +72,26 @@ export const ProjectTeam = () => {
       </div>
 
       <div style={{ marginTop: "18px" }} className="topcard-branch">
-        <TCard name="Ansh Mehta" role="Project Coordinator" />
+        {/* <TCard name="Ansh Mehta" role="Project Coordinator" /> */}
+        <TCard member={projectTeam[0]}/>
       </div>
       <img className="img" src={tree} alt="branches" />
       <div data-aos="zoom-in" className="cards">
         <div className="cards-end">
-          <TCard name="Jinish Shah" role="Frontend Team" />
+          {/* <TCard name="Jinish Shah" role="Frontend Team" /> */}
+          <TCard member={projectTeam[1]}/>
         </div>
         <div className="cards-center">
-          <TCard name="Chaitanya Kumbhar" role="Backend Team" />
+          {/* <TCard name="Chaitanya Kumbhar" role="Backend Team" /> */}
+          <TCard member={projectTeam[4]}/>
         </div>
         <div className="cards-center">
-          <TCard name="Yash Jhaveri" role="Full Stack Developer" />
+          {/* <TCard name="Yash Jhaveri" role="Full Stack Developer" /> */}
+          <TCard member={projectTeam[6]}/>
         </div>
         <div className="cards-end">
-          <TCard name="Ojas Karmaker" role="App Team" />
+          {/* <TCard name="Ojas Karmaker" role="App Team" /> */}
+          <TCard member={projectTeam[7]}/>
         </div>
       </div>
       <div
@@ -94,16 +100,19 @@ export const ProjectTeam = () => {
         className="cards"
       >
         <div className="cards-end">
-          <TCard name="Prachi Patel" role="Frontend Team" />
+          {/* <TCard name="Prachi Patel" role="Frontend Team" /> */}
+          <TCard member={projectTeam[2]}/>
         </div>
         <div className="cards-center">
-          <TCard name="Chirag Jain" role="Backend Team" />
+          {/* <TCard name="Chirag Jain" role="Backend Team" /> */}
+          <TCard member={projectTeam[5]}/>
         </div>
         <div className="cards-center">
           <div style={{ width: "165px" }}></div>
         </div>
         <div className="cards-end">
-          <TCard name="Tanmai Kamat" role="App Team" />
+          {/* <TCard name="Tanmai Kamat" role="App Team" /> */}
+          <TCard member={projectTeam[8]}/>
         </div>
       </div>
       <div
@@ -112,7 +121,8 @@ export const ProjectTeam = () => {
         className="cards"
       >
         <div className="cards-end">
-          <TCard name="Meith Navlakha" role="Frontend Team" />
+          {/* <TCard name="Meith Navlakha" role="Frontend Team" /> */}
+          <TCard member={projectTeam[3]}/>
         </div>
         <div className="cards-center">
           <div style={{ width: "165px" }}></div>
@@ -131,32 +141,36 @@ export const ProjectTeam = () => {
           style={{ transitionDelay: "0.2s" }}
           className="bottom-div-col"
         >
-          <TCard name="Jinish Shah" role="Frontend Team" />
-          <TCard name="Prachi Patel" role="Frontend Team" />
+          {/* <TCard name="Jinish Shah" role="Frontend Team" />
+          <TCard name="Prachi Patel" role="Frontend Team" /> */}
+          <TCard member={projectTeam[1]}/><TCard member={projectTeam[2]}/>
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.4s" }}
           className="bottom-div-col"
         >
-          <TCard name="Meith Navlakha" role="Frontend Team" />
-          <TCard name="Chaitanya Kumbhar" role="Backend Team" />
+          {/* <TCard name="Meith Navlakha" role="Frontend Team" />
+          <TCard name="Chaitanya Kumbhar" role="Backend Team" /> */}
+          <TCard member={projectTeam[3]}/><TCard member={projectTeam[4]}/>
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.6s" }}
           className="bottom-div-col"
         >
-          <TCard name="Chirag Jain" role="Backend Team" />
-          <TCard name="Yash Jhaveri" role="Full Stack Developer" />
+          {/* <TCard name="Chirag Jain" role="Backend Team" />
+          <TCard name="Yash Jhaveri" role="Full Stack Developer" /> */}
+          <TCard member={projectTeam[5]}/><TCard member={projectTeam[6]}/>
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.8s" }}
           className="bottom-div-col"
         >
-          <TCard name="Ojas Karmakar" role="App Team" />
-          <TCard name="Tanmai Kamat" role="App Team" />
+          {/* <TCard name="Ojas Karmakar" role="App Team" />
+          <TCard name="Tanmai Kamat" role="App Team" /> */}
+          <TCard member={projectTeam[7]}/><TCard member={projectTeam[8]}/>
         </div>
       </div>
       <div className="bottom-div-mob">
