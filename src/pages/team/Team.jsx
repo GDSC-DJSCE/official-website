@@ -134,7 +134,7 @@ export const Team = () => {
           style={{ transitionDelay: "0.5s" }}
           className="bottom-div-col"
         >
-          <Link to="/team/domain-head">
+          <Link to="/team/domain-head2">
             {/* <TCard name="Amay Gada" role="Technical Coordinator" /> */}
             <TCard member={coreTeam[1]} />
           </Link>
@@ -185,7 +185,7 @@ export const Team = () => {
           style={{ transitionDelay: "0.5s" }}
           className="bottom-div-col"
         >
-          <Link to="/team/domain-head">
+          <Link to="/team/domain-head2">
             {/* <TCardMob name="Amay Gada" role="Technical Coordinator" /> */}
             <TCardMob member={coreTeam[1]} />
           </Link>

@@ -110,27 +110,27 @@ export const TCard = ({ member }) => {
             <p className={classes.p2}>{title}</p>
           </div>
           <div className={classes.action}>
-            <Link to="/team/lead" className="icon-link">
+            {/* <Link to="/team/lead" className="icon-link"> */}
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="card-icon"
                 size="lg"
               />
-            </Link>
-            <Link to="/team/lead" className="icon-link">
+            {/* </Link> */}
+            {/* <Link to="/team/lead" className="icon-link"> */}
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="card-icon"
                 size="lg"
               />
-            </Link>
-            <Link to="/team/lead" className="icon-link">
+            {/* </Link> */}
+            {/* <Link to="/team/lead" className="icon-link"> */}
               <FontAwesomeIcon
                 icon={faGithub}
                 className="card-icon"
                 size="lg"
               />
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       </span>

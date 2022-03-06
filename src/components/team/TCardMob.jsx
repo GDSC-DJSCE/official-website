@@ -86,24 +86,24 @@ export const TCardMob = ({member}) => {
           <p className={classes.p2}>{title}</p>
         </div>
         <div className={classes.action}>
-          <Link
+          {/* <Link
             style={{ color: darkMode ? "white" : "#2B2B2B" }}
             to="/team/lead"
-          >
+          > */}
             <FontAwesomeIcon icon={faLinkedin} />
-          </Link>
-          <Link
+          {/* </Link> */}
+          {/* <Link
             style={{ color: darkMode ? "white" : "#2B2B2B" }}
             to="/team/lead"
-          >
+          > */}
             <FontAwesomeIcon icon={faInstagram} />
-          </Link>
-          <Link
+          {/* </Link> */}
+          {/* <Link
             style={{ color: darkMode ? "white" : "#2B2B2B" }}
             to="/team/lead"
-          >
+          > */}
             <FontAwesomeIcon icon={faGithub} />
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
     </>
