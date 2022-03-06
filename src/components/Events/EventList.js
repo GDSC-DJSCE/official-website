@@ -29,14 +29,12 @@ const useStyles = makeStyles((theme) => ({
   },
   select: {
       margin: "10px 100px",
-      fontFamily: "Open Sans",
       fontStyle: "normal",
       fontWeight: "normal",
       color: "black",
   },
   selectDark: {
       margin: "10px 100px",
-      fontFamily: "Open Sans",
       fontStyle: "normal",
       fontWeight: "normal",
       color: "white",
