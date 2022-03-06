@@ -42,7 +42,7 @@ export const THead = () => {
           </p>
           <p
             className={classes.body}
-            style={{ color: darkMode ? "#adadad" : "#535353" }}
+            style={{ color: darkMode ? "#adadad" : "#535353" , fontSize:"20px" }}
           >
             Meet the team that makes GDSC DJSCE Successful! Lorem ipsum dolor
             sit amet consectetur adipisicing elit. Voluptates laudantium

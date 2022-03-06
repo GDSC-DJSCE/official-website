@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10px",
     marginBottom: "7px",
     border: "2px solid #4385f3",
+    objectFit: "cover",
   },
   content: {
     padding: "0",
@@ -58,10 +59,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TCardMob = (props) => {
+export const TCardMob = ({member}) => {
   const classes = useStyles();
 
   const { darkMode } = useContext(ThemeContext);
+
+  const {name , title , imageSrc} = member;
 
   return (
     <>
@@ -73,14 +76,14 @@ export const TCardMob = (props) => {
         }}
       >
         <img
-          src="http://picsum.photos/100"
+          src={imageSrc}
           alt="profile"
           height="70px"
           className={classes.image}
         />
         <div className={classes.content}>
-          <p className={classes.p1}>{props.name}</p>
-          <p className={classes.p2}>{props.role}</p>
+          <p className={classes.p1}>{name}</p>
+          <p className={classes.p2}>{title}</p>
         </div>
         <div className={classes.action}>
           <Link

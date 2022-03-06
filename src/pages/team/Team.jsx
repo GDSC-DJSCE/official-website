@@ -14,6 +14,7 @@ import { TCard, THead, TCardMob } from "../../components";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import coreTeam from "./Core";
 
 export const Team = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -32,7 +33,8 @@ export const Team = () => {
       <div>
         <img alt="background" className="topimg" src={background} />
         <div className="topcard">
-          <TCard name="Soham Dave" role="GDSC DJSCE Lead" />
+          {/* <TCard name="Soham Dave" role="GDSC DJSCE Lead" /> */}
+          <TCard member={coreTeam[0]} />
         </div>
         <div className="headSm">
           <THead />
@@ -44,14 +46,16 @@ export const Team = () => {
             className="cont1card"
           >
             <Link to="/team/domain-head2">
-              <TCard name="Amay Gada" role="Technical Coordinator" />
+              {/* <TCard name="Amay Gada" role="Technical Coordinator" /> */}
+              <TCard member={coreTeam[1]} />
             </Link>
           </div>
           <div className="cont1head">
             <THead />
           </div>
           <div className="topcard-cont1">
-            <TCard name="Soham Dave" role="GDSC DJSCE Lead" />
+            {/* <TCard name="Soham Dave" role="GDSC DJSCE Lead" /> */}
+            <TCard member={coreTeam[0]} />
           </div>
           <div
             data-aos="zoom-in"
@@ -59,7 +63,8 @@ export const Team = () => {
             className="cont1card"
           >
             <Link to="/team/domain-head">
-              <TCard name="Rushank Shah" role="Technical Coordinator" />
+              {/* <TCard name="Rushank Shah" role="Technical Coordinator" /> */}
+              <TCard member={coreTeam[2]} />
             </Link>
           </div>
         </div>
@@ -77,10 +82,11 @@ export const Team = () => {
             className="cardend"
           >
             <Link to="/team/content-editoral">
-              <TCard
+              {/* <TCard
                 name="Shivam Vora"
                 role="Content and Editorial Coordinator"
-              />
+              /> */}
+              <TCard member={coreTeam[3]} />
             </Link>
           </div>
           <div
@@ -92,7 +98,8 @@ export const Team = () => {
           </div>
           <div data-aos="zoom-in" className="cardcenter">
             <Link to="/team/project-team">
-              <TCard name="Ansh Mehta" role="Project Coordinator" />
+              {/* <TCard name="Ansh Mehta" role="Project Coordinator" /> */}
+              <TCard member={coreTeam[4]} />
             </Link>
           </div>
           <div
@@ -108,7 +115,8 @@ export const Team = () => {
             className="cardend"
           >
             <Link to="/team/outreach-events">
-              <TCard name="Heth Gala" role="Events and Outreach Coordinator" />
+              {/* <TCard name="Heth Gala" role="Events and Outreach Coordinator" /> */}
+              <TCard member={coreTeam[5]} />
             </Link>
           </div>
           <div
@@ -127,10 +135,12 @@ export const Team = () => {
           className="bottom-div-col"
         >
           <Link to="/team/domain-head">
-            <TCard name="Amay Gada" role="Technical Coordinator" />
+            {/* <TCard name="Amay Gada" role="Technical Coordinator" /> */}
+            <TCard member={coreTeam[1]} />
           </Link>
           <Link to="/team/domain-head">
-            <TCard name="Rushank Shah" role="Technical Coordinator" />
+            {/* <TCard name="Rushank Shah" role="Technical Coordinator" /> */}
+            <TCard member={coreTeam[2]} />
           </Link>
         </div>
         <div
@@ -139,13 +149,15 @@ export const Team = () => {
           className="bottom-div-col"
         >
           <Link to="/team/content-editoral">
-            <TCard
+            {/* <TCard
               name="Shivam Vora"
               role="Content and Editorial Coordinator"
-            />
+            /> */}
+            <TCard member={coreTeam[3]} />
           </Link>
           <Link to="/team/outreach-events">
-            <TCard name="Heth Gala" role="Events and Outreach Coordinator" />
+            {/* <TCard name="Heth Gala" role="Events and Outreach Coordinator" /> */}
+            <TCard member={coreTeam[4]} />
           </Link>
         </div>
         <div
@@ -154,7 +166,8 @@ export const Team = () => {
           className="bottom-card"
         >
           <Link to="/team/project-team">
-            <TCard name="Ansh Mehta" role="Project Coordinator" />
+            {/* <TCard name="Ansh Mehta" role="Project Coordinator" /> */}
+            <TCard member={coreTeam[5]} />
           </Link>
         </div>
       </div>
@@ -163,7 +176,8 @@ export const Team = () => {
       <div className="bottom-div-mob">
         <div className="bottom-card">
           <Link to="/team">
-            <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" />
+            {/* <TCardMob name="Soham Dave" role="GDSC DJSCE Lead" /> */}
+            <TCardMob member={coreTeam[0]} />
           </Link>
         </div>
         <div
@@ -172,10 +186,12 @@ export const Team = () => {
           className="bottom-div-col"
         >
           <Link to="/team/domain-head">
-            <TCardMob name="Amay Gada" role="Technical Coordinator" />
+            {/* <TCardMob name="Amay Gada" role="Technical Coordinator" /> */}
+            <TCardMob member={coreTeam[1]} />
           </Link>
           <Link to="/team/domain-head">
-            <TCardMob name="Rushank Shah" role="Technical Coordinator" />
+            {/* <TCardMob name="Rushank Shah" role="Technical Coordinator" /> */}
+            <TCardMob member={coreTeam[2]} />
           </Link>
         </div>
         <div
@@ -184,13 +200,15 @@ export const Team = () => {
           className="bottom-div-col"
         >
           <Link to="/team/content-editoral">
-            <TCardMob
+            {/* <TCardMob
               name="Shivam Vora"
               role="Content and Editorial Coordinator"
-            />
+            /> */}
+            <TCardMob member={coreTeam[3]} />
           </Link>
           <Link to="/team/outreach-events">
-            <TCardMob name="Heth Gala" role="Events and Outreach Coordinator" />
+            {/* <TCardMob name="Heth Gala" role="Events and Outreach Coordinator" /> */}
+            <TCardMob member={coreTeam[5]} />
           </Link>
         </div>
         <div
@@ -199,7 +217,8 @@ export const Team = () => {
           className="bottom-card"
         >
           <Link to="/team/project-team">
-            <TCardMob name="Ansh Mehta" role="Project Coordinator" />
+            {/* <TCardMob name="Ansh Mehta" role="Project Coordinator" /> */}
+            <TCardMob member={coreTeam[4]} />
           </Link>
         </div>
       </div>

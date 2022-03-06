@@ -2,7 +2,7 @@ const projectTeam = [
     {
         name: "Ansh Mehta",
         title: "Frontend Coordinator",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/committee/project/ansh.jpeg",
     },
     {
         name: "Jinish Shah",
@@ -12,7 +12,7 @@ const projectTeam = [
     {
         name: "Prachi Patel",
         title: "Frontend Team",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/person.jpg",
     },
     {
         name: "Meith Navlakha",

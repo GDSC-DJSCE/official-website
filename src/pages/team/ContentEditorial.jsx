@@ -25,14 +25,8 @@ export const ContentEditorial = () => {
 
   return (
     <>
-      <p className="header" style={{ color: darkMode ? "white" : null }}>
-        Our Team
-      </p>
-      <div className="headSm-branch">
-        <THead />
-      </div>
       <Link to="/team">
-        <div className="back-top">
+        <div className="back-top" style={{paddingTop:"15px"}}>
           <img
             src={darkMode ? backdark : back}
             alt="back"
@@ -51,6 +45,12 @@ export const ContentEditorial = () => {
           </Typography>
         </div>
       </Link>
+      <p className="header" style={{ color: darkMode ? "white" : null }}>
+        Our Team
+      </p>
+      <div className="headSm-branch" style={{height:"100%"}}>
+        <THead />
+      </div>
       <div className="button">
         <Button
           style={{ borderRadius: "15px", width: "225px" }}
@@ -245,7 +245,8 @@ export const ContentEditorial = () => {
       <div className="bottom-div-mob">
         <div className="bottom-card">
           <Link to="/team">
-            <TCardMob name="Shivam Vora" role="Content & Editorial" />
+            {/* <TCardMob name="Shivam Vora" role="Content & Editorial" /> */}
+            <TCardMob member={contentTeam[0]} />
           </Link>
         </div>
         <div
@@ -253,40 +254,45 @@ export const ContentEditorial = () => {
           style={{ transitionDelay: "0.2s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Samyak Shah" role="Soft Creatives" />
-          <TCardMob name="Vedant Gandhi" role="Soft Creatives" />
+          {/* <TCardMob name="Samyak Shah" role="Soft Creatives" />
+          <TCardMob name="Vedant Gandhi" role="Soft Creatives" /> */}
+          <TCardMob member={contentTeam[1]} /><TCardMob member={contentTeam[2]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.4s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Nimish Sabnis" role="Soft Creatives" />
-          <TCardMob name="Kashish Mistry" role="Soft Creatives" />
+          {/* <TCardMob name="Nimish Sabnis" role="Soft Creatives" />
+          <TCardMob name="Kashish Mistry" role="Soft Creatives" /> */}
+          <TCardMob member={contentTeam[3]} /><TCardMob member={contentTeam[4]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.6s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Vedit Beladia" role="Soft Creatives" />
-          <TCardMob name="Mihir Panchal" role="Video Editing" />
+          {/* <TCardMob name="Vedit Beladia" role="Soft Creatives" />
+          <TCardMob name="Mihir Panchal" role="Video Editing" /> */}
+          <TCardMob member={contentTeam[5]} /><TCardMob member={contentTeam[6]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.8s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Allan Almeida" role="Video Editing" />
-          <TCardMob name="Aarya Bagde" role="Editorial" />
+          {/* <TCardMob name="Allan Almeida" role="Video Editing" />
+          <TCardMob name="Aarya Bagde" role="Editorial" /> */}
+          <TCardMob member={contentTeam[7]} /><TCardMob member={contentTeam[8]} />
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "1s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Naitik Vora" role="Editorial" />
-          <TCardMob name="Prathamesh Nayak" role="Editorial" />
+          {/* <TCardMob name="Naitik Vora" role="Editorial" />
+          <TCardMob name="Prathamesh Nayak" role="Editorial" /> */}
+          <TCardMob member={contentTeam[9]} /><TCardMob member={contentTeam[10]} />
         </div>
         <div
           data-aos="zoom-in"
@@ -297,7 +303,8 @@ export const ContentEditorial = () => {
             transitionDelay: "1s",
           }}
         >
-          <TCardMob name="Shweta Joshi" role="Editorial" />
+          {/* <TCardMob name="Shweta Joshi" role="Editorial" /> */}
+          <TCardMob member={contentTeam[11]} />
         </div>
       </div>
       <br />

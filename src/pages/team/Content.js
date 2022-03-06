@@ -2,12 +2,12 @@ const contentTeam = [
     {
         name: "Shivam Vora",
         title: "Content & Editorial Coordinator",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/committee/content/shivam.jpeg",
     },
     {
         name: "Samyak Shah",
         title: "Soft Creatives",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/person.jpg",
     },
     {
         name: "Vedant Gandhi",
@@ -17,12 +17,12 @@ const contentTeam = [
     {
         name: "Nimish Sabnis",
         title: "Soft Creatives",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/person.jpg",
     },
     {
         name: "Kashish Mistry",
         title: "Soft Creatives",
-        imageSrc: "/images/committee/project/jinish.jpg",
+        imageSrc: "/images/person.jpg",
     },
     {
         name: "Vedit Beladia",

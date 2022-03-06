@@ -25,14 +25,8 @@ export const ProjectTeam = () => {
 
   return (
     <>
-      <p className="header" style={{ color: darkMode ? "white" : null }}>
-        Our Team
-      </p>
-      <div className="headSm-branch">
-        <THead />
-      </div>
       <Link to="/team">
-        <div className="back-top">
+        <div className="back-top" style={{paddingTop:"15px"}}>
           <img
             src={darkMode ? backdark : back}
             color="white"
@@ -52,6 +46,12 @@ export const ProjectTeam = () => {
           </Typography>
         </div>
       </Link>
+      <p className="header" style={{ color: darkMode ? "white" : null }}>
+        Our Team
+      </p>
+      <div className="headSm-branch" style={{height:"100%"}}>
+        <THead />
+      </div>
       <div className="button">
         <Button
           style={{ borderRadius: "15px", width: "225px" }}
@@ -176,7 +176,8 @@ export const ProjectTeam = () => {
       <div className="bottom-div-mob">
         <div className="bottom-card">
           <Link to="/team">
-            <TCardMob name="Ansh Mehta" role="Project Coordinator" />
+            {/* <TCardMob name="Ansh Mehta" role="Project Coordinator" /> */}
+            <TCardMob member={projectTeam[0]}/>
           </Link>
         </div>
         <div
@@ -184,16 +185,18 @@ export const ProjectTeam = () => {
           style={{ transitionDelay: "0.2s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Jinish Shah" role="Frontend Team" />
-          <TCardMob name="Prachi Patel" role="Frontend Team" />
+          {/* <TCardMob name="Jinish Shah" role="Frontend Team" />
+          <TCardMob name="Prachi Patel" role="Frontend Team" /> */}
+          <TCardMob member={projectTeam[1]}/><TCardMob member={projectTeam[2]}/>
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.4s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Meith Navlakha" role="Frontend Team" />
-          <TCardMob name="Chaitanya Kumbhar" role="Backend Team" />
+          {/* <TCardMob name="Meith Navlakha" role="Frontend Team" />
+          <TCardMob name="Chaitanya Kumbhar" role="Backend Team" /> */}
+          <TCardMob member={projectTeam[3]}/><TCardMob member={projectTeam[4]}/>
         </div>
       </div>
       <div className="bottom-div-mob">
@@ -202,16 +205,18 @@ export const ProjectTeam = () => {
           style={{ transitionDelay: "0.6s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Chirag Jain" role="Backend Team" />
-          <TCardMob name="Yash Jhaveri" role="Full Stack Developer" />
+          {/* <TCardMob name="Chirag Jain" role="Backend Team" />
+          <TCardMob name="Yash Jhaveri" role="Full Stack Developer" /> */}
+          <TCardMob member={projectTeam[5]}/><TCardMob member={projectTeam[6]}/>
         </div>
         <div
           data-aos="zoom-in"
           style={{ transitionDelay: "0.8s" }}
           className="bottom-div-col"
         >
-          <TCardMob name="Ojas Karmakar" role="App Team" />
-          <TCardMob name="Tanmai Kamat" role="App Team" />
+          {/* <TCardMob name="Ojas Karmakar" role="App Team" />
+          <TCardMob name="Tanmai Kamat" role="App Team" /> */}
+          <TCardMob member={projectTeam[7]}/><TCardMob member={projectTeam[8]}/>
         </div>
       </div>
       <Link to="/team">

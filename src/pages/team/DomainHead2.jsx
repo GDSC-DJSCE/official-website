@@ -9,6 +9,7 @@ import { TCard, TCardMob, THead } from "../../components";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import domainTeam2 from "./Domain2";
 
 export const DomainHead2 = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -23,14 +24,8 @@ export const DomainHead2 = () => {
   }, []);
   return (
     <>
-      <p className="header" style={{ color: darkMode ? "white" : null }}>
-        Our Team
-      </p>
-      <div className="headSm-branch">
-        <THead />
-      </div>
       <Link to="/team">
-        <div className="back-top">
+        <div className="back-top"  style={{paddingTop:"15px"}}>
           <img
             src={darkMode ? backdark : back}
             alt="back"
@@ -49,6 +44,12 @@ export const DomainHead2 = () => {
           </Typography>
         </div>
       </Link>
+      <p className="header" style={{ color: darkMode ? "white" : null }}>
+        Our Team
+      </p>
+      <div className="headSm-branch" style={{height:"100%"}}>
+        <THead />
+      </div>
       <div className="button">
         <Button
           style={{ borderRadius: "15px", width: "225px" }}
@@ -69,24 +70,28 @@ export const DomainHead2 = () => {
       </div>
 
       <div style={{ marginTop: "18px" }} className="topcard-branch">
-        <TCard name="Amay Gada" role="Technical Coordinator" />
+        {/* <TCard name="Amay Gada" role="Technical Coordinator" /> */}
+        <TCard member={domainTeam2[0]} />
       </div>
       <img className="img" src={tree} alt="branches" />
       <div className="cards">
         <div className="cards-end"></div>
         <div data-aos="zoom-in" className="cards-center">
-          <TCard name="Dhruv Jain" role="Web & Blockchain" />
+          {/* <TCard name="Dhruv Jain" role="Web & Blockchain" /> */}
+          <TCard member={domainTeam2[1]} />
         </div>
         <div data-aos="zoom-in" className="cards-center">
-          <TCard role="AR/VR & IOT" />
+          {/* <TCard name="Ayush Shah" role="AR/VR & IOT" /> */}
+          <TCard member={domainTeam2[2]} />
         </div>
         <div className="cards-end"></div>
       </div>
 
       <div className="bottom-div">
         <div data-aos="zoom-in" className="bottom-div-col">
-          <TCard name="Dhruv Jain" role="Web & Blockchain" />
-          <TCard name="Ayush Shah" role="AR/VR & IOT" />
+          {/* <TCard name="Dhruv Jain" role="Web & Blockchain" />
+          <TCard name="Ayush Shah" role="AR/VR & IOT" /> */}
+          <TCard member={domainTeam2[1]} /><TCard member={domainTeam2[2]} />
         </div>
       </div>
       <Link to="/team">
@@ -108,12 +113,14 @@ export const DomainHead2 = () => {
       <div className="bottom-div-mob">
         <div className="bottom-card">
           <Link to="/team">
-            <TCardMob name="Amay Gada" role="Technical Coordinator" />
+            {/* <TCardMob name="Amay Gada" role="Technical Coordinator" /> */}
+            <TCardMob member={domainTeam2[0]} />
           </Link>
         </div>
         <div data-aos="zoom-in" className="bottom-div-col">
-          <TCardMob name="Dhruv Jain" role="Web & Blockchain" />
-          <TCardMob name="Ayush Shah" role="AR/VR & IOT" />
+          {/* <TCardMob name="Dhruv Jain" role="Web & Blockchain" />
+          <TCardMob name="Ayush Shah" role="AR/VR & IOT" /> */}
+          <TCardMob member={domainTeam2[1]} /><TCardMob member={domainTeam2[2]} />
         </div>
       </div>
       <br />
