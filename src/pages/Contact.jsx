@@ -491,7 +491,7 @@ export const Contact = () => {
 	};
 	return (
 		<div className="mainbody" >
-			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"5vh" ,textAlign:"center"}}>Contact Us</div>
+			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"2vh" ,textAlign:"center"}}>Contact Us</div>
 			<div className={darkMode ? "sub-header-dark" : "sub-header" }>Any Questions or Remarks? Just write us a Question</div>
 			
 			
@@ -711,7 +711,7 @@ export const Contact = () => {
 			<div className={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
-						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Lets Talk ?</div>
+						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Let's Talk</div>
 						{isMobile ?
 						<TextField
 							className={darkMode ? classes.mobileboxdark : classes.mobilebox}
@@ -867,12 +867,12 @@ export const Contact = () => {
 								Mumbai, Maharashtra 400056{' '}
 							</div>
 						</div>
-						<div className="box-address">
+						{/* <div className="box-address">
 							<div class="h-28 w-28 p-7 ml-5">
 								<FontAwesomeIcon icon={faPhoneAlt} color="rgba(16, 157, 88, 1)" size="2x" />
 							</div>
 							<div className="detail h-28 text-lg w-200 pl-3 p-6 font-semibold">+91 939282927</div>
-						</div>
+						</div> */}
 						<div class="box-map">
 							<div>
 								<iframe
@@ -897,7 +897,7 @@ export const Contact = () => {
 						: <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="" />
 						}	
 							<a href="mailto:gdsc.djsce@gmail.com">
-								<img src="https://img.icons8.com/color/48/000000/gmail-new.png" alt="" />
+								<img src="https://img.icons8.com/ios-filled/48/000000/gmail-new.png" alt="" />
 							</a>
 							<a href="https://www.linkedin.com/company/gdsc-djsce/">
 								{darkMode ?

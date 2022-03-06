@@ -77,6 +77,7 @@ const useStyles = makeStyles((theme)=>({
     },
     icons:{
       display:"grid",
+      justifyContent: "center",
       gridTemplateColumns:"10vh 10vh",
       paddingLeft:"2vh",
       paddingRight:"1.5vh",
@@ -94,9 +95,9 @@ export const FooterMobile = () => {
     return (
     <div>
     <AppBar position="relative" sx={{ top: "auto", bottom: 20 }} className={darkMode ? classes.darkroots : classes.roots}>
-      <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"10vh 30vh" }}>
+      <div class="start-logo" style={{display:"grid" , gridTemplateColumns:"10vh 30vh",marginLeft:"2.5vh" }}>
           <img src={logo} alt="logo" style={{width:"8vh" , height:"3vh" ,paddingLeft:"3.3vh" ,paddingTop:"0.5vh"}}/>
-          <Typography style={{ color:"#979797",fontSize:"2.3vh"}}>Developer Student Clubs</Typography>
+          <Typography style={{ color:"#979797",fontSize:"2.3vh"}}>Google's Developer Student Clubs</Typography>
       </div>
       <div className={classes.footerdetails} >
           <div>
@@ -113,14 +114,14 @@ export const FooterMobile = () => {
               <div class="in-touch">
                 <Typography className={classes.community}>Keep in touch</Typography>
                   <div className={classes.list}>
-                    <Typography style={{marginBottom:"1.2vh"}}>djscegdsc@gmail.com</Typography>
-                    <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography>
+                    <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
+                    {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
                   </div>
               </div>
             </div>
           </div>
-          <div class="follow-us"> 
-              <Typography className={classes.community} style={{padding:"1vh" ,paddingLeft:"2vh"}}>Follow Us</Typography>
+          <div class="follow-us" style={{textAlign:"center"}}> 
+              <Typography className={classes.community} style={{padding:"1vh" ,paddingLeft:"0"}}>Follow Us</Typography>
               <div className={classes.icons}>
                 <div style={{width:"5.7vh" , height:"5.7vh"}}>
                 <a href="https://www.linkedin.com/company/gdsc-djsce/">
@@ -151,13 +152,14 @@ export const FooterMobile = () => {
     &copy; GDSC DJSCE 2021
     </div>
     <div>
-      <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/>
+      {/* <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/> */}
     </div>
     <div style={{fontSize:"1.2vh" , marginTop:"3vh"}}>
-    Made By @GDSC DJSCE Frontend Team
+    Made with ❤ GDSC DJSCE
     </div>
   </div>
   </div>
   );
+  
 }
 

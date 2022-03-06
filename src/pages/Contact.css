@@ -500,7 +500,7 @@
 }
 .mainbody{
     position: relative;
-    height:180vh;
+    height:auto;
     overflow:hidden;
 
 }
@@ -530,6 +530,7 @@
     overflow: hidden;
 }
 .box-social{
+    padding-top: 40px;
     display: grid;
     grid-template-columns: 0% 30% 30% 30%;
 }
