@@ -66,7 +66,7 @@ const Featured = () => {
                             </Link>
                             <Chip label="Upcoming" color="secondary" style={{marginRight: "20px",marginTop: "10px"}}/>
                         </div>
-                        <Typography variant="p" component="p" style={{marginLeft: "20px",marginTop: "225px"}}>
+                        <Typography variant="p" component="p" style={{marginLeft: "20px",color:'white',marginTop: "225px"}}>
                             Mark Your Calendar
                         </Typography>
                     </Card>
