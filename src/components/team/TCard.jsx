@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "20px",
     marginBottom: "7px",
     border: "3px solid #4385f3",
+    objectFit: "cover",
   },
   content: {
     padding: "0",
@@ -85,8 +86,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TCard = (props) => {
+export const TCard = ({ member }) => {
   const classes = useStyles();
+
+  console.log(member);
+
+  const { name, title, imageSrc } = member;
 
   const { darkMode } = useContext(ThemeContext);
 
@@ -95,14 +100,14 @@ export const TCard = (props) => {
       <span className="tcard">
         <div className={darkMode ? classes.containerdark : classes.container}>
           <img
-            src="http://picsum.photos/100"
+            src={imageSrc}
             alt="profile"
             height="70px"
             className={classes.image}
           />
           <div className={classes.content}>
-            <p className={classes.p1}>{props.name}</p>
-            <p className={classes.p2}>{props.role}</p>
+            <p className={classes.p1}>{name}</p>
+            <p className={classes.p2}>{title}</p>
           </div>
           <div className={classes.action}>
             <Link to="/team/lead" className="icon-link">
