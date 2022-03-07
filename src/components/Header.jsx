@@ -12,8 +12,8 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
-
-import logo from "../assets/images/logo.png" ;
+import GDSCLogo from "../assets/images/GDSC___DJSCE.png" ;
+import GDSCLogoDark from "../assets/images/GDSC_DJSCE_Dark.png" ;
 import lighttheme from "../assets/images/lighttheme.png"
 const useStyles = makeStyles((theme) => ({
   navlinks: {
@@ -52,6 +52,20 @@ const useStyles = makeStyles((theme) => ({
       color: "black",
     },
   },
+  darklink: {
+    backgroundColor:"inherit",
+    justifyContent:"center",
+    alignItems:"center",
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: "20PX",
+    marginRight:"25px",
+    fontWeight:"450",
+    "&:hover": {
+      color: "#979797",
+    },
+  },
 }));
 
 export const  Header = () =>{
@@ -75,15 +89,20 @@ export const  Header = () =>{
           <div style={{display:"grid" , gridTemplateColumns:"10% 80% 10%" , width:"100%"}}>
           <DrawerComponent style={{backgroundColor:"#E5E5E5"}}/>
           <Link to="/" >
-          <div style={{justifyContent:"center" , alignItems:"center" , display:"grid" , gridTemplateColumns:"20% 80%"}}>
-              {/*<div style={{display:"grid" , gridTemplateColumns:"20% 80%" ,justifyContent:"center" , alignItems:"center" , }}>*/}
-              <img src={logo} alt="logo" style={{width:"50px" , height:"35px" , paddingTop:"1vh" , marginLeft:"35%"}}/>
-              
-              <Typography className={classes.logo} style={{fontSize:"1rem" , margin:"20px"}}>
-              Developer Student Clubs
-              </Typography>  
-  
-          </div>
+          <div style={{display:"grid" , gridTemplateColumns:"100%" }}>
+                {/* <div >
+                <img src={logo} alt="logo" style={{width:"80px" , height:"45px" , overflow:"hidden"}}/>
+                </div>
+                <div > */}
+               { darkMode?
+                <img src={GDSCLogoDark} style={{height:'41px',paddingTop:'10px',width:'200px'}} alt="logo"/>
+                :
+                <img src={GDSCLogo} style={{height:'35px',marginTop:'10px',width:'200px'}} alt="logo"/>
+                }
+                {/* <Typography className={classes.logo} style={{marginLeft:"10px"}}>
+                Google's Developer Students Club
+                </Typography> */}
+            </div>
           </Link>
 
           <div  onClick={() => setDarkMode(!darkMode)}>
@@ -92,31 +111,38 @@ export const  Header = () =>{
           
         </div>
         ) : (
-          <div style={{display:"grid" , gridTemplateColumns:"25% 75%" , width:"100%" }}>
+          <div style={{display:"grid" , gridTemplateColumns:"50% 50%" , width:"100%" }}>
 
             <Link to="/" >
-            <div style={{display:"grid" , gridTemplateColumns:"20% 80%" , paddingTop:"1.5vh" ,justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh"}}>
-                <div >
+            <div style={{display:"grid" , gridTemplateColumns:"100%" }}>
+                {/* <div >
                 <img src={logo} alt="logo" style={{width:"80px" , height:"45px" , overflow:"hidden"}}/>
                 </div>
-                <Typography className={classes.logo} style={{marginLeft:"10px"}}>
+                <div > */}
+               { darkMode?
+                <img src={GDSCLogoDark} style={{height:'41px',paddingTop:'10px',width:'200px'}} alt="logo"/>
+                :
+                <img src={GDSCLogo} style={{height:'35px',marginTop:'10px',width:'200px'}} alt="logo"/>
+                }
+                {/* <Typography className={classes.logo} style={{marginLeft:"10px"}}>
                 Google's Developer Students Club
-                </Typography>
+                </Typography> */}
             </div>
             </Link>
                
 
-          <div className={classes.navlinks} style={{paddingLeft:"60vh" , justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
-            <Link to="/" className={classes.link}>
+          <div className={classes.navlinks} style={{ justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
+            <Link to="/" className={darkMode?classes.darklink:classes.link}>
+              
               Home
             </Link>
-            <Link to="/events" className={classes.link}>
+            <Link to="/events" className={darkMode?classes.darklink:classes.link}>
               Events
             </Link>
-            <Link to="/team" className={classes.link}>
+            <Link to="/team" className={darkMode?classes.darklink:classes.link}>
               Team
             </Link>
-            <Link to="/contact" className={classes.link}>
+            <Link to="/contact" className={darkMode?classes.darklink:classes.link}>
               Contact
             </Link>
             {/* <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",

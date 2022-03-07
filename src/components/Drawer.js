@@ -29,8 +29,25 @@ const useStyles = makeStyles(()=>({
           color: "black",
         },
     },
+    darklink:{
+        justifyContent:"cenetr",
+        alignContent:"center",
+        alignItems:"center",
+        textDecoration:"none",
+        color: "white",
+        paddingLeft:"15vh",
+        paddingRight:"15vh",
+        fontSize: "20px",
+        fontWeight:"400",
+        "&:hover": {
+          color: "#F5F5F5",
+        },
+    },
     icon:{
         color: "black"
+    },
+    darkicon:{
+        color: "white"
     },
     lightbg:{
       backgroundColor:"#F5F5F5" , 
@@ -55,22 +72,22 @@ function DrawerComponent() {
         <List className={darkMode ? classes.darkbg : classes.lightbg}>
         <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/" className={classes.link}>Home</Link>
+              <Link to="/" className={darkMode?classes.darklink:classes.link}>Home</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/events" className={classes.link}>Events</Link>
+              <Link to="/events" className={darkMode?classes.darklink:classes.link}>Events</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/team" className={classes.link}>Team</Link>
+              <Link to="/team" className={darkMode?classes.darklink:classes.link}>Team</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/contact" className={classes.link}>Contact</Link>
+              <Link to="/contact" className={darkMode?classes.darklink:classes.link}>Contact</Link>
             </ListItemText>
           </ListItem>
           {/* <div style={{paddingLeft:"14vh",paddingRight:"14vh"}}>
@@ -80,7 +97,7 @@ function DrawerComponent() {
           </div> */}
         </List>
       </Drawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={classes.icon}>
+      <IconButton onClick={() => setOpenDrawer(!openDrawer)}className={darkMode?classes.darkicon:classes.icon}>
         <MenuIcon />
       </IconButton>
     </>

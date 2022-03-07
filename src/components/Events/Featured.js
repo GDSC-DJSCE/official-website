@@ -38,16 +38,17 @@ const Featured = () => {
             <Grid container spacing={2} justify="flex-start" alignItems="flex-start">
                 {featured_event.map(event => (
                     <Grid item xs={12} sm={12} md={7}  key={event.id}>
-                        <Card style={{height: "300px"}}>
+                        <Card style={{height: "300px",background: `url(${event.bannerimage}) no-repeat`,
+                        backgroundSize: "100% 100%"}}>
                             <div className={classes.x}>
                                 <Link to={`/events/${event.id}`} className={classes.links}>
-                                    <Typography variant="h5" component="h5" style={{marginLeft: "20px",marginTop: "10px"}}>
+                                    <Typography variant="h5" component="h5" style={{marginLeft: "20px",color:'white',marginTop: "10px"}}>
                                         {event.title}
                                     </Typography>
                                 </Link>
                                 <Chip label="Featured" color="primary" style={{marginRight: "20px",marginTop: "10px"}}/>
                             </div>
-                            <Typography variant="p" component="p" style={{marginLeft: "20px",marginTop: "225px"}}>
+                            <Typography variant="p" component="p" style={{marginLeft: "20px",color:'white',marginTop: "225px"}}>
                                 Description of Event
                             </Typography>
                         </Card>
@@ -55,16 +56,17 @@ const Featured = () => {
                 ))}
                 {upcoming_event.map(event => (
                     <Grid item xs={12} sm={12} md={5}  key={event.id}>
-                    <Card style={{height: "300px"}}>
+                    <Card style={{height: "300px",background: `url(${event.bannerimage}) no-repeat`,
+                        backgroundSize: "200% 100%"}}>
                         <div className={classes.x}>
                             <Link to={`/events/${event.id}`} className={classes.links}>
-                                <Typography variant="h5" component="h5" style={{marginLeft: "20px",marginTop: "10px"}}>
+                                <Typography variant="h5" component="h5" style={{marginLeft: "20px",color:'white',marginTop: "10px"}}>
                                     {event.title}
                                 </Typography>
                             </Link>
                             <Chip label="Upcoming" color="secondary" style={{marginRight: "20px",marginTop: "10px"}}/>
                         </div>
-                        <Typography variant="p" component="p" style={{marginLeft: "20px",marginTop: "225px"}}>
+                        <Typography variant="p" component="p" style={{marginLeft: "20px",color:'white',marginTop: "225px"}}>
                             Mark Your Calendar
                         </Typography>
                     </Card>
