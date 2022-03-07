@@ -22,11 +22,11 @@ import halfcircle from '../assets/images/greenhalfcircle.png';
 import yellowCircleHalfdark from '../assets/images/yellowCircleHalfdark.jpg';
 import yellowCircleHalf from '../assets/images/yellowCircleHalf.png';
 import rgbyCircle from '../assets/images/rgbyCircle.svg';
-import rgby2dark from '../assets/images/rgby2.jpg';
+import rgby2dark from '../assets/images/rgby2darkk.png';
 import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
-import { TextField, makeStyles, Button ,useMediaQuery,useTheme} from '@material-ui/core';
+import { TextField, makeStyles, Button ,useMediaQuery,useTheme , Grid} from '@material-ui/core';
 
 var service_id = process.env.REACT_APP_SERVICE_ID;
 var template_id = process.env.REACT_APP_TEMPLATE_ID;
@@ -49,8 +49,12 @@ const useStyles = makeStyles({
 		paddingTop:"5px"
 	},
 	inputbox: {
+<<<<<<< HEAD
+		marginBottom: '1rem',
+=======
 		marginBottom: '5px',
 		width: '100%',
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 		borderColor: '#4385F3',
 	},
 	mobilebox: {
@@ -62,8 +66,12 @@ const useStyles = makeStyles({
 		"&.MuiFormControl-root":{
 			backgroundColor: "#ecf0f1"
 		},
+<<<<<<< HEAD
+		marginBottom: '1rem',
+=======
 		marginBottom: '5px',
 		width: '100%',
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 		color: 'yellow',
 	},
 	mobileboxdark: {
@@ -730,12 +738,49 @@ export const Contact = () => {
 					</div>
 			<div className={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
+<<<<<<< HEAD
+					<div class="inner-Box mb-4 mt-8 ml-20">
+						<Grid container>
+						<div className="talk">
+						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Let's Talk</div>
+						</div>
+						<Grid item xs={12}>
+						<TextField
+						className={darkMode ? classes.inputboxdark : classes.inputbox}
+						autoFocus="1"
+						fullWidth
+						label="Your Name"
+						name="firstname"
+						onChange={handleChanges}
+						value={value.firstname}
+						type="text"
+						variant="filled"
+						autoComplete="off"
+						onBlur={blur}
+						/>
+						{/*{isMobile ?
+						<TextField
+							className={darkMode ? classes.mobileboxdark : classes.mobilebox}
+							autoFocus="1"
+							label="Your Name"
+							name="firstname"
+							onChange={handleChanges}
+							value={value.firstname}
+							type="text"
+							variant="filled"
+							autoComplete="off"
+							onBlur={blur}
+						/>
+						: <TextField
+						className={darkMode ? classes.inputboxdark : classes.inputbox}
+=======
 						
 
 
 					<div className="message-box">
 							{isMobile ?<TextField
 								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						autoFocus="1"
 						label="Your Name"
 						name="firstname"
@@ -745,6 +790,22 @@ export const Contact = () => {
 						variant="filled"
 						autoComplete="off"
 						onBlur={blur}
+<<<<<<< HEAD
+						/>}*/}
+						<div
+							style={{
+								marginTop: '-15px',
+								paddingBottom: '15px',
+								color: 'red',
+								fontSize: '0.9rem',
+								marginBottom: '3rem',
+							}}
+						>
+							{errors.fnerror}
+						</div>
+						</Grid>
+						<Grid item xs={12}>
+=======
 
 							/> : <TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
@@ -772,77 +833,84 @@ export const Contact = () => {
 						{errors.fnerror}
 					</div>
 						</div>		
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div className="message-box">
-							{isMobile ? <TextField
-								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
-								label="Your Email"
-								name="email"
-								onChange={handleChanges}
-								value={value.email}
-								type="email"
-								variant="filled"
-								autoComplete="off"
-								onBlur={blur}
-							/>: <TextField
+							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
 							label="Your Email"
 							name="email"
+							fullWidth
 							onChange={handleChanges}
 							value={value.email}
 							type="email"
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
+<<<<<<< HEAD
+						/>		
+						</div>
+=======
 						/>}
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div
 							style={{
 								color: 'red',
 								fontSize: '0.9rem',
+<<<<<<< HEAD
+								marginBottom: '3rem',
+=======
 								marginBottom: '25px',
 								textAlign:'left'
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 							}}
 						>
 							{errors.emailerror}
 						</div>
+<<<<<<< HEAD
+						</Grid>
+						<Grid item xs={12}>
+=======
 							
 						</div>
 						
 
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div className="message-box">
-							{isMobile ?<TextField
-								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
-								label="Your Message"
-								name="message"
-								onChange={handleChanges}
-								value={value.message}
-								type="text"
-								variant="filled"
-								autoComplete="off"
-								onBlur={blur}
-							/> : <TextField
+							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
 							label="Your Message"
 							name="message"
 							onChange={handleChanges}
 							value={value.message}
+							fullWidth
 							type="text"
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
+<<<<<<< HEAD
+						/>
+							
+						</div>
+=======
 						/> }
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div
 							style={{
 								//paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
+<<<<<<< HEAD
+								marginBottom: '3rem',
+=======
 								marginBottom: '45px',
 								textAlign:'left'
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 							}}
 						>
 							{errors.mesgerror}
 						</div>		
 						</div>
-
+						</Grid>
 						<Button
 							className="submit"
 							variant="contained"
@@ -851,6 +919,8 @@ export const Contact = () => {
 								width: '12rem',
 								height: '2.5rem',
 								fontSize: '1.5rem',
+								marginBottom:"4vh",
+								marginTop:"-2vh",
 								backgroundColor: 'rgba(67, 133, 243, 1)',
 								color: 'white',
 							}}
@@ -858,6 +928,7 @@ export const Contact = () => {
 						>
 							Submit
 						</Button>
+					</Grid>
 					</div>
 				</div>
 			{/* <div className="box-secondary">
@@ -877,7 +948,13 @@ export const Contact = () => {
 								<FontAwesomeIcon icon={faPhoneAlt} color="rgba(16, 157, 88, 1)" size="2x" />
 							</div>
 							<div className="detail h-28 text-lg w-200 pl-3 p-6 font-semibold">+91 939282927</div>
+<<<<<<< HEAD
+						</div> */}
+						<Grid container>
+						<Grid item xs={12}>
+=======
 						</div> 
+>>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div class="box-map">
 							<div>
 								<iframe
@@ -886,9 +963,9 @@ export const Contact = () => {
 									marginwidth="0"
 									title="DJ Sanghavi College"
 									src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Dwarkadas%20J.Sanghavi%20+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-									width="100%"
 									height="600"
 									frameborder="0"
+									width="100%"
 								>
 									<a href="https://www.mapsdirections.info/en/measure-map-radius/">
 										Map radius measure
@@ -896,6 +973,8 @@ export const Contact = () => {
 								</iframe>
 							</div>
 						</div>
+						</Grid>
+						</Grid>
 						<div class="box-social ml-28 ">
 							
 							<a href="mailto:gdsc.djsce@gmail.com">
