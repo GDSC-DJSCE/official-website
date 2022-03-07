@@ -514,9 +514,15 @@ body{
 
 
 .banner .banner_content .left_content{
-    width: calc(50% - 10px);
-    float: left;
+    /* width: calc(50% - 10px); */
+    display: block;
+    width: calc(80% - 0px);
+    margin: 0 auto;
     margin-top: 20px;
+    
+
+    /* border: 1px solid rgb(0, 255, 136); */
+
 
 }
 
@@ -529,18 +535,22 @@ body{
 
 
 .banner .banner_content .left_content .logo{
-    width: 150px;
+    width: 200px;
+    /* float: left; */
     height: auto;
-    float: left;
-    padding-top: 10px;
+    margin: 0 auto;
+    margin-top: 60px;
 
 }
 
 .banner .banner_content .left_content .gdsc{
-    float: left;
-    width: calc(100% - 150px - 20px);
-    margin-left: 20px;
-    /* border: 1px solid rgb(255, 238, 0); */
+    /* float: left; */
+    width: calc(60% - 0px);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    /* border: 1px solid rgb(255, 0, 234); */
 }
 
 
@@ -552,10 +562,13 @@ body{
     margin: 0 auto;
     padding: 0 0 !important;
     /* padding-left: 15px; */
-    text-align: left ;
+    /* text-align: left ; */
+    text-align: center ;
+    margin-top: 15px;
     font-family: 'Poppins', sans-serif;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 600;
+    margin-bottom: 20px;
    
     /* border: 1px solid red; */
     
@@ -583,12 +596,15 @@ body{
 
 .banner .banner_content .left_content .gdsc .banner_text{
 
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: #3F3F3F;
     font-family: 'Montserrat', sans-serif;
     line-height: 2px;
+    margin-top: 10px;
+    /* border: 1px solid red; */
 }
+
 
 .banner .banner_content .left_content .gdsc .banner_text.banner_dark{
     color: #ececec;
@@ -603,12 +619,15 @@ body{
 
 
 .banner .banner_content .right_content{
-    width: calc(40% - 2px);
+    /* width: calc(40% - 2px); */
+
     float: right;
     height: fit-content;
     overflow: hidden;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     margin-left: 0px;
+
+    display: none;
 }
 
 .banner .banner_content .right_content .banner_img{
@@ -631,7 +650,7 @@ body{
     /* height: fit-content; */
     height: 50px;
     padding: 2px 5px;
-    margin: 25px auto;
+    margin: 30px auto;
     /* background-color: rgba(189, 188, 188, 0.281); */
     /* border: 1px solid red; */
 }
@@ -1096,6 +1115,7 @@ body{
 }
 
 .banner .banner_content .right_content{
+    display: none;
     width: calc(60% - 0px);
     margin: 0 auto;
     float: none;
