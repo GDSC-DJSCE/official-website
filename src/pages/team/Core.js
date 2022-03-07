@@ -2,7 +2,7 @@ const coreTeam = [
     {
         name:"Soham Dave",
         title:"GDSC DJSCE Lead",
-        imageSrc: "/images/person.jpg",
+        imageSrc: "/images/core/soham.png",
     },
     {
         name:"Amay Gada",
