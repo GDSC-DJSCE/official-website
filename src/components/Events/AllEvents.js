@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{useContext} from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../ThemeContext";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card, Grid, Typography } from "@material-ui/core/";
 
@@ -14,9 +15,24 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     padding: 0,
   },
+  links: {
+    textDecoration: "none",
+    color: "black",
+    "&:hover": {
+      color: "blue",
+    },
+  },
+  darklinks: {
+    textDecoration: "none",
+    color: "white",
+    "&:hover": {
+      color: "grey",
+    },
+  },
 }));
 const AllEvents = ({ id, title, date, summary, bgimage }) => {
   const classes = useStyles();
+  const {darkMode} = useContext(ThemeContext);
 
   return (
     <Card
@@ -30,10 +46,10 @@ const AllEvents = ({ id, title, date, summary, bgimage }) => {
       }}
     >
       <Grid className={classes.grid} item xs={12} sm={12} md={12} key={id}>
-        <Card style={{ backgroundColor: "#1F1B24",color:"white" }}>
+        <Card style={{ backgroundColor: darkMode?"#1F1B24":"#F6F9FB",color:darkMode?"white":"black" }}>
           <div className={classes.item}>
-            <Link to={`/events/${id}`} style={{fontSize:'30px'}}>
-              <Typography className={classes.links} style={{color:"white"}}>
+            <Link to={`/events/${id}`} className={darkMode?classes.darklinks:classes.links} style={{fontSize:'30px'}}>
+              <Typography>
                 {title}
               </Typography>
             </Link>

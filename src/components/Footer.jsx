@@ -17,11 +17,12 @@ const useStyles = makeStyles((theme)=>({
       paddingTop:"5vh",
       paddingBottom:"5vh",
       display: "grid",
-      gridTemplateColumns: "45% 65%",
+      gridTemplateColumns: "33% 33% 33%",
+      textAlign:'center',
       boxShadow:"none",
       margin:0,
     },
-    "& .MuiTypography-root:hover":{
+    "&.MuiTypography-a .MuiTypography-root:hover":{
       cursor:'pointer'
     },
   },
@@ -34,7 +35,8 @@ const useStyles = makeStyles((theme)=>({
       paddingTop:"5vh",
       paddingBottom:"5vh",
       display: "grid",
-      gridTemplateColumns: "45% 65%",
+      gridTemplateColumns: "33% 33% 33%",
+      textAlign:'center',
       boxShadow:"none",
       margin:0,
     },
@@ -107,8 +109,7 @@ export const Footer = () => {
                 <img src={GDSCLogo} style={{height:'30px',marginTop:'10px',align:'center',width:'200px',marginLeft:'auto',marginRight:'auto'}} alt="logo"/>
                 }
       </div>
-      <div className={classes.footerdetails} >
-          <div class="community">
+      <div class="community">
               <Typography className={classes.community}>Community</Typography>
               <div className={classes.list}>
                 <Link to={''} className={classes.links}>
@@ -142,17 +143,18 @@ export const Footer = () => {
                 </a>
               </div>
           </div>
-      </div>
+      {/* <div className={classes.footerdetails} >  
+      </div> */}
      
     </AppBar>
     <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom}>
-      <div style={{marginLeft:"7vh"}}>
+      <div>
       &copy; GDSC DJSCE 2022
       </div>
       <div>
       {/* <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" , marginLeft:"-15vh" , marginTop:"-3vh"}}/> */}
       </div>
-      <div style={{marginLeft:"7vh" , overflow:"hidden"}}>
+      <div style={{ overflow:"hidden"}}>
       Made with ❤ by GDSC DJSCE
       </div>
     </div>

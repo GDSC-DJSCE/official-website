@@ -29,7 +29,7 @@
 .red{
     position: absolute;
     top: 90vh;
-    left: 2%;
+    left: 0.75%;
     width: 100px;
     height: auto;
     overflow: hidden;
@@ -496,7 +496,7 @@
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 150px;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 4px ;
+    box-shadow: rgba(250, 248, 248, 0.2) 0px 2px 4px ;
 }
 .mainbody{
     position: relative;
@@ -530,9 +530,8 @@
     overflow: hidden;
 }
 .box-social{
-    padding-top: 40px;
     display: grid;
-    grid-template-columns: 0% 30% 30% 30%;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 .mailid{
     margin-bottom: 70px;
@@ -547,7 +546,7 @@
     display: none;
 }
 
-@media screen and (min-width: 1000px ){
+@media screen and (min-width: 1087px ){
     .box-map{
         display: none;
     }
@@ -556,9 +555,7 @@
     }
    
 }
-@media screen and (min-width: 650px ) and (max-width:1000px){
-
-    
+@media screen and (min-width: 600px ) and (max-width:1087px){   
     .images-phone{
         display: none;
     }
@@ -595,16 +592,23 @@
     .box-mail{
         width: 135px;
     }
+    .box-secondary{
+        margin-top: -8vh;
+    }
     .box-map{
         margin: 10px;
-        margin-left: 80px;
-        width: 295px ;
-        height: 200px;
+        margin-left: 2vh;
+        height: 40vh;
         overflow: hidden;
         border-radius: 5px;
     }
     .box-social{
-        margin-top: 250px;
+        margin-top: 45vh;
+        margin-left: 5vh;
+        margin-bottom: -15vh;
+    }
+    .box-primary{
+        margin-left: -10vh;
     }
     .header-contact{
         display: none;
@@ -612,7 +616,7 @@
     
 }
 
-@media screen and (max-width: 650px) and (min-width:0px){
+@media screen and (max-width: 600px) and (min-width:0px){
     .header-contact{
         justify-content: center;
         align-items: center;
@@ -646,10 +650,10 @@
         align-items: center;
     }
     .box{
-        grid-template-rows: 85vh 55vh;
+        grid-template-rows: 40% 60%;
         grid-template-columns: 100%;
-        width: 329px;
-        height: 140vh;
+        width:80%;
+        height: 250vh;
         /*border: 1px solid black;*/
         margin-left: 30px;
         margin-bottom: 30vh;
@@ -657,10 +661,9 @@
         /*margin-bottom: 1000px;*/
     }
     .box-dark{
-        grid-template-rows: 85vh 55vh;
         grid-template-columns: 100%;
-        width: 329px;
-        height: 140vh;
+        width: 80%;
+        height: 150vh;
         /*border: 1px solid black;*/
         margin-left: 30px;
         margin-bottom: 30vh;
@@ -683,22 +686,25 @@
         
     }
     .box-social{
-        margin-top: 250px;
-        margin-left: 25px;
+        margin-top: 35vh;
+        margin-left: 1.5vh;
         margin-bottom: 25px;
         grid-template-columns: 22% 22% 22% 22%;
+
+    }
+    .talk{
+        margin-top: 5vh;
+        margin-left: 2vh;
     }
     .box-map{
         margin: 5px;
-        width: 295px ;
-        height: 200px;
+        margin-top: 2vh;
+        height: 30vh;
         overflow: hidden;
         border-radius: 5px;
     }
     .submit{
-        margin-top:5px;
-        width: 10rem;
-        height: 2rem;
+        height: 1.5rem;
     }
     .MuiFormControl-root{
         width:17rem;

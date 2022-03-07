@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme)=>({
     roots:{
       "&.MuiAppBar-colorPrimary":{
         backgroundColor:"#F5F5F5",
+        color:'black',
         top:"auto",
         bottom:"0",
         paddingTop:"1.5vh",
-        paddingBottom:"5vh",
         display: "grid",
         gridTemplateRow: "30% 70%",
         boxShadow:"none"
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme)=>({
         top:"auto",
         bottom:"0",
         paddingTop:"1.5vh",
-        paddingBottom:"5vh",
         display: "grid",
         gridTemplateRow: "30% 70%",
         boxShadow:"none"
@@ -34,21 +33,15 @@ const useStyles = makeStyles((theme)=>({
     },
 
     footerdetails:{
-      display: "grid",
-      gridTemplateRows: "60% 40%",
     },
     footerdetails2:{
-      display:"grid",
-      gridTemplateColumns:"100%",
-      padding:"2vh",
+      padding:"2vh 2vh 0 2vh",
       textAlign:'center',
-      marginBottom:'10px'
     },
     community:{
       color:"black",
       fontSize:"2.5vh",
       fontWeight:"450"
-      
     },
     list:{
       color:"black",
@@ -118,7 +111,7 @@ export const FooterMobile = () => {
                   </Link>
                 </div>
               </div>
-              <hr style={darkMode ? {color: 'white'} : {color: 'black'}}/>
+              <hr style={darkMode ? {color: 'white',marginBottom:'0'} : {color: 'black',marginBottom:'0'}}/>
               {/* <div style={{borderLeftWidth:"0.2vh" , borderLeftColor:"#979797",textAlign:'center',marginLeft:'auto',marginRight:'auto'  }}></div> */}
               {/* <div class="in-touch">
                 <Typography className={classes.community}>Keep in touch</Typography>
@@ -131,7 +124,7 @@ export const FooterMobile = () => {
               </div> */}
             </div>
           </div>
-          <div class="follow-us" style={{textAlign:"center"}}> 
+          <div class="follow-us" style={{textAlign:"center",paddingBottom:'10px'}}> 
               <Typography className={classes.community} style={{padding:"1vh" ,paddingLeft:"0"}}>Follow Us</Typography>
               <div className={classes.icons}>
                 <div style={{width:"5.7vh" , height:"5.7vh"}}>
@@ -166,13 +159,13 @@ export const FooterMobile = () => {
           
       </div> 
     <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom }>
-      <div style={{marginTop:"1.7vh"}}>
+      <div style={{fontSize:"2.0vh" }}>
     &copy; GDSC DJSCE 2022
     </div>
     <div>
       {/* <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/> */}
     </div>
-    <div style={{fontSize:"1.2vh" , marginTop:"0.3vh"}}>
+    <div style={{fontSize:"2.2vh" }}>
     Made with ❤ by GDSC DJSCE
     </div>
   </div>
