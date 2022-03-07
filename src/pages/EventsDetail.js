@@ -125,7 +125,7 @@ export default function EventsDetail() {
         <div>
             {event.map(x => (
                 <div>
-                    <Card style={{background: `url(${x.bannerimage}) no-repeat`,backgroundSize: "100% 100%",height: "450px"}}></Card>
+                    <Card style={{background: `url(${x.bannerimage}) no-repeat`,height: "450px"}}></Card>
                     <Grid className={classes.grid} item xs={12} sm={12} md={12}  key={x.id}>
                         <Card className={darkMode?classes.darkMode:classes.lightMode}>
                             <div className={darkMode?classes.darktop:classes.top}>
