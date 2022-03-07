@@ -17,6 +17,7 @@ import EventsDetail from "../pages/EventsDetail";
 import { Header, Footer } from "./";
 
 import "../styles/darkTheme.css";
+import NewTeam from '../pages/newTeam/NewTeam';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/events" component={Events} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/team" component={Team} />
+          <Route exact path="/newteam" component={NewTeam} />
           <Route exact path="/team/domain-head" component={DomainHead} />
           <Route exact path="/team/domain-head2" component={DomainHead2} />
           <Route path="/events/:id" component={EventsDetail} />

@@ -175,7 +175,6 @@ export const Home = () => {
             persistent efforts put by Soham Dave, a fourth-year student from the Department of Information Technology under the guidance of 
             Dr. Hari Vasudevan, Principal of Dwarkadas J. Sanghvi College of Engineering and Dr. Vinaya Sawant, Head of the Department of Information
              Technology and Prof. Neha Katre, faculty advisor.
-
           </div>
         </div>
       </div>
@@ -195,7 +194,6 @@ export const Home = () => {
           </div>
         </div>
         <h1 className="header" data-aos="fade-left" data-offset="100">OUR VISION</h1>
-
       </div>
 
     </div>

@@ -1,0 +1,16 @@
+.CoCommHeader{
+    margin-top: 70px;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 372px) {
+    .CoCommHeader{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .CoCommHeader {
+        font-size: 30px;
+    }
+}
