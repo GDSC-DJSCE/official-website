@@ -122,7 +122,7 @@ export const Home = () => {
               <div className="gdsc" >
                
                 <LightSpeed left> 
-                  <h1 className="banner_header" >
+                  <h1 className={darkMode ? "banner_header banner_header_dark": "banner_header banner_header_light"} >
                     GDSC DJSCE 
                   </h1>
                 </LightSpeed >
@@ -167,7 +167,7 @@ export const Home = () => {
         </div>
         <HomeDots />
        
-        <h1 className="header" data-aos="fade-right">ABOUT US</h1>
+        <h1 className={darkMode ? "header header_dark": "header header_light"} data-aos="fade-right">ABOUT US</h1>
         <div className="content_box">
           <div className="content" data-aos="fade-right"  data-aos-duration="300" data-aos-delay="500" >
             Google Developer Student Clubs (GDSC) are community groups for college interested in Google developer technologies. Students from 

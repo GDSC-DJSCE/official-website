@@ -556,14 +556,26 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 45px;
     font-weight: 600;
-    /* color: #2F3944; */
+   
+    /* border: 1px solid red; */
+    
+}
+
+.banner .banner_content .left_content .gdsc .banner_header_light{
     background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #8b8b8b 51.87%, #3F3F3F 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* border: 1px solid red; */
-    
+
 }
+
+
+.banner .banner_content .left_content .gdsc .banner_header_dark{
+    color: white;
+    /* background: none; */
+
+}
+
 
 .banner .banner_content .left_content .gdsc .banner_header_sm{
     display: none;
@@ -738,13 +750,20 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     font-weight: 600;
-    /* color: #2F3944; */
+    
+
+}
+
+.info .about .header_light{
     background: -webkit-linear-gradient(90deg, #3F3F3F 0%, #696969 51.87%, #3F3F3F 100%);
     background-clip: text;
     /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
     /* border: 1px solid red; */
+}
 
+.info .about .header_dark{
+    color: white;
 }
 
 .info .about .content_box{
@@ -819,6 +838,7 @@ body{
     /* border: 1px solid green ; */
 
 }
+
 
 .info .vision .content_box{
     width: calc(80% - 10px);
