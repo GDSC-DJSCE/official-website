@@ -22,11 +22,11 @@ import halfcircle from '../assets/images/greenhalfcircle.png';
 import yellowCircleHalfdark from '../assets/images/yellowCircleHalfdark.jpg';
 import yellowCircleHalf from '../assets/images/yellowCircleHalf.png';
 import rgbyCircle from '../assets/images/rgbyCircle.svg';
-import rgby2dark from '../assets/images/rgby2.jpg';
+import rgby2dark from '../assets/images/rgby2darkk.png';
 import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
-import { TextField, makeStyles, Button ,useMediaQuery,useTheme} from '@material-ui/core';
+import { TextField, makeStyles, Button ,useMediaQuery,useTheme , Grid} from '@material-ui/core';
 
 var service_id = process.env.REACT_APP_SERVICE_ID;
 var template_id = process.env.REACT_APP_TEMPLATE_ID;
@@ -52,7 +52,6 @@ const useStyles = makeStyles({
 	},
 	inputbox: {
 		marginBottom: '1rem',
-		width: '20rem',
 		borderColor: '#4385F3',
 	},
 	mobilebox: {
@@ -65,7 +64,6 @@ const useStyles = makeStyles({
 			backgroundColor: "#ecf0f1"
 		},
 		marginBottom: '1rem',
-		width: '20rem',
 		color: 'yellow',
 	},
 	mobileboxdark: {
@@ -711,8 +709,25 @@ export const Contact = () => {
 			<div className={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
 					<div class="inner-Box mb-4 mt-8 ml-20">
+						<Grid container>
+						<div className="talk">
 						<div className={darkMode ? "head text-3xl mb-14 font-bold text-white" : "head text-3xl mb-14 font-bold" }>Let's Talk</div>
-						{isMobile ?
+						</div>
+						<Grid item xs={12}>
+						<TextField
+						className={darkMode ? classes.inputboxdark : classes.inputbox}
+						autoFocus="1"
+						fullWidth
+						label="Your Name"
+						name="firstname"
+						onChange={handleChanges}
+						value={value.firstname}
+						type="text"
+						variant="filled"
+						autoComplete="off"
+						onBlur={blur}
+						/>
+						{/*{isMobile ?
 						<TextField
 							className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 							autoFocus="1"
@@ -736,75 +751,59 @@ export const Contact = () => {
 						variant="filled"
 						autoComplete="off"
 						onBlur={blur}
-						/>}
+						/>}*/}
 						<div
 							style={{
 								marginTop: '-15px',
 								paddingBottom: '15px',
 								color: 'red',
 								fontSize: '0.9rem',
-								marginBottom: '4rem',
+								marginBottom: '3rem',
 							}}
 						>
 							{errors.fnerror}
 						</div>
+						</Grid>
+						<Grid item xs={12}>
 						<div className="message-box">
-							{isMobile ? <TextField
-								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
-								label="Your Email"
-								name="email"
-								onChange={handleChanges}
-								value={value.email}
-								type="email"
-								variant="filled"
-								autoComplete="off"
-								onBlur={blur}
-							/>: <TextField
+							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
 							label="Your Email"
 							name="email"
+							fullWidth
 							onChange={handleChanges}
 							value={value.email}
 							type="email"
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
-						/>}
-							
+						/>		
 						</div>
 						<div
 							style={{
 								marginTop: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
-								marginBottom: '4rem',
+								marginBottom: '3rem',
 							}}
 						>
 							{errors.emailerror}
 						</div>
-
+						</Grid>
+						<Grid item xs={12}>
 						<div className="message-box">
-							{isMobile ?<TextField
-								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
-								label="Your Message"
-								name="message"
-								onChange={handleChanges}
-								value={value.message}
-								type="text"
-								variant="filled"
-								autoComplete="off"
-								onBlur={blur}
-							/> : <TextField
+							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
 							label="Your Message"
 							name="message"
 							onChange={handleChanges}
 							value={value.message}
+							fullWidth
 							type="text"
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
-						/> }
+						/>
 							
 						</div>
 						<div
@@ -813,12 +812,12 @@ export const Contact = () => {
 								//paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
-								marginBottom: '4rem',
+								marginBottom: '3rem',
 							}}
 						>
 							{errors.mesgerror}
 						</div>
-
+						</Grid>
 						<Button
 							className="submit"
 							variant="contained"
@@ -827,6 +826,8 @@ export const Contact = () => {
 								width: '12rem',
 								height: '2.5rem',
 								fontSize: '1.5rem',
+								marginBottom:"4vh",
+								marginTop:"-2vh",
 								backgroundColor: 'rgba(67, 133, 243, 1)',
 								color: 'white',
 							}}
@@ -834,6 +835,7 @@ export const Contact = () => {
 						>
 							Submit
 						</Button>
+					</Grid>
 					</div>
 				</div>
 				<div className="box-secondary">
@@ -873,6 +875,8 @@ export const Contact = () => {
 							</div>
 							<div className="detail h-28 text-lg w-200 pl-3 p-6 font-semibold">+91 939282927</div>
 						</div> */}
+						<Grid container>
+						<Grid item xs={12}>
 						<div class="box-map">
 							<div>
 								<iframe
@@ -881,9 +885,9 @@ export const Contact = () => {
 									marginwidth="0"
 									title="DJ Sanghavi College"
 									src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Dwarkadas%20J.Sanghavi%20+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-									width="100%"
 									height="600"
 									frameborder="0"
+									width="100%"
 								>
 									<a href="https://www.mapsdirections.info/en/measure-map-radius/">
 										Map radius measure
@@ -891,6 +895,8 @@ export const Contact = () => {
 								</iframe>
 							</div>
 						</div>
+						</Grid>
+						</Grid>
 						<div class="box-social ml-28 ">
 						{darkMode ? 
 						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADnUlEQVRoge2ZT4gbZRjGf+/sqqBtvYgHraJIPaigFO1N24pCERUU1J2ZrD3sQZtkbaUeioosVPFQWGtNthVND20m2V2P/ivowdKLYK2XLohtBVkUEUHp2rKbbub1kA1OspnJfLMT00N+x/dlnnmezHx87zeBAQMGDOgnEtU8XK3e4dd1P8IO4KZAaxGYAz2cdZyjIqI9dRlBaIAPjh270xoa/ha4OUpAYTLvOntTdxYTK7QxNLyfLuYBBF49Ui7fk6orA0IDAI/G1JA61pNpmElCVIDYiLApDZ0kRAX41UDntrUaSUpEAIkdQJXb0zCThIgA/s+xVeSqfAJ8b6Cz7sPZ2RvXaiYJoQHE908b6OhSrdaXzSw0wB8XLpwD/ownoz+8kslcTMmTEaEBJiYmfEG/jKGx7PvW1bcTr/Bpl35dVHaOj9rfpGXIlMgA1y0ungAuhbSXBbWzGbuSvq34RAYYGxtbAJnu0KqLys6s637SI1+x6TpK+BZHVldlX79/+SZdA4zb9mmEU61V7dvw1k6sYc6vy1ttpa2FcvWZHvgxJvJEFqToVb4CHguUfhP0vqzr/pW+rfjEHqdV2KNQC5RuUZVDPfBkROwAeceZE+VAS1HITJWrL6fuygCjA831V5beBuaCNV/0/anj1YdTdWVA7DXQpDA9fbfU/e+ADYHyRfWt7fnRkTPpWYuH8ZEyPzLyk6IvAcHpc4NY/heHjk/fb6pXKpXWl0ql9abXNTF+Ak0Knve6IO+0lf8WX57OjtqnOl4UoOh520EmgQdWSpcUfrFgHpgHPS/1oc93vThyNkoncYCGicpBYHewplCzVHZnM3aHHbxBoVJ5XhQPGO52D4XJnGO/FvbxbE0BVFWmKtX3aAuxgifoePs+YWL+v/vIWD5jH+3UW9NnFRHRnOvsUfQNWtcEgKvI2aLnPdssTHnec6bmG/fRXaE9I8cRFMvVFxD9COi0IE+CfAb6LobmG+jlnOve0KmTyoctgFzGnvGFLQidFt1W0AMkMg8g14R1UgsAMO44Pw4vLGwWdB+wlKZ2GKm9Qu0UKpV7RTlI6wCYlCs517m2UyPVJxAk7zhzOdd5XIRtq88TxoROvD0L0CTrOCdzjvOIb8lDAh8D/ySQORHW6NkrFEZxdnYdtfoORJ8CnqD1n5/VKL8zJFtytj3fqf2/BwiiqlKcmdlkLeuDaulmlLtAbwXZSGNf+RpL3gwzP2DAgAH9518IwRIJe+OBSwAAAABJRU5ErkJggg==" alt="" />
