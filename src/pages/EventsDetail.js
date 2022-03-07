@@ -3,6 +3,7 @@ import { ThemeContext } from "../ThemeContext";
 import { useParams } from "react-router-dom";
 import {Grid,Card} from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
+import {useMediaQuery,useTheme } from "@material-ui/core";
 import Data from '../components/data.js';
 
 const useStyles = makeStyles((theme) => ({
@@ -121,11 +122,13 @@ export default function EventsDetail() {
     const { id } = useParams();
     var event = Data.filter(element => element.id===Number(id));
     const { darkMode } = useContext(ThemeContext);
+    const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
     return (
         <div>
             {event.map(x => (
                 <div>
-                    <Card style={{background: `url(${x.bannerimage}) no-repeat`,height: "450px"}}></Card>
+                    <Card style={{background: `url(${isMobile?x.bgimage:x.bannerimage}) no-repeat`,backgroundSize: isMobile?("100% 100%"):"cover",height: "450px"}}></Card>
                     <Grid className={classes.grid} item xs={12} sm={12} md={12}  key={x.id}>
                         <Card className={darkMode?classes.darkMode:classes.lightMode}>
                             <div className={darkMode?classes.darktop:classes.top}>
