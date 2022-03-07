@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme)=>({
     roots:{
       "&.MuiAppBar-colorPrimary":{
         backgroundColor:"#F5F5F5",
+        color:'black',
         top:"auto",
         bottom:"0",
         paddingTop:"1.5vh",
