@@ -12,8 +12,8 @@ import blueCircleHalf from '../assets/images/blueCircleHalf.png';
 import redCircle from '../assets/images/redCircle.svg';
 import redCircleHalfdark from '../assets/images/redCircledark.jpg';
 import redCircleHalf from '../assets/images/redCircle.png';
-import contactUs from '../assets/images/contactUs_.png';
-import contactUsDark from '../assets/images/contactUsDark.svg';
+import Contactpagedark from '../assets/images/Contactpagedark.gif';
+import Contactpage from '../assets/images/Contactpage.gif';
 import blueRect from '../assets/images/blueRect.svg';
 import yellowRect from '../assets/images/yellowRect.svg';
 import greenRect from '../assets/images/greenRect.svg';
@@ -34,6 +34,8 @@ var user = process.env.REACT_APP_ACCESS_TOKEN;
 var user_id = process.env.REACT_APP_USERID;
 var redRect = require('../assets/images/redRect.svg');
 const useStyles = makeStyles({
+
+
 	mainContainer: {
 		display: 'grid',
 		justifyContent: 'center',
@@ -42,36 +44,26 @@ const useStyles = makeStyles({
 	},
 	formContainer: {
 		position: 'relative',
-		width: '100%',
+		width: '23rem',
 		height: 'auto',
 		justifyContent: 'center',
 		padding: '10px',
 		paddingTop:"5px"
 	},
 	inputbox: {
-<<<<<<< HEAD
 		marginBottom: '1rem',
-=======
-		marginBottom: '5px',
-		width: '100%',
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 		borderColor: '#4385F3',
 	},
 	mobilebox: {
 		marginBottom: '1rem',
-		width: 'auto',
+		width: '15rem',
 		borderColor: 'blue',
 	},
 	inputboxdark: {
 		"&.MuiFormControl-root":{
 			backgroundColor: "#ecf0f1"
 		},
-<<<<<<< HEAD
 		marginBottom: '1rem',
-=======
-		marginBottom: '5px',
-		width: '100%',
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 		color: 'yellow',
 	},
 	mobileboxdark: {
@@ -79,7 +71,7 @@ const useStyles = makeStyles({
 			backgroundColor: "#ecf0f1"
 		},
 		marginBottom: '1rem',
-		width: 'auto',
+		width: '15rem',
 		borderColor: 'blue',
 	},
 	signbtn: {
@@ -497,7 +489,7 @@ export const Contact = () => {
 	};
 	return (
 		<div className="mainbody" >
-			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"2vh" , marginBottom:"2vh" ,textAlign:"center"}}>Contact Us</div>
+			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"5vh" , marginBottom:"2vh" ,textAlign:"center"}}>Contact Us</div>
 			<div className={darkMode ? "sub-header-dark" : "sub-header" }>Any Questions or Remarks? Just write us a Question</div>
 			
 			
@@ -713,32 +705,9 @@ export const Contact = () => {
 					</div>
 				</div>
 			</div>
-			<div className="box-image" style={{marginBottom:'50px'}}>
-						{darkMode ? 
-							<img
-							style={{
-								height: '290px',
-							align:'center',
-							marginTop:'17px',
-							marginLeft:'auto',
-							marginRight:'auto',
-							}}
-							src={contactUsDark}
-							alt=""
-						/> : <img
-						style={{
-							height: '300px',
-							align:'center',
-							marginLeft:'auto',
-							marginRight:'auto',
-						}}
-						src={contactUs}
-						alt=""
-					/> }
-					</div>
+
 			<div className={darkMode ? "box-dark" : "box" }>
 				<div className="box-primary">
-<<<<<<< HEAD
 					<div class="inner-Box mb-4 mt-8 ml-20">
 						<Grid container>
 						<div className="talk">
@@ -773,14 +742,6 @@ export const Contact = () => {
 						/>
 						: <TextField
 						className={darkMode ? classes.inputboxdark : classes.inputbox}
-=======
-						
-
-
-					<div className="message-box">
-							{isMobile ?<TextField
-								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						autoFocus="1"
 						label="Your Name"
 						name="firstname"
@@ -790,7 +751,6 @@ export const Contact = () => {
 						variant="filled"
 						autoComplete="off"
 						onBlur={blur}
-<<<<<<< HEAD
 						/>}*/}
 						<div
 							style={{
@@ -805,35 +765,6 @@ export const Contact = () => {
 						</div>
 						</Grid>
 						<Grid item xs={12}>
-=======
-
-							/> : <TextField
-							className={darkMode ? classes.inputboxdark : classes.inputbox}
-							autoFocus="1"
-						label="Your Name"
-						name="firstname"
-						onChange={handleChanges}
-						value={value.firstname}
-						type="text"
-						variant="filled"
-						autoComplete="off"
-						onBlur={blur}
-
-
-
-
-						/> }
-						<div
-						style={{
-							color: 'red',
-							fontSize: '0.9rem',
-							marginBottom: '25px',
-						}}
-					>
-						{errors.fnerror}
-					</div>
-						</div>		
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div className="message-box">
 							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
@@ -846,35 +777,20 @@ export const Contact = () => {
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
-<<<<<<< HEAD
 						/>		
 						</div>
-=======
-						/>}
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div
 							style={{
+								marginTop: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
-<<<<<<< HEAD
 								marginBottom: '3rem',
-=======
-								marginBottom: '25px',
-								textAlign:'left'
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 							}}
 						>
 							{errors.emailerror}
 						</div>
-<<<<<<< HEAD
 						</Grid>
 						<Grid item xs={12}>
-=======
-							
-						</div>
-						
-
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div className="message-box">
 							<TextField
 							className={darkMode ? classes.inputboxdark : classes.inputbox}
@@ -887,28 +803,19 @@ export const Contact = () => {
 							variant="filled"
 							autoComplete="off"
 							onBlur={blur}
-<<<<<<< HEAD
 						/>
 							
 						</div>
-=======
-						/> }
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div
 							style={{
+								marginTop: '2px',
 								//paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
-<<<<<<< HEAD
 								marginBottom: '3rem',
-=======
-								marginBottom: '45px',
-								textAlign:'left'
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 							}}
 						>
 							{errors.mesgerror}
-						</div>		
 						</div>
 						</Grid>
 						<Button
@@ -931,8 +838,27 @@ export const Contact = () => {
 					</Grid>
 					</div>
 				</div>
-			{/* <div className="box-secondary">
-					
+				<div className="box-secondary">
+					<div className="box-image">
+						{darkMode ? 
+							<img
+							style={{
+								height: '700px',
+								marginTop: '-120px',
+								marginLeft: '-50px',
+							}}
+							src={Contactpagedark}
+							alt=""
+						/> : <img
+						style={{
+							height: '700px',
+							marginTop: '-120px',
+							marginLeft: '-50px',
+						}}
+						src={Contactpage}
+						alt=""
+					/> }
+					</div>
 					<div className={darkMode ? "box-detail h-56 mr-14 w-11/12 text-white" : "box-detail h-56 mr-14 w-11/12 "}>
 						<div className="box-address">
 							<div class="h-28 w-28 p-7 ml-5">
@@ -948,13 +874,9 @@ export const Contact = () => {
 								<FontAwesomeIcon icon={faPhoneAlt} color="rgba(16, 157, 88, 1)" size="2x" />
 							</div>
 							<div className="detail h-28 text-lg w-200 pl-3 p-6 font-semibold">+91 939282927</div>
-<<<<<<< HEAD
 						</div> */}
 						<Grid container>
 						<Grid item xs={12}>
-=======
-						</div> 
->>>>>>> 76766a2f160f46385dfa118614862e9dc2f0fc44
 						<div class="box-map">
 							<div>
 								<iframe
@@ -976,7 +898,10 @@ export const Contact = () => {
 						</Grid>
 						</Grid>
 						<div class="box-social ml-28 ">
-							
+						{darkMode ? 
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADnUlEQVRoge2ZT4gbZRjGf+/sqqBtvYgHraJIPaigFO1N24pCERUU1J2ZrD3sQZtkbaUeioosVPFQWGtNthVND20m2V2P/ivowdKLYK2XLohtBVkUEUHp2rKbbub1kA1OspnJfLMT00N+x/dlnnmezHx87zeBAQMGDOgnEtU8XK3e4dd1P8IO4KZAaxGYAz2cdZyjIqI9dRlBaIAPjh270xoa/ha4OUpAYTLvOntTdxYTK7QxNLyfLuYBBF49Ui7fk6orA0IDAI/G1JA61pNpmElCVIDYiLApDZ0kRAX41UDntrUaSUpEAIkdQJXb0zCThIgA/s+xVeSqfAJ8b6Cz7sPZ2RvXaiYJoQHE908b6OhSrdaXzSw0wB8XLpwD/ownoz+8kslcTMmTEaEBJiYmfEG/jKGx7PvW1bcTr/Bpl35dVHaOj9rfpGXIlMgA1y0ungAuhbSXBbWzGbuSvq34RAYYGxtbAJnu0KqLys6s637SI1+x6TpK+BZHVldlX79/+SZdA4zb9mmEU61V7dvw1k6sYc6vy1ttpa2FcvWZHvgxJvJEFqToVb4CHguUfhP0vqzr/pW+rfjEHqdV2KNQC5RuUZVDPfBkROwAeceZE+VAS1HITJWrL6fuygCjA831V5beBuaCNV/0/anj1YdTdWVA7DXQpDA9fbfU/e+ADYHyRfWt7fnRkTPpWYuH8ZEyPzLyk6IvAcHpc4NY/heHjk/fb6pXKpXWl0ql9abXNTF+Ak0Knve6IO+0lf8WX57OjtqnOl4UoOh520EmgQdWSpcUfrFgHpgHPS/1oc93vThyNkoncYCGicpBYHewplCzVHZnM3aHHbxBoVJ5XhQPGO52D4XJnGO/FvbxbE0BVFWmKtX3aAuxgifoePs+YWL+v/vIWD5jH+3UW9NnFRHRnOvsUfQNWtcEgKvI2aLnPdssTHnec6bmG/fRXaE9I8cRFMvVFxD9COi0IE+CfAb6LobmG+jlnOve0KmTyoctgFzGnvGFLQidFt1W0AMkMg8g14R1UgsAMO44Pw4vLGwWdB+wlKZ2GKm9Qu0UKpV7RTlI6wCYlCs517m2UyPVJxAk7zhzOdd5XIRtq88TxoROvD0L0CTrOCdzjvOIb8lDAh8D/ySQORHW6NkrFEZxdnYdtfoORJ8CnqD1n5/VKL8zJFtytj3fqf2/BwiiqlKcmdlkLeuDaulmlLtAbwXZSGNf+RpL3gwzP2DAgAH9518IwRIJe+OBSwAAAABJRU5ErkJggg==" alt="" />
+						: <img src="https://img.icons8.com/material-rounded/48/000000/phone--v1.png" alt="" />
+						}	
 							<a href="mailto:gdsc.djsce@gmail.com">
 							{darkMode ? 
 							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAGHElEQVRoge2Ye0xTZxjGn9P2FFo4QA/2crxhmGNEFJaJc8siposzZjPLLhmZl8QZQ4IzKhTnbWrclKlYLApEXYbOqDEjQbM4sosmjGiWTTsviTC8ZF7QXqBXS3ugnNOzP0YZItRyAF22/v5q+33f+z7P+b6c730LxIgRI0aMYUD0/VJbWyu9fvfu1zyIORKZLJELdjlUSmV18cqVxmchrqyiYkuA4wpJUp7CdXMBaSh09rUZ0xfr9XouPKfXgNlsJr9vbPyD1jHP9Q0S4nl42tquvTBxwuz8/HzX0xB+8uTJ1KbbtxtTNNosiUTyyJjbbvtzXl5eZm5ubjcA9I7+9HPj4f7iAUAilYJmmKk3LJY7Ffv3vz/a4isqKz9outd6h9Yxj4kHAJVWl36m8dzhXn3hD5xE8lakwCq1hnL7fHtGVO0AuFnWSKvViZHmdBPo1SoBALPZrFRSVNKTghMEIQBA1f6Dpcfq6sYPV2yYY3V146v2HyztmyMSysTEJLPZrAR6DHAcR8lIkoi87B/aPJ7596zWmxXV1R+LFR3GVF39UavFeqPN45kf7RqZXE5wHEcBfY7QUElW0fFQJlRtN5afrq2tlQ51vSAIxNadO0+E4uIPJdG0QqwO0QYAgJTLCRXDzL9+//6DA4cOTYl23fG6uvRSk+n2mPETPoxXKKLe+YGQAABFUf7AQ2+H2CC0Vqd1+QOXyvbuXf2kuWV7966+a7E2q7S6NIIQpz3w0NuhUCg6gB4DWVlZHa9OmzbRY7dd4HleVNBkmo6TJyWbdphMZ5qamuT9xxsaGmTbyoynSCrJlEzTcWJyhEIhuG3W5qy0tOdzcnL8vQaamprkrXY786nBMJN1OQ/4O3whMQlIuZxI0mjn1P3w452amqM54d9rao7mnLt0+R49buw78rg4UY/d3+ELBZyOA5tKSrK8LEuHH5IEAHw+n8ru9V7ZZTJtXldUtFzB8/NdbW0eMYkAIFWnY9o7fRd37qnYYqysXGsPeC+k6nSM2Hgeh8MnDQbfXVdUtNxYWbnW7vFe8vl8KgCQhSeRcfEkERf/+XZj+Zx5b7wx1263T2z49beGJLV6ukwmGzz6IFApKSTX3f0ZAChIUpRwjuPwsL39d/0rM/VarTbIGssbSSopTwB674pH3kIykoSKYfJOnP7OcvHy5emb15TkBlzOUp/Xyz0e/snISBIykeL9Ph8fcDpMm9eU5DY3N2d+U1/fqmKYvP7xBnyNpmq1dDcpP1tqNBo3FBdvUsXJ9V6Hw4l+1etoIAgC4XG0u1Pk5LwNBoNhR3n5dhfH/6JSa9QDzR/0bCRQlJRTKEq2GcvzMtLTXwcwvuXWrfWjprwHnUp1OHPy5J0AZNuM5ReUY9QzIh3hiBeZTCYDzTAzzl+52nqtpWX28oKCrQAgkUieWK8MlXDM5QUFW6+1tMw+f+VqK80wEcUDUd7EtEaTwhKS+tLdu8sAQJdML3Ha7JZhq+7BabNbdMn0EgAo3b27jCUk9bRGkxLN2qhLiQSKknYD+QBQWLjs6qyXXkxz26yngl1doncjGAwK3jb7mTdnz5pUWLjsKgB0A/kJFBV1bSW6FtLr9dymkpL3CDZQ4HY42KGu97qcXZzXU7SxuHhuuLsSw7CKOQAoWrGiJoPRZTpttluCEN1mtFss9xmanvZJUdG+4eYftgEAyM/Pv7fZUJzhfvDgRCfLDuoi2NUlPLTbTk9Jmzhp6aJFN0ci99Cv2EHo6aQWGvftq/ey7JfJNK3sO+52OjvlPLdyg8Hw1UjlBEZoB/qyZtWq4+pUOt1tszYLggBBEOCyWe+OTUzIWFtcPKLigRHcgb4ULFxoFwRh6i6T6QsA2GQwbIym1xXDqBgAeo/UBgBYbzCMVpqRP0JPm5iBZ81/w4BCoRAQ5S36r0AQ/taMHgPZ2dkO1t8RfLaqoof1+4PZ2dkOoMcAQRAhnmUPRioDAAAhQfR/R9EihELuSONdnZ0C7w8cJAgiBPRrEY8cP/6yw+V6m+f5x8pZgiAEWqOpWrZgwYj1AQNxpLZ2XJvVukIQhMfaV6lUytMq1bdLFy++OJoaYsSIEeN/xF8+ZVqNHDTcpgAAAABJRU5ErkJggg=="/>
@@ -995,7 +920,8 @@ export const Contact = () => {
 							</a>
 						</div>
 					</div>
-				</div> */}
+				</div>
+			</div>
 		</div>
 	);
 };
