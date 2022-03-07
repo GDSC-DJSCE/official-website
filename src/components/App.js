@@ -33,8 +33,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={Events} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/team" component={Team} />
-          <Route exact path="/newteam" component={NewTeam} />
+          <Route exact path="/team" component={NewTeam} />
+          {/* <Route exact path="/newteam" component={NewTeam} /> */}
           <Route exact path="/team/domain-head" component={DomainHead} />
           <Route exact path="/team/domain-head2" component={DomainHead2} />
           <Route path="/events/:id" component={EventsDetail} />
