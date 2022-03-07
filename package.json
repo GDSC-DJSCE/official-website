@@ -3,11 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@craco/craco": "^6.3.0",
 		"@emotion/react": "^11.5.0",
 		"@emotion/styled": "^11.3.0",
-		"@fortawesome/fontawesome-free": "^5.15.4",
-		"@fortawesome/fontawesome-svg-core": "^1.2.36",
 		"@fortawesome/free-brands-svg-icons": "^5.15.4",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@fortawesome/react-fontawesome": "^0.1.16",
@@ -41,9 +38,9 @@
 	},
 	"scripts": {
 		"dev": "nodemon src/app -e js,hbs",
-		"start": "craco start",
-		"build": "craco build",
-		"test": "craco test",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -66,8 +63,7 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.8.8",
-		"postcss": "^7.0.39",
-		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+		"postcss": "^7.0.39"
 	},
 	"homepage": "https://gdsc-djsce.netlify.app"
 }
