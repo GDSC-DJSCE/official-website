@@ -6,7 +6,7 @@ import CarouselComponent from '../components/Events/CarouselComponent';
 export const Events = () => {
   return (
       <div>
-        <CarouselComponent />
+        {/* <CarouselComponent /> */}
         <Featured />
         <EventsList />
       </div>

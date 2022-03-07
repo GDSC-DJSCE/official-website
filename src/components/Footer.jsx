@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme)=>({
       paddingTop:"5vh",
       paddingBottom:"5vh",
       display: "grid",
-      gridTemplateColumns: "35% 65%",
+      gridTemplateColumns: "45% 65%",
       boxShadow:"none",
       margin:0,
     },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme)=>({
       paddingTop:"5vh",
       paddingBottom:"5vh",
       display: "grid",
-      gridTemplateColumns: "35% 65%",
+      gridTemplateColumns: "45% 65%",
       boxShadow:"none",
       margin:0,
     },
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme)=>({
   },
   footerdetails:{
     display: "grid",
-    gridTemplateColumns: "37% 37% 26%",
+    gridTemplateColumns: "50% 50%",
     color:"white",
   },
   community:{
@@ -122,15 +122,15 @@ export const Footer = () => {
                 </Link>
               </div>
           </div>
-          <div class="in-touch">
+          {/* <div class="in-touch">
               <Typography className={classes.community}>Keep in touch</Typography>
               <div className={classes.list}>
               <a href="mailto:gdsc.djsce@gmail.com" className={classes.links}>
               <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
             </a>
-                {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
+                {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> 
               </div>
-          </div>
+          </div> */}
           <div class="follow-us"> 
               <Typography className={classes.community}>Follow Us</Typography>
               <div className={classes.list}>
@@ -147,13 +147,13 @@ export const Footer = () => {
     </AppBar>
     <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom}>
       <div style={{marginLeft:"7vh"}}>
-      &copy; GDSC DJSCE 2021
+      &copy; GDSC DJSCE 2022
       </div>
       <div>
       {/* <img src={arrow} alt="arrow" style={{width:"5vh", height:"7vh" , marginLeft:"-15vh" , marginTop:"-3vh"}}/> */}
       </div>
       <div style={{marginLeft:"7vh" , overflow:"hidden"}}>
-      Made with ❤ GDSC DJSCE
+      Made with ❤ by GDSC DJSCE
       </div>
     </div>
     </div>

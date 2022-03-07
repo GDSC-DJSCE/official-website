@@ -23,13 +23,17 @@ const AllEvents = ({ id, title, date, summary, bgimage }) => {
       style={{
         background: `url(${bgimage}) no-repeat`,
         backgroundSize: "100% 66%",
+        marginTop:'30px',
+        margin:'30px auto',
+        width:'350px',
+        alignItems:'center'
       }}
     >
       <Grid className={classes.grid} item xs={12} sm={12} md={12} key={id}>
-        <Card style={{ backgroundColor: "#F6F9FB" }}>
+        <Card style={{ backgroundColor: "#1F1B24",color:"white" }}>
           <div className={classes.item}>
-            <Link to={`/events/${id}`} className={classes.links}>
-              <Typography variant="h4" component="h4">
+            <Link to={`/events/${id}`} style={{fontSize:'30px'}}>
+              <Typography className={classes.links} style={{color:"white"}}>
                 {title}
               </Typography>
             </Link>

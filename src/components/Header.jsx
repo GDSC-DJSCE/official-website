@@ -44,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems:"center",
     textDecoration: "none",
     color: "#979797",
-    fontSize: "20px",
-    marginLeft: "20PX",
+    fontSize: "18px",
+    marginLeft: "20px",
     marginRight:"25px",
     fontWeight:"450",
     "&:hover": {
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems:"center",
     textDecoration: "none",
     color: "white",
-    fontSize: "20px",
+    fontSize: "18px",
     marginLeft: "20PX",
     marginRight:"25px",
     fontWeight:"450",
@@ -111,7 +111,7 @@ export const  Header = () =>{
           
         </div>
         ) : (
-          <div style={{display:"grid" , gridTemplateColumns:"50% 50%" , width:"100%" }}>
+          <div style={{display:"grid" , gridTemplateColumns:"40% 60%" , width:"100%" }}>
 
             <Link to="/" >
             <div style={{display:"grid" , gridTemplateColumns:"100%" }}>
@@ -131,7 +131,7 @@ export const  Header = () =>{
             </Link>
                
 
-          <div className={classes.navlinks} style={{ justifyContent:"center" ,alignItems:"center" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
+          <div className={classes.navlinks} style={{ justifyContent:"right" ,alignItems:"right" , paddingBottom:"1.5vh" , paddingTop:"1.5vh"}}>
             <Link to="/" className={darkMode?classes.darklink:classes.link}>
               
               Home

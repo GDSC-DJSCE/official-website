@@ -9,7 +9,7 @@ const CoreTeamSection = () => {
         <section
             className="team2 cid-s8XcCyHzmg"
             id="team02-8"
-            style={{ padding: "20px 40px" }}
+            style={{ padding: "20px 40px",textAlign:'center' }}
         >
             <div className="container-fluid">
                 {/* <div className="row justify-content-start">

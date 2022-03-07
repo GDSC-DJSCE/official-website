@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme)=>({
     roots:{
       "&.MuiAppBar-colorPrimary":{
         backgroundColor:"#F5F5F5",
-        height:"37vh",
         top:"auto",
         bottom:"0",
         paddingTop:"1.5vh",
@@ -21,7 +20,6 @@ const useStyles = makeStyles((theme)=>({
     darkroots:{
       "&.MuiAppBar-colorPrimary":{
         backgroundColor:"#1b1b1b",
-        height:"37vh",
         top:"auto",
         bottom:"0",
         paddingTop:"1.5vh",
@@ -41,8 +39,10 @@ const useStyles = makeStyles((theme)=>({
     },
     footerdetails2:{
       display:"grid",
-      gridTemplateColumns:"45% 5% 50%",
-      padding:"2vh"
+      gridTemplateColumns:"100%",
+      padding:"2vh",
+      textAlign:'center',
+      marginBottom:'10px'
     },
     community:{
       color:"black",
@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme)=>({
     icons:{
       display:"grid",
       justifyContent: "center",
-      gridTemplateColumns:"10vh 10vh",
+      gridTemplateColumns:"10vh 10vh 10vh",
       paddingLeft:"2.6vh",
     },
     socialicons:{
@@ -118,16 +118,17 @@ export const FooterMobile = () => {
                   </Link>
                 </div>
               </div>
-              <div style={{borderLeftWidth:"0.2vh" , borderLeftColor:"#979797"  }}></div>
-              <div class="in-touch">
+              <hr style={darkMode ? {color: 'white'} : {color: 'black'}}/>
+              {/* <div style={{borderLeftWidth:"0.2vh" , borderLeftColor:"#979797",textAlign:'center',marginLeft:'auto',marginRight:'auto'  }}></div> */}
+              {/* <div class="in-touch">
                 <Typography className={classes.community}>Keep in touch</Typography>
                   <div className={classes.list}>
                   <a href="mailto:gdsc.djsce@gmail.com" className={classes.links}>
               <Typography style={{marginBottom:"1.2vh"}}>gdsc.djsce@gmail.com</Typography>
             </a>
-                    {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography> */}
+                    {/* <Typography style={{marginBottom:"1.2vh"}}>+91 134567890</Typography>
                   </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div class="follow-us" style={{textAlign:"center"}}> 
@@ -151,23 +152,31 @@ export const FooterMobile = () => {
                 }
 							  </a>  
                 </div>
+                <div style={{width:"5.7vh" , height:"5.7vh"}}>
+                <a href="mailto:gdsc.djsce@gmail.com">
+                {darkMode ? 
+							<img src="data:image/png;base64,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"/>
+							:<img src="https://img.icons8.com/ios-filled/48/000000/gmail-new.png" alt="" />
+							}
+							  </a>  
+                </div>
 
               </div>
           </div>
           
       </div> 
-    </AppBar>
     <div className={darkMode ? classes.darkfooterBottom : classes.footerBottom }>
       <div style={{marginTop:"1.7vh"}}>
-    &copy; GDSC DJSCE 2021
+    &copy; GDSC DJSCE 2022
     </div>
     <div>
       {/* <img src={arrow} alt="arrow" style={{position:"absolute" ,width:"5vh", height:"7vh" ,marginLeft:"1vh", marginTop:"-3vh" }}/> */}
     </div>
     <div style={{fontSize:"1.2vh" , marginTop:"0.3vh"}}>
-    Made with ❤ GDSC DJSCE
+    Made with ❤ by GDSC DJSCE
     </div>
   </div>
+    </AppBar>  
   </div>
   );
   

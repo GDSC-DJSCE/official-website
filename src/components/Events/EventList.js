@@ -57,7 +57,7 @@ const EventsList = () => {
     eventList = Data.filter(element => element.type === "session");
   }
   else if(type===2){
-    eventList = Data.filter(element => element.type === "workshop");
+    eventList = Data.filter(element => element.type === "festivals");
   }
   else if(type===0){
     eventList = Data;
@@ -80,12 +80,12 @@ const EventsList = () => {
                           </button>
                         </Grid>
                         <Grid item xs={12} sm={12} md={4}>
-                          <button className={type===2 ? classes.highlight : darkMode ? classes.selectDark : classes.select} onClick={() => setType(2)}>Workshop</button>
+                          <button className={type===2 ? classes.highlight : darkMode ? classes.selectDark : classes.select} onClick={() => setType(2)}>Festivals</button>
                         </Grid>
                     </Card>
                 </Grid>
               {eventList.map(event => (
-                  <Grid item xs={12} sm={12} md={3} container key={event.id}>
+                  <Grid item xs={12} sm={12} md={6} lg={4} container key={event.id}>
                       <AllEvents
                           key={event.id}
                           id={event.id}

@@ -28,7 +28,7 @@ const NewTeam = () => {
             >
                 <div className="row justify-content-center" style={{marginBottom:"40px"}}>
                     {/* <Pulse> */}
-                        <div className="col-12 col-sm-6 text-center">
+                        <div className="col-12 col-sm-6 text-center" style={{marginBottom:'10px'}}>
                             <Button
                                 style={
                                     currentTeam

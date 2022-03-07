@@ -13,11 +13,10 @@ const data = [
   {
     id: 1,
     title: "Getting Started With Flutter - Flutter Festival GDSC DJSCE",
-    title: "Speaker Session / Tech Talk - Virtual",
     bgimage: `${gdevEcco}`,
     bannerimage: `${flutterFes}`,
     date: "Mar 1, 2022",
-    type: "session",
+    type: "festivals",
     summary: "Speaker Session / Tech Talk - Virtual",
     description: `Now that Flutter festival is here,
       How does one get started with Flutter?

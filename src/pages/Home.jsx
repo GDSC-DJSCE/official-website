@@ -167,15 +167,13 @@ export const Home = () => {
         </div>
         <HomeDots />
        
-        <h1 className={darkMode ? "header header_dark": "header header_light"} data-aos="fade-right">ABOUT US</h1>
+        <h1 className={darkMode ? "header header_dark": "header header_light"} style={darkMode?{color:'white'}:{}} data-aos="fade-right">ABOUT US</h1>
         <div className="content_box">
           <div className="content" data-aos="fade-right"  data-aos-duration="300" data-aos-delay="500" >
             Google Developer Student Clubs (GDSC) are community groups for college interested in Google developer technologies. Students from 
             all undergraduate or graduate programs with an interest in growing as a developer are welcome. GDSC DJSCE is the club made due to 
-            persistent efforts put by Soham Dave, a fourth-year student from the Department of Information Technology under the guidance of 
-            Dr. Hari Vasudevan, Principal of Dwarkadas J. Sanghvi College of Engineering and Dr. Vinaya Sawant, Head of the Department of Information
-             Technology and Prof. Neha Katre, faculty advisor.
-          </div>
+            persistent efforts put by Soham Dave, a fourth-year student from the Department of Information Technology.
+            </div>
         </div>
       </div>
 
@@ -193,7 +191,7 @@ export const Home = () => {
            collectively and effectively working in a team
           </div>
         </div>
-        <h1 className="header" data-aos="fade-left" data-offset="100">OUR VISION</h1>
+        <h1 className={darkMode ? "header header_dark_home": "header header_light"} style={darkMode?{color:'white'}:{}} data-aos="fade-left" data-offset="100">OUR VISION</h1>
       </div>
 
     </div>
