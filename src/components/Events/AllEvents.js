@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const AllEvents = ({ id, title, date, summary, bgimage }) => {
+const AllEvents = ({ id, title, date, summary, bgimage, disabled }) => {
   const classes = useStyles();
   const {darkMode} = useContext(ThemeContext);
 
@@ -48,7 +48,7 @@ const AllEvents = ({ id, title, date, summary, bgimage }) => {
       <Grid className={classes.grid} item xs={12} sm={12} md={12} key={id}>
         <Card style={{ backgroundColor: darkMode?"#1F1B24":"#F6F9FB",color:darkMode?"white":"black" }}>
           <div className={classes.item}>
-            <Link to={`/events/${id}`} className={darkMode?classes.darklinks:classes.links} style={{fontSize:'30px'}}>
+            <Link onClick={(e)=>{if(disabled)e.preventDefault()}} to={`/events/${id}`} className={darkMode?classes.darklinks:classes.links} style={{fontSize:'30px'}}>
               <Typography>
                 {title}
               </Typography>

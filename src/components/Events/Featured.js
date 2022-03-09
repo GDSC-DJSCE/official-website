@@ -41,7 +41,7 @@ const Featured = () => {
                         <Card style={{height: "300px",background: `url(${event.bannerimage}) no-repeat`,
                         backgroundSize: "100% 100%"}}>
                             <div className={classes.x}>
-                                <Link to={`/events/${event.id}`} className={classes.links}>
+                                <Link to={`/events/${event.id}`} onClick={(e)=>{if(event.onclick_disabled)e.preventDefault()}} className={classes.links}>
                                     <Typography variant="h5" component="h5" style={{marginLeft: "20px",color:'white',marginTop: "10px"}}>
                                         {event.title}
                                     </Typography>
@@ -59,7 +59,7 @@ const Featured = () => {
                     <Card style={{height: "300px",background: `url(${event.bannerimage}) no-repeat`,
                         backgroundSize: "100% 100%"}}>
                         <div className={classes.x}>
-                            <Link to={`/events/${event.id}`} className={classes.links}>
+                            <Link onClick={(e)=>{if(event.onclick_disabled)e.preventDefault()}} to={`/events/${event.id}`} className={classes.links}>
                                 <Typography variant="h5" component="h5" style={{marginLeft: "20px",color:'white',marginTop: "10px"}}>
                                     {event.title}
                                 </Typography>

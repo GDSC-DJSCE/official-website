@@ -22,6 +22,7 @@ const data = [
     summary: "",
     description: ``,
     status: "upcoming",
+    onclick_disabled:true
   },
   {
     id: 2,
@@ -37,6 +38,7 @@ const data = [
       GDSC DJSCE, in collaboration with GDSC VIT Mumbai, GDSC VJTI, GDSC UMIT, and GDSCMIET presents,
       Shrihriday Bhagwat, a self-taught Flutter developer and the Founder and CEO of Codeaamy coming in to help you in getting started with Flutter`,
     status: "featured",
+    onclick_disabled:false
   },
   {
     id: 3,
@@ -50,6 +52,7 @@ const data = [
       Apart from this, 3 sessions were organized. In the first session, a brief introduction on the event was given and students were made familiar about what they were supposed to do. In the second and third session, basics of Kotlin were covered and implemented in an app.
       No of participants - About 60+ registrations. 5 completed the entire course and 2 of them also built an app which was an optional task.`,
     status: null,
+    onclick_disabled:false
   },
   {
     id: 4,
@@ -63,6 +66,7 @@ const data = [
       This session covered the following topics
       Intents,Multiple activities creations,Introduction to firebase services,Connecting Android app to firebase, Implementing firebase authentication`,
     status: null,
+    onclick_disabled:false
   },
   {
     id: 5,
@@ -79,6 +83,7 @@ const data = [
       Duration of the program: 29th November 2021 to 10th January 2022
       Complete all the 6 units, earning all 16 batches in this duration on Google Developers profile to earn a certificate of completion.`,
     status: null,
+    onclick_disabled:false
   },
   {
     id: 6,
@@ -102,6 +107,7 @@ const data = [
       
       📍 : MS Teams`,
     status: null,
+    onclick_disabled:false
   },
   {
     id: 7,
@@ -133,6 +139,7 @@ const data = [
       There was a lot to takeaway from the session and it helped all of us with the bare minimum to get started with our own open source contributions.	
       `,
     status: null,
+    onclick_disabled:false
   },
   {
     id: 8,
@@ -144,6 +151,7 @@ const data = [
     summary: "Speaker Session / Tech Talk - Virtual",
     description: `A session on “Kickstart to Google Cloud'' was organized by GDSC DJSCE on 27th September 2021 in collaboration with GDSC VJTI and  GDSC UMIT. The session had 500+ registrations and unique attendees with the highest number of concurrent attendees at any given point in time. Soham Dave, Lead and Cloud Facilitator of GDSC DJSCE  initiated the session by introducing the meaning of Cloud to the audience and why this session was organized. After a quick overview of the session's key points, Soham presented the panel, which consisted of the leads and cloud facilitators of GDSC VJTI and GDSC UMIT. The lead speaker for the session was Mr. Nirav Kothari who is a Google Developer Expert of Google Cloud Platform, Co-organizer of GDG Cloud Community in Mumbai, Solution Architect with 16+ years of the overall experience, and has deep expertise in designing system architecture and development using Cloud services. Mr. Nirav Kothari began his presentation by explaining what cloud computing is, how it got here, and what its future potential is. He also discussed the increase of cloud use and what the top cloud applications are, as well as the Google services and products available to developers. He then introduced the GCP API Library, which has 350+ APIs that may assist students in quickly building and managing their products. He stressed to the students numerous GCP roadmaps that would help them enhance their abilities and urged them to use Google Cloud to its full potential. Following Mr. Nirav's informative speech, the college leads and facilitators offered students a brief tour of Qwiklabs and explained the procedures they must take after registering for the "30 Days of Google Cloud Program." The workshop gave students a better knowledge of what cloud is, the numerous uses connected with it, and the future potential of cloud as a career option. The students learned about the industry's expectations and how to prepare themselves for them. The session was really interesting and entertaining.`,
     status: null,
+    onclick_disabled:false
   },
 ];
 

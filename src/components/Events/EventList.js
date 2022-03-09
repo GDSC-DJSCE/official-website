@@ -93,6 +93,7 @@ const EventsList = () => {
                           date={event.date}
                           summary={event.summary}
                           bgimage={event.bgimage}
+                          disabled={event.onclick_disabled}
                       /> 
                   </Grid>
                 ))}
