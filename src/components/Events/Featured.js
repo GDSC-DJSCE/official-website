@@ -57,7 +57,7 @@ const Featured = () => {
                 {upcoming_event.map(event => (
                     <Grid item xs={12} sm={12} md={5}  key={event.id}>
                     <Card style={{height: "300px",background: `url(${event.bannerimage}) no-repeat`,
-                        backgroundSize: "200% 100%"}}>
+                        backgroundSize: "100% 100%"}}>
                         <div className={classes.x}>
                             <Link to={`/events/${event.id}`} className={classes.links}>
                                 <Typography variant="h5" component="h5" style={{marginLeft: "20px",color:'white',marginTop: "10px"}}>

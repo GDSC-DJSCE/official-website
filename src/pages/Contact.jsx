@@ -1,5 +1,4 @@
 import React, { useState , useContext} from 'react';
-
 import { ThemeContext } from "../ThemeContext";
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,6 +25,7 @@ import rgby2dark from '../assets/images/rgby2.jpg';
 import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
+import Alert from '../components/Alert';
 import { TextField, makeStyles, Button ,useMediaQuery,useTheme} from '@material-ui/core';
 
 var service_id = process.env.REACT_APP_SERVICE_ID;
@@ -409,6 +409,10 @@ export const Contact = () => {
 	const {darkMode} = useContext(ThemeContext) ; 
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+	const [successMsg, setSuccessMsg] = useState("");
+	const [dangerMsg, setDangerMsg] = useState("");
+	const [isAlertDangerMsgLoaded, setIsAlertDangerMsgLoaded] = useState(false);
+	const [isAlertSuccessMsgLoaded, setIsAlertSuccessMsgLoaded] = useState(false);
 	let [errors, setErrors] = useState({
 		fnerror: '',
 		mesgerror: '',
@@ -483,12 +487,28 @@ export const Contact = () => {
 			from_name: value.firstname,
 			from_email: value.email,
 			message: value.message,
-		};
+		};  
 		emailjs.init(user);
-		emailjs.send(service_id, template_id, templateParams, user_id).then(res => console.log(res));
+		emailjs.send(service_id, template_id, templateParams, user_id)
+		.then(res => {setIsAlertSuccessMsgLoaded(true);
+			setSuccessMsg("Mail send successfully");})
+		.catch(e=>{setIsAlertDangerMsgLoaded(true);
+			setDangerMsg("Mail not send");});
 	};
 	return (
 		<div className="mainbody" >
+		<Alert
+        msg={successMsg}
+        setIsAlertMsgLoaded={setIsAlertSuccessMsgLoaded}
+        isAlertMsgLoaded={isAlertSuccessMsgLoaded}
+        type="success"
+      ></Alert>
+      <Alert
+        msg={dangerMsg}
+        setIsAlertMsgLoaded={setIsAlertDangerMsgLoaded}
+        isAlertMsgLoaded={isAlertDangerMsgLoaded}
+        type="danger"
+      ></Alert>
 			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"2vh" , marginBottom:"2vh" ,textAlign:"center"}}>Contact Us</div>
 			<div className={darkMode ? "sub-header-dark" : "sub-header" }>Any Questions or Remarks? Just write us a Question</div>
 			
