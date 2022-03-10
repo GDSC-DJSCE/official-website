@@ -141,9 +141,9 @@ export const  Header = () =>{
             <Link to="/team" className={darkMode?classes.darklink:classes.link}>
               Team
             </Link>
-            {/* <a href="https://codeshastra.netlify.app/" className={darkMode?classes.darklink:classes.link}>
+            {<a href="https://codeshastra.netlify.app/" className={darkMode?classes.darklink:classes.link}>
             CodeShastra
-            </a> */}
+            </a>}
             <Link to="/contact" className={darkMode?classes.darklink:classes.link}>
               Contact
             </Link>
