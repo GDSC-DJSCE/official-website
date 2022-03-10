@@ -17,7 +17,6 @@ import GDSCLogoDark from "../assets/images/GDSC_DJSCE_Dark.png" ;
 import lighttheme from "../assets/images/lighttheme.png"
 const useStyles = makeStyles((theme) => ({
   navlinks: {
-    
     marginLeft:"120px",
     display: "flex",
     paddingTop:"2.5vh",
@@ -142,6 +141,9 @@ export const  Header = () =>{
             <Link to="/team" className={darkMode?classes.darklink:classes.link}>
               Team
             </Link>
+            {/* <a href="https://codeshastra.netlify.app/" className={darkMode?classes.darklink:classes.link}>
+            CodeShastra
+            </a> */}
             <Link to="/contact" className={darkMode?classes.darklink:classes.link}>
               Contact
             </Link>
