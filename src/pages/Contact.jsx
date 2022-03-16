@@ -1,8 +1,9 @@
-import React, { useState , useContext} from 'react';
-import { ThemeContext } from "../ThemeContext";
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from '../ThemeContext';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import toast from 'react-hot-toast';
 import yellowCircle from '../assets/images/yellowCircle.svg';
 import greenCircle from '../assets/images/greenCircle.svg';
 import blueCircle from '../assets/images/blueCircle.png';
@@ -26,7 +27,7 @@ import rgby2 from '../assets/images/rgby2.png';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
 import Alert from '../components/Alert';
-import { TextField, makeStyles, Button ,useMediaQuery,useTheme} from '@material-ui/core';
+import { TextField, makeStyles, Button, useMediaQuery, useTheme } from '@material-ui/core';
 
 var service_id = process.env.REACT_APP_SERVICE_ID;
 var template_id = process.env.REACT_APP_TEMPLATE_ID;
@@ -46,7 +47,7 @@ const useStyles = makeStyles({
 		height: 'auto',
 		justifyContent: 'center',
 		padding: '10px',
-		paddingTop:"5px"
+		paddingTop: '5px',
 	},
 	inputbox: {
 		marginBottom: '5px',
@@ -59,16 +60,16 @@ const useStyles = makeStyles({
 		borderColor: 'blue',
 	},
 	inputboxdark: {
-		"&.MuiFormControl-root":{
-			backgroundColor: "#ecf0f1"
+		'&.MuiFormControl-root': {
+			backgroundColor: '#ecf0f1',
 		},
 		marginBottom: '5px',
 		width: '100%',
 		color: 'yellow',
 	},
 	mobileboxdark: {
-		"&.MuiFormControl-root":{
-			backgroundColor: "#ecf0f1"
+		'&.MuiFormControl-root': {
+			backgroundColor: '#ecf0f1',
 		},
 		marginBottom: '1rem',
 		width: 'auto',
@@ -193,14 +194,13 @@ const useStyles = makeStyles({
 	},
 	rgby2: {
 		position: 'absolute',
-		marginTop:"130vh",
+		marginTop: '130vh',
 		left: '75%',
 		width: '105px',
 		height: '105px',
-		overflow:"hidden",
-		borderRadius:"30%",
-		borderTopLeftRadius:"50%",
-		
+		overflow: 'hidden',
+		borderRadius: '30%',
+		borderTopLeftRadius: '50%',
 	},
 	blue1d: {
 		position: 'absolute',
@@ -306,7 +306,7 @@ const useStyles = makeStyles({
 		left: '87%',
 		width: '25px',
 		height: '25px',
-		opacity:"60%"
+		opacity: '60%',
 	},
 	green2d: {
 		position: 'absolute',
@@ -314,7 +314,7 @@ const useStyles = makeStyles({
 		left: '84%',
 		width: '10px',
 		height: '10px',
-		opacity:"60%"
+		opacity: '60%',
 	},
 	green3d: {
 		position: 'absolute',
@@ -322,7 +322,7 @@ const useStyles = makeStyles({
 		left: '80%',
 		width: '10px',
 		height: '10px',
-		opacity:"60%"
+		opacity: '60%',
 	},
 	green4d: {
 		position: 'absolute',
@@ -406,13 +406,9 @@ const useStyles = makeStyles({
 });
 
 export const Contact = () => {
-	const {darkMode} = useContext(ThemeContext) ; 
+	const { darkMode } = useContext(ThemeContext);
 	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-	const [successMsg, setSuccessMsg] = useState("");
-	const [dangerMsg, setDangerMsg] = useState("");
-	const [isAlertDangerMsgLoaded, setIsAlertDangerMsgLoaded] = useState(false);
-	const [isAlertSuccessMsgLoaded, setIsAlertSuccessMsgLoaded] = useState(false);
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 	let [errors, setErrors] = useState({
 		fnerror: '',
 		mesgerror: '',
@@ -480,114 +476,108 @@ export const Contact = () => {
 	const classes = useStyles();
 
 	const onsubmit = () => {
-		console.log(value.message);
-		console.log(value.firstname);
-		console.log(value.email);
 		let templateParams = {
 			from_name: value.firstname,
 			from_email: value.email,
 			message: value.message,
-		};  
+		};
+		const id = toast.loading('Sending...');
 		emailjs.init(user);
-		emailjs.send(service_id, template_id, templateParams, user_id)
-		.then(res => {setIsAlertSuccessMsgLoaded(true);
-			setSuccessMsg("Mail send successfully");})
-		.catch(e=>{setIsAlertDangerMsgLoaded(true);
-			setDangerMsg("Mail not send");});
+		emailjs
+			.send(service_id, template_id, templateParams, user_id)
+			.then(res => {
+				toast.success('Mail sent succesfully!', { id });
+			})
+			.catch(e => {
+				toast.error('Error in sending mail. Please try again later', { id });
+			});
 	};
 	return (
-		<div className="mainbody" >
-		<Alert
-        msg={successMsg}
-        setIsAlertMsgLoaded={setIsAlertSuccessMsgLoaded}
-        isAlertMsgLoaded={isAlertSuccessMsgLoaded}
-        type="success"
-      ></Alert>
-      <Alert
-        msg={dangerMsg}
-        setIsAlertMsgLoaded={setIsAlertDangerMsgLoaded}
-        isAlertMsgLoaded={isAlertDangerMsgLoaded}
-        type="danger"
-      ></Alert>
-			<div className= {darkMode ? "header-conatct font-semibold text-white" : "header-conatct font-semibold" } style={{fontSize:"40px" , marginTop:"2vh" , marginBottom:"2vh" ,textAlign:"center"}}>Contact Us</div>
-			<div className={darkMode ? "sub-header-dark" : "sub-header" }>Any Questions or Remarks? Just write us a Question</div>
-			
-			
+		<div className="mainbody">
+			<div
+				className={darkMode ? 'header-conatct font-semibold text-white' : 'header-conatct font-semibold'}
+				style={{ fontSize: '40px', marginTop: '2vh', marginBottom: '2vh', textAlign: 'center' }}
+			>
+				Contact Us
+			</div>
+			<div className={darkMode ? 'sub-header-dark' : 'sub-header'}>
+				Any Questions or Remarks? Just write us a Question
+			</div>
+
 			<div className="images-phone w-0">
 				<div className="yellow">
-				{darkMode ? (<img src={yellowCircleHalfdark} alt=""/>): (<img src={yellowCircleHalf} alt="" />)  }
-					
+					{darkMode ? <img src={yellowCircleHalfdark} alt="" /> : <img src={yellowCircleHalf} alt="" />}
 				</div>
 				<div className="green">
-					{darkMode ? (<img src={halfcircledark} alt=""/>): (<img src={halfcircle} alt="" />)  }
+					{darkMode ? <img src={halfcircledark} alt="" /> : <img src={halfcircle} alt="" />}
 				</div>
 				<div className="blue">
-				{darkMode ? (<img src={blueCircleHalfdark} alt=""/>): (<img src={blueCircleHalf} alt="" />)  }
-					<img  alt="" />
+					{darkMode ? <img src={blueCircleHalfdark} alt="" /> : <img src={blueCircleHalf} alt="" />}
+					<img alt="" />
 				</div>
 				<div className="red">
-				{darkMode ? (<img src={redCircleHalfdark} alt=""/>): (<img src={redCircleHalf} alt="" />)  }
+					{darkMode ? <img src={redCircleHalfdark} alt="" /> : <img src={redCircleHalf} alt="" />}
 				</div>
 				<div className="yellow1">
 					<img src={yellowCircle} alt="" />
 				</div>
 				<div className={classes.green1}>
 					<div className="floatgreen1">
-					<img src={greenCircle} alt="" />
+						<img src={greenCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue1}>
 					<div className="floatblue1">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.red1}>
 					<div className="floatred1">
-					<img src={redCircle} alt="" />
+						<img src={redCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue2}>
 					<div className="floatblue2">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.red2}>
 					<div className="floatred2">
-					<img src={redCircle} alt="" />
+						<img src={redCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.red3}>
 					<div className="floatred3">
-					<img src={redCircle} alt="" />
+						<img src={redCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellowR1}>
 					<div className="floatyellowR1">
-					<img src={yellowRect} alt="" />
+						<img src={yellowRect} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellowR2}>
 					<div className="floatyellowR2">
-					<img src={yellowRect} alt="" />
+						<img src={yellowRect} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellowR3}>
 					<div className="floatyellowR3">
-					<img src={yellowRect} alt="" />
+						<img src={yellowRect} alt="" />
 					</div>
 				</div>
 				<div className={classes.blueR}>
 					<div className="floatblueR">
-					<img src={blueRect} alt="" />
+						<img src={blueRect} alt="" />
 					</div>
 				</div>
 				<div className={classes.greenR}>
 					<div className="floatgreenR">
-					<img src={greenRect} alt="" />
+						<img src={greenRect} alt="" />
 					</div>
 				</div>
 				<div class={classes.rgby2}>
-					{darkMode ? <img src={rgby2dark} alt =" " /> :<img src={rgby2} alt="" /> }
+					{darkMode ? <img src={rgby2dark} alt=" " /> : <img src={rgby2} alt="" />}
 				</div>
 			</div>
 
@@ -603,112 +593,112 @@ export const Contact = () => {
 				</div>
 				<div className="yellowR-d">
 					<div className="floatyellowR-d">
-					<img src={yellowRect} alt="" />
+						<img src={yellowRect} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue1d}>
 					<div className="floatblue1d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue2d}>
 					<div className="floatblue2d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue3d}>
 					<div className="floatblue3d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue4d}>
 					<div className="floatblue4d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue5d}>
 					<div className="floatblue5d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue6d}>
 					<div className="floatblue6d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue7d}>
 					<div className="floatblue7d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue8d}>
 					<div className="floatblue8d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue9d}>
 					<div className="floatblue9d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue10d}>
 					<div className="floatblue10d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue11d}>
 					<div className="floatblue11d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.blue12d}>
 					<div className="floatblue12d">
-					<img src={blueCircle} alt="" />
+						<img src={blueCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.green1d}>
-				<div class="floatgreen1d">
-					<img src={greenCircle} alt="" />
-				</div>
+					<div class="floatgreen1d">
+						<img src={greenCircle} alt="" />
+					</div>
 				</div>
 				<div className={classes.green2d}>
 					<div className="floatgreen2d">
-					<img src={greenCircle} alt="" />
+						<img src={greenCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.green3d}>
 					<div className="floatgreen3d">
-					<img src={greenCircle} alt="" />
+						<img src={greenCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.green5d}>
 					<div className="floatgreen5d">
-					<img src={greenCircle} alt="" />
+						<img src={greenCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow1d}>
 					<div className="floatyellow1d">
-					<img src={yellowCircle} alt="" />
+						<img src={yellowCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow2d}>
 					<div className="floatyellow2d">
-					<img src={yellowCircle} alt="" />
+						<img src={yellowCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow3d}>
 					<div className="floatyellow3d">
-					<img src={yellowCircle} alt="" />
+						<img src={yellowCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow4d}>
 					<div className="floatyellow4d">
-					<img src={yellowCircle} alt="" />
+						<img src={yellowCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow5d}>
 					<div className="floatyellow5d">
-					<img src={yellowCircle} alt="" />
+						<img src={yellowCircle} alt="" />
 					</div>
 				</div>
 				<div className={classes.yellow6d}>
@@ -720,80 +710,80 @@ export const Contact = () => {
 				<div className="circle">
 					<div className={classes.rgbyCircle1}>
 						<div className="circle1">
-						<img src={rgbyCircle} alt="" />
+							<img src={rgbyCircle} alt="" />
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="box-image" style={{marginBottom:'50px'}}>
-						{darkMode ? 
-							<img
-							style={{
-								height: '290px',
-							align:'center',
-							marginTop:'17px',
-							marginLeft:'auto',
-							marginRight:'auto',
-							}}
-							src={contactUsDark}
-							alt=""
-						/> : <img
+			<div className="box-image" style={{ marginBottom: '50px' }}>
+				{darkMode ? (
+					<img
+						style={{
+							height: '290px',
+							align: 'center',
+							marginTop: '17px',
+							marginLeft: 'auto',
+							marginRight: 'auto',
+						}}
+						src={contactUsDark}
+						alt=""
+					/>
+				) : (
+					<img
 						style={{
 							height: '300px',
-							align:'center',
-							marginLeft:'auto',
-							marginRight:'auto',
+							align: 'center',
+							marginLeft: 'auto',
+							marginRight: 'auto',
 						}}
 						src={contactUs}
 						alt=""
-					/> }
-					</div>
-			<div className={darkMode ? "box-dark" : "box" }>
+					/>
+				)}
+			</div>
+			<div className={darkMode ? 'box-dark' : 'box'}>
 				<div className="box-primary">
-						
-
-
 					<div className="message-box">
-							{isMobile ?<TextField
+						{isMobile ? (
+							<TextField
 								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
-						autoFocus="1"
-						label="Your Name"
-						name="firstname"
-						onChange={handleChanges}
-						value={value.firstname}
-						type="text"
-						variant="filled"
-						autoComplete="off"
-						onBlur={blur}
-
-							/> : <TextField
-							className={darkMode ? classes.inputboxdark : classes.inputbox}
-							autoFocus="1"
-						label="Your Name"
-						name="firstname"
-						onChange={handleChanges}
-						value={value.firstname}
-						type="text"
-						variant="filled"
-						autoComplete="off"
-						onBlur={blur}
-
-
-
-
-						/> }
+								autoFocus="1"
+								label="Your Name"
+								name="firstname"
+								onChange={handleChanges}
+								value={value.firstname}
+								type="text"
+								variant="filled"
+								autoComplete="off"
+								onBlur={blur}
+							/>
+						) : (
+							<TextField
+								className={darkMode ? classes.inputboxdark : classes.inputbox}
+								autoFocus="1"
+								label="Your Name"
+								name="firstname"
+								onChange={handleChanges}
+								value={value.firstname}
+								type="text"
+								variant="filled"
+								autoComplete="off"
+								onBlur={blur}
+							/>
+						)}
 						<div
-						style={{
-							color: 'red',
-							fontSize: '0.9rem',
-							marginBottom: '25px',
-						}}
-					>
-						{errors.fnerror}
+							style={{
+								color: 'red',
+								fontSize: '0.9rem',
+								marginBottom: '25px',
+							}}
+						>
+							{errors.fnerror}
+						</div>
 					</div>
-						</div>		
-						<div className="message-box">
-							{isMobile ? <TextField
+					<div className="message-box">
+						{isMobile ? (
+							<TextField
 								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 								label="Your Email"
 								name="email"
@@ -803,33 +793,35 @@ export const Contact = () => {
 								variant="filled"
 								autoComplete="off"
 								onBlur={blur}
-							/>: <TextField
-							className={darkMode ? classes.inputboxdark : classes.inputbox}
-							label="Your Email"
-							name="email"
-							onChange={handleChanges}
-							value={value.email}
-							type="email"
-							variant="filled"
-							autoComplete="off"
-							onBlur={blur}
-						/>}
+							/>
+						) : (
+							<TextField
+								className={darkMode ? classes.inputboxdark : classes.inputbox}
+								label="Your Email"
+								name="email"
+								onChange={handleChanges}
+								value={value.email}
+								type="email"
+								variant="filled"
+								autoComplete="off"
+								onBlur={blur}
+							/>
+						)}
 						<div
 							style={{
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '25px',
-								textAlign:'left'
+								textAlign: 'left',
 							}}
 						>
 							{errors.emailerror}
 						</div>
-							
-						</div>
-						
+					</div>
 
-						<div className="message-box">
-							{isMobile ?<TextField
+					<div className="message-box">
+						{isMobile ? (
+							<TextField
 								className={darkMode ? classes.mobileboxdark : classes.mobilebox}
 								label="Your Message"
 								name="message"
@@ -839,47 +831,50 @@ export const Contact = () => {
 								variant="filled"
 								autoComplete="off"
 								onBlur={blur}
-							/> : <TextField
-							className={darkMode ? classes.inputboxdark : classes.inputbox}
-							label="Your Message"
-							name="message"
-							onChange={handleChanges}
-							value={value.message}
-							type="text"
-							variant="filled"
-							autoComplete="off"
-							onBlur={blur}
-						/> }
+							/>
+						) : (
+							<TextField
+								className={darkMode ? classes.inputboxdark : classes.inputbox}
+								label="Your Message"
+								name="message"
+								onChange={handleChanges}
+								value={value.message}
+								type="text"
+								variant="filled"
+								autoComplete="off"
+								onBlur={blur}
+							/>
+						)}
 						<div
 							style={{
 								//paddingBottom: '2px',
 								color: 'red',
 								fontSize: '0.9rem',
 								marginBottom: '45px',
-								textAlign:'left'
+								textAlign: 'left',
 							}}
 						>
 							{errors.mesgerror}
-						</div>		
 						</div>
-
-						<Button
-							className="submit"
-							variant="contained"
-							endIcon={<SendIcon />}
-							style={{
-								width: '12rem',
-								height: '2.5rem',
-								fontSize: '1.5rem',
-								backgroundColor: 'rgba(67, 133, 243, 1)',
-								color: 'white',
-							}}
-							onClick={onsubmit}
-						>
-							Submit
-						</Button>
 					</div>
+
+					<Button
+						className="submit"
+						variant="contained"
+						endIcon={<SendIcon />}
+						style={{
+							width: '12rem',
+							height: '2.5rem',
+							fontSize: '1.5rem',
+							backgroundColor: 'rgba(67, 133, 243, 1)',
+							color: 'white',
+						}}
+						onClick={onsubmit}
+					>
+						Submit
+					</Button>
 				</div>
+			</div>
 			{/* <div className="box-secondary">
 					
 					<div className={darkMode ? "box-detail h-56 mr-14 w-11/12 text-white" : "box-detail h-56 mr-14 w-11/12 "}>
