@@ -1,0 +1,9 @@
+.prof-subtitle {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 720px) {
+    .prof-subtitle {
+        font-size: 18px;
+    }
+}

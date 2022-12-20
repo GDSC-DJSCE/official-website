@@ -1,0 +1,13 @@
+
+.darkBG{
+    background-color: black;
+    transition: all 0.5s linear;
+    color: white;
+  }
+  
+  .lightBG{
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s linear;
+  
+  }
+  
