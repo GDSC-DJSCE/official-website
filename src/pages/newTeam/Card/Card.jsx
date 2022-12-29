@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import Fade from "@stahl.luke/react-reveal/Fade";
 import "./Card.css";
 const Card = ({ member }) => {
   const { name, title, imageSrc, socials } = member;
