@@ -55,62 +55,58 @@ const CoreTeamSection = () => {
                         <Card member={coreTeam[0]} />
                     </div>
                 </div>
-                <div
-                    className="row justify-content-around"
-                    style={{ marginTop: "5%" }}
-                >
+                <div className="row justify-content-center">
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[1]} />
                     </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={coreTeam[2]} />
-                    </div>
                 </div>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={coreTeam[2]} />
+                        
+                    </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[3]} />
                     </div>
+                </div>
+                <div
+                    className="row justify-content-around"
+                    style={{ marginTop: "5%" }}
+                >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[4]} />
                     </div>
-                </div>
-                <div
-                    className="row justify-content-around"
-                    style={{ marginTop: "5%" }}
-                >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[5]} />
                     </div>
-                    {/* <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={coreTeam[6]} />
-                    </div> */}
-                </div>
-                {/* <div
-                    className="row justify-content-around"
-                    style={{ marginTop: "5%" }}
-                >
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={coreTeam[7]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={coreTeam[8]} />
-                    </div>
                 </div>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={coreTeam[10]} />
+                        <Card member={coreTeam[6]} />
+                    </div>
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={coreTeam[7]} />
+                    </div>
+                </div>
+                 
+                <div
+                    className="row justify-content-around"
+                    style={{ marginTop: "5%" }}
+                >
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={coreTeam[8]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[9]} />
                     </div>
                 </div>
-                <div
+                 {/*<div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >

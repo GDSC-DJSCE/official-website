@@ -1,13 +1,21 @@
 import React from "react"
 // import Pulse from "react-reveal/Pulse"
 import Card from "./Card/Card"
-import coComm from "./CoComm"
+// import coComm from "./CoComm"
 import "./CoComm.css"
-import domainTeam1 from "./Members/Domain1"
-import domainTeam2 from "./Members/Domain2";
-import projectTeam from "./Members/Project";
-import eventTeam from "./Members/Event";
-import contentTeam from "./Members/Content";
+// import domainTeam1 from "./Members/Domain1"
+// import domainTeam2 from "./Members/Domain2";
+// import projectTeam from "./Members/Project";
+// import eventTeam from "./Members/Event";
+// import contentTeam from "./Members/Content";
+
+
+import webdevteam from "./Members/WebDev"
+import appdevteam from "./Members/AppDev"
+import marketingteam from "./Members/Marketing"
+import publicityteam from "./Members/Publicity"
+import cyberteam from "./Members/Cyber"
+import creativesteam from "./Members/Creatives"
 
 
 const CoCommSection = () => {
@@ -19,135 +27,128 @@ const CoCommSection = () => {
         >
             <div className="container-fluid">
                 <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
-                    <strong>Technical Team</strong>
+                    <strong>Web Dev Team</strong>
                 </h3>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={domainTeam1[1]} />
+                        <Card member={webdevteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={domainTeam1[2]} />
+                        <Card member={webdevteam[1]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={domainTeam2[1]} />
+                        <Card member={webdevteam[2]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={domainTeam2[2]} />
+                        <Card member={webdevteam[3]} />
+                    </div>
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={webdevteam[4]} />
+                    </div>
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={webdevteam[5]} />
                     </div>
                 </div>
                 <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
-                    <strong>Project Team</strong>
+                    <strong>App Dev Team</strong>
                 </h3>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[1]} />
+                        <Card member={appdevteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[2]} />
+                        <Card member={appdevteam[1]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[3]} />
+                        <Card member={appdevteam[2]} />
                     </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[4]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[5]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[6]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[7]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={projectTeam[8]} />
-                    </div>
+                    
                 </div>
                 <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
-                    <strong>Content & Editorial Team</strong>
+                    <strong>Cyber Team</strong>
                 </h3>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[1]} />
+                        <Card member={cyberteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[2]} />
+                        <Card member={cyberteam[1]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[3]} />
+                        <Card member={cyberteam[2]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[4]} />
+                        <Card member={cyberteam[3]} />
                     </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[5]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[6]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[7]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[8]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[9]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[10]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={contentTeam[11]} />
-                    </div>
+                    
                 </div>
                 <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
-                    <strong>Event & Outreach Team</strong>
+                    <strong>Creatives Team</strong>
                 </h3>
                 <div
                     className="row justify-content-around"
                     style={{ marginTop: "5%" }}
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[1]} />
+                        <Card member={creativesteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[2]} />
+                        <Card member={creativesteam[1]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[3]} />
+                        <Card member={creativesteam[2]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[4]} />
+                        <Card member={creativesteam[3]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[5]} />
+                        <Card member={creativesteam[4]} />
+                    </div>
+                    
+                </div>
+                <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
+                    <strong>Marketing Team</strong>
+                </h3>
+                <div
+                    className="row justify-content-around"
+                    style={{ marginTop: "5%" }}
+                >
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={marketingteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[6]} />
+                        <Card member={marketingteam[1]} />
+                    </div>
+                    
+                    
+                </div>
+                <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
+                    <strong>Publicity Team</strong>
+                </h3>
+                <div
+                    className="row justify-content-around"
+                    style={{ marginTop: "5%" }}
+                >
+                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
+                        <Card member={publicityteam[0]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[7]} />
+                        <Card member={publicityteam[1]} />
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[8]} />
+                        <Card member={publicityteam[2]} />
                     </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[9]} />
-                    </div>
-                    <div className="col-sm-8 col-md-5 col-lg-4 col-10">
-                        <Card member={eventTeam[10]} />
-                    </div>
+                    
+                    
                 </div>
                 {/* <h3 className="CoCommHeader mbr-section-title mbr-fonts-style align-center">
                     <strong>Editorial Team</strong>
