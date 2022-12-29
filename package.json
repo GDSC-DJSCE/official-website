@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@craco/craco": "^6.4.5",
+		"@craco/craco": "^6.3.0",
 		"@emotion/react": "^11.5.0",
 		"@emotion/styled": "^11.3.0",
 		"@fortawesome/fontawesome-free": "^5.15.4",
