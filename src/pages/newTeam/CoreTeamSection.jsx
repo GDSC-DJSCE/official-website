@@ -66,6 +66,7 @@ const CoreTeamSection = () => {
                 >
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[2]} />
+                        
                     </div>
                     <div className="col-sm-8 col-md-5 col-lg-4 col-10">
                         <Card member={coreTeam[3]} />
