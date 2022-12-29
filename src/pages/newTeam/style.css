@@ -1,9 +1,13 @@
 .prof-subtitle {
-    font-size: 30px;
+  font-size: 30px;
 }
 
+/* img {
+  height: 300px;
+} */
+
 @media screen and (max-width: 720px) {
-    .prof-subtitle {
-        font-size: 18px;
-    }
+  .prof-subtitle {
+    font-size: 18px;
+  }
 }
