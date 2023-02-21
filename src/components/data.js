@@ -26,7 +26,7 @@ const data = [
     📍DJ Sanghvi College of Engineering
     🏅Top projects win cash prizes and exciting goodies
 `,
-    status: "upcoming",
+    status: "featured",
     register: true,
     onclick_disabled: false,
   },
